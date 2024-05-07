@@ -1,0 +1,17 @@
+* C:\Users\ruseler\Documents\GitHub\AOS-QUIZES\TE02\LTspice\COMB01op.asc
+Vcc X 0 {Vcc}
+R1 B 0 {R1}
+R2 B X {R2}
+D1 B C DZ1
+D2 0 C DZ2
+.model D D
+.lib C:\Users\ruseler\AppData\Local\LTspice\lib\cmp\standard.dio
+.op
+.param Vcc=2.500e+01 R1=1.200e+02 R2=1.200e+02
+.model DZ1 D(Is=1.000e-14 n=1.200e+00 bv=3)
+.model DZ2 D(Is=2.000e-14 n=2.000e+00 bv=3)
+.meas vz1 param v(B)-v(C)
+.meas vz2 param -v(C)
+.meas VR2 PARAM v(x)-v(b)
+.backanno
+.end
