@@ -1,0 +1,13 @@
+* C:\Users\ruseler\Documents\GitHub\AOS-QUIZES\TE02\LTspice\DIODEMODEL01op.asc
+Vcc i 0 {Vcc}
+R0 o 0 {R0}
+D0 i o D0
+.model D D
+.lib C:\Users\ruseler\AppData\Local\LTspice\lib\cmp\standard.dio
+.op
+.temp {Td}
+.meas Von PARAM v(i)-v(o) - func1
+.param Vcc=20 R0=750 Td=40
+.model D0 D(Is=8p n=1.4)
+.backanno
+.end
