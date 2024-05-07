@@ -1,0 +1,969 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<?application progid="SMath Studio Desktop" version="1.0.8348.30405"?>
+<worksheet xmlns="http://smath.info/schemas/worksheet/1.0">
+  <settings ppi="96">
+    <identity>
+      <id>18a0993b-6ec3-4459-8372-8c09f79fcf41</id>
+      <revision>74</revision>
+    </identity>
+    <metadata lang="eng">
+      <author>Adriano Ruseler</author>
+    </metadata>
+    <calculation>
+      <precision>4</precision>
+      <exponentialThreshold>5</exponentialThreshold>
+      <trailingZeros>false</trailingZeros>
+      <significantDigitsMode>false</significantDigitsMode>
+      <roundingMode>0</roundingMode>
+      <approximateEqualAccuracy>0</approximateEqualAccuracy>
+      <fractions>decimal</fractions>
+    </calculation>
+    <pageModel active="false" viewMode="2" printGrid="false" printAreas="true" simpleEqualsOnly="false" printBackgroundImages="true">
+      <paper id="9" orientation="Portrait" width="827" height="1169" />
+      <margins left="39" right="39" top="49" bottom="49" />
+      <header alignment="Center" color="#a9a9a9">&amp;[DATE] &amp;[TIME] - &amp;[FILENAME]</header>
+      <footer alignment="Center" color="#a9a9a9">&amp;[PAGENUM] / &amp;[COUNT]</footer>
+      <backgrounds />
+    </pageModel>
+    <dependencies>
+      <assembly name="SMath Studio Desktop" version="1.0.8348.30405" guid="a37cba83-b69c-4c71-9992-55ff666763bd" />
+      <assembly name="MathRegion" version="1.11.8348.30405" guid="02f1ab51-215b-466e-a74d-5d8b1cf85e8d" />
+      <assembly name="PictureRegion" version="1.10.8348.30405" guid="06b5df04-393e-4be7-9107-305196fcb861" />
+      <assembly name="SpecialFunctions" version="1.12.8348.30405" guid="2814e667-4e12-48b1-8d51-194e480eabc5" />
+      <assembly name="TextRegion" version="1.11.8348.30405" guid="485d28c5-349a-48b6-93be-12a35a1c1e39" />
+      <assembly name="X-Y Plot Region (JXCharts)" version="0.2.8209.38826" guid="c12231ec-4873-43c1-a7d0-a167ebd17066" />
+    </dependencies>
+  </settings>
+  <regions type="content">
+    <region left="450" top="0" width="301" height="257" color="#000000">
+      <picture>
+        <raw format="png" encoding="base64">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</raw>
+      </picture>
+    </region>
+    <region left="0" top="18" width="93" height="30" color="#000000" fontSize="10">
+      <math>
+        <input>
+          <e type="operand">V.pk1</e>
+          <e type="operand">250</e>
+          <e type="operand" style="unit">V</e>
+          <e type="operator" args="2">*</e>
+          <e type="operator" args="2">:</e>
+        </input>
+      </math>
+    </region>
+    <region left="126" top="18" width="85" height="30" color="#000000" fontSize="10">
+      <math>
+        <input>
+          <e type="operand">I.pk1</e>
+          <e type="operand">15</e>
+          <e type="operand" style="unit">A</e>
+          <e type="operator" args="2">*</e>
+          <e type="operator" args="2">:</e>
+        </input>
+      </math>
+    </region>
+    <region left="288" top="18" width="77" height="30" color="#000000" fontSize="10">
+      <math>
+        <input>
+          <e type="operand">I.pk5</e>
+          <e type="operand">4</e>
+          <e type="operand" style="unit">A</e>
+          <e type="operator" args="2">*</e>
+          <e type="operator" args="2">:</e>
+        </input>
+      </math>
+    </region>
+    <region left="126" top="45" width="158" height="41" color="#000000" fontSize="10">
+      <math>
+        <input>
+          <e type="operand">I.ph1</e>
+          <e type="operand">20</e>
+          <e type="operand">π</e>
+          <e type="operator" args="2">*</e>
+          <e type="operand">180</e>
+          <e type="operator" args="2">/</e>
+          <e type="operator" args="2">:</e>
+        </input>
+        <result action="numeric">
+          <e type="operand">0.3491</e>
+        </result>
+      </math>
+    </region>
+    <region left="0" top="54" width="81" height="30" color="#000000" fontSize="10">
+      <math>
+        <input>
+          <e type="operand">f.1</e>
+          <e type="operand">70</e>
+          <e type="operand" style="unit">Hz</e>
+          <e type="operator" args="2">*</e>
+          <e type="operator" args="2">:</e>
+        </input>
+      </math>
+    </region>
+    <region left="288" top="54" width="158" height="41" color="#000000" fontSize="10">
+      <math>
+        <input>
+          <e type="operand">I.ph5</e>
+          <e type="operand">90</e>
+          <e type="operand">π</e>
+          <e type="operator" args="2">*</e>
+          <e type="operand">180</e>
+          <e type="operator" args="2">/</e>
+          <e type="operator" args="2">:</e>
+        </input>
+        <result action="numeric">
+          <e type="operand">1.5708</e>
+        </result>
+      </math>
+    </region>
+    <region left="0" top="90" width="77" height="30" color="#000000" fontSize="10">
+      <math>
+        <input>
+          <e type="operand">V.pk3</e>
+          <e type="operand">5</e>
+          <e type="operand" style="unit">V</e>
+          <e type="operator" args="2">*</e>
+          <e type="operator" args="2">:</e>
+        </input>
+      </math>
+    </region>
+    <region left="126" top="90" width="77" height="30" color="#000000" fontSize="10">
+      <math>
+        <input>
+          <e type="operand">I.pk3</e>
+          <e type="operand">5</e>
+          <e type="operand" style="unit">A</e>
+          <e type="operator" args="2">*</e>
+          <e type="operator" args="2">:</e>
+        </input>
+      </math>
+    </region>
+    <region left="0" top="126" width="158" height="41" color="#000000" fontSize="10">
+      <math>
+        <input>
+          <e type="operand">V.ph3</e>
+          <e type="operand">45</e>
+          <e type="operand">π</e>
+          <e type="operator" args="2">*</e>
+          <e type="operand">180</e>
+          <e type="operator" args="2">/</e>
+          <e type="operator" args="2">:</e>
+        </input>
+        <result action="numeric">
+          <e type="operand">0.7854</e>
+        </result>
+      </math>
+    </region>
+    <region left="162" top="126" width="166" height="41" color="#000000" fontSize="10">
+      <math>
+        <input>
+          <e type="operand">I.ph3</e>
+          <e type="operand">135</e>
+          <e type="operand">π</e>
+          <e type="operator" args="2">*</e>
+          <e type="operand">180</e>
+          <e type="operator" args="2">/</e>
+          <e type="operator" args="2">:</e>
+        </input>
+        <result action="numeric">
+          <e type="operand">2.3562</e>
+        </result>
+      </math>
+    </region>
+    <region left="9" top="189" width="114" height="23" color="#000000" fontSize="10">
+      <text lang="eng" width="110" fontFamily="Arial" fontSize="10">
+        <content>
+          <p>Tensão na fonte:</p>
+        </content>
+      </text>
+    </region>
+    <region left="9" top="216" width="353" height="32" color="#000000" fontSize="10">
+      <math>
+        <input>
+          <e type="operand">ωt</e>
+          <e type="function" args="1">v.in</e>
+          <e type="operand">V.pk1</e>
+          <e type="operand">ωt</e>
+          <e type="function" args="1">sin</e>
+          <e type="operator" args="2">*</e>
+          <e type="operand">V.pk3</e>
+          <e type="operand">3</e>
+          <e type="operand">ωt</e>
+          <e type="operator" args="2">*</e>
+          <e type="operand">V.ph3</e>
+          <e type="operator" args="2">+</e>
+          <e type="function" args="1">sin</e>
+          <e type="operator" args="2">*</e>
+          <e type="operator" args="2">+</e>
+          <e type="operator" args="2">:</e>
+        </input>
+      </math>
+    </region>
+    <region left="9" top="252" width="139" height="23" color="#000000" fontSize="10" isBreakable="false">
+      <text lang="eng" width="139" fontFamily="Arial" fontSize="10">
+        <content>
+          <p>Corrente na carga:</p>
+        </content>
+      </text>
+    </region>
+    <region left="9" top="279" width="573" height="32" color="#000000" fontSize="10">
+      <math>
+        <input>
+          <e type="operand">ωt</e>
+          <e type="function" args="1">i.in</e>
+          <e type="operand">I.pk1</e>
+          <e type="operand">ωt</e>
+          <e type="operand">I.ph1</e>
+          <e type="operator" args="2">+</e>
+          <e type="function" args="1">sin</e>
+          <e type="operator" args="2">*</e>
+          <e type="operand">I.pk3</e>
+          <e type="operand">3</e>
+          <e type="operand">ωt</e>
+          <e type="operator" args="2">*</e>
+          <e type="operand">I.ph3</e>
+          <e type="operator" args="2">+</e>
+          <e type="function" args="1">sin</e>
+          <e type="operator" args="2">*</e>
+          <e type="operator" args="2">+</e>
+          <e type="operand">I.pk5</e>
+          <e type="operand">5</e>
+          <e type="operand">ωt</e>
+          <e type="operator" args="2">*</e>
+          <e type="operand">I.ph5</e>
+          <e type="operator" args="2">+</e>
+          <e type="function" args="1">sin</e>
+          <e type="operator" args="2">*</e>
+          <e type="operator" args="2">+</e>
+          <e type="operator" args="2">:</e>
+        </input>
+      </math>
+    </region>
+    <region left="9" top="324" width="353" height="219" color="#000000" bgColor="#ffffff" fontSize="10">
+      <xyplot width="343" height="211" points="100" name="XYPlot">
+        <chartstyle backcolor="White" bordercolor="Black" />
+        <propertiessource index="1" sourcetype="PropertyGrid" />
+        <grid gridcolor="LightGray" gridpattern="Dash" gridthickness="1" isxgrid="true" isygrid="true" isy2grid="false" />
+        <xaxes xmin="0" xmax="6.28" xtick="0.7854" visible="True" decimalplaces="3" numberformat="General" />
+        <yaxes ymin="-291" ymax="309" ytick="50" visible="True" decimalplaces="3" numberformat="General" />
+        <y2axes isy2axis="false" y2min="-1" y2max="1" y2tick="0.5" visible="True" decimalplaces="3" numberformat="General" />
+        <title2d title="" titlefont="Arial, 10pt" titlefontcolor="Black" />
+        <xylabel labelfont="Arial, 10pt" labelfontcolor="Black" tickfont="Arial, 8pt" tickfontcolor="Black" xlabel="wt" ylabel="Vin" y2label="y2" />
+        <legend isbordervisible="true" islegendvisible="true" legendbackcolor="White" legendbordercolor="Black" legendfont="Arial, 8pt" legendposition="NorthEast" textcolor="Black" />
+        <traces>
+          <trace seriesname="Vi" isy2data="false" isvisible="true" plotmethod="Lines" lineantialias="true" linecolor="Blue" linethickness="1" linepattern="Solid" symbolantialias="true" symbolsize="8" symboltype="None" symbolborderthickness="1" symbolbordercolor="Black" symbolfillcolor="White" />
+          <trace seriesname="V1" isy2data="false" isvisible="true" plotmethod="Lines" lineantialias="true" linecolor="Red" linethickness="1" linepattern="Solid" symbolantialias="true" symbolsize="8" symboltype="None" symbolborderthickness="1" symbolbordercolor="Black" symbolfillcolor="White" />
+          <trace seriesname="V3" isy2data="false" isvisible="true" plotmethod="Lines" lineantialias="true" linecolor="Green" linethickness="1" linepattern="Solid" symbolantialias="true" symbolsize="8" symboltype="None" symbolborderthickness="1" symbolbordercolor="Black" symbolfillcolor="White" />
+        </traces>
+        <input>
+          <e type="operand">ωt</e>
+          <e type="function" args="1">v.in</e>
+          <e type="operand">V.pk1</e>
+          <e type="operand">ωt</e>
+          <e type="function" args="1">sin</e>
+          <e type="operator" args="2">*</e>
+          <e type="operand">V.pk3</e>
+          <e type="operand">3</e>
+          <e type="operand">ωt</e>
+          <e type="operator" args="2">*</e>
+          <e type="operand">V.ph3</e>
+          <e type="operator" args="2">+</e>
+          <e type="function" args="1">sin</e>
+          <e type="operator" args="2">*</e>
+          <e type="operand">3</e>
+          <e type="operand">1</e>
+          <e type="function" args="5">sys</e>
+        </input>
+      </xyplot>
+    </region>
+    <region left="387" top="324" width="353" height="219" color="#000000" bgColor="#ffffff" fontSize="10">
+      <xyplot width="343" height="211" points="100" name="XYPlot">
+        <chartstyle backcolor="White" bordercolor="Black" />
+        <propertiessource index="1" sourcetype="PropertyGrid" />
+        <grid gridcolor="LightGray" gridpattern="Dash" gridthickness="1" isxgrid="true" isygrid="true" isy2grid="false" />
+        <xaxes xmin="2.235174E-08" xmax="6.28" xtick="2" visible="True" decimalplaces="3" numberformat="General" />
+        <yaxes ymin="-18.10427" ymax="21.89573" ytick="5" visible="True" decimalplaces="3" numberformat="General" />
+        <y2axes isy2axis="false" y2min="-1" y2max="1" y2tick="0.5" visible="True" decimalplaces="3" numberformat="General" />
+        <title2d title="" titlefont="Arial, 10pt" titlefontcolor="Black" />
+        <xylabel labelfont="Arial, 10pt" labelfontcolor="Black" tickfont="Arial, 8pt" tickfontcolor="Black" xlabel="wt" ylabel="Iin" y2label="y2" />
+        <legend isbordervisible="true" islegendvisible="true" legendbackcolor="White" legendbordercolor="Black" legendfont="Arial, 8pt" legendposition="NorthEast" textcolor="Black" />
+        <traces>
+          <trace seriesname="Ii" isy2data="false" isvisible="true" plotmethod="Lines" lineantialias="true" linecolor="Blue" linethickness="1" linepattern="Solid" symbolantialias="true" symbolsize="8" symboltype="None" symbolborderthickness="1" symbolbordercolor="Black" symbolfillcolor="White" />
+          <trace seriesname="I1" isy2data="false" isvisible="true" plotmethod="Lines" lineantialias="true" linecolor="Red" linethickness="1" linepattern="Solid" symbolantialias="true" symbolsize="8" symboltype="None" symbolborderthickness="1" symbolbordercolor="Black" symbolfillcolor="White" />
+          <trace seriesname="I3" isy2data="false" isvisible="true" plotmethod="Lines" lineantialias="true" linecolor="Green" linethickness="1" linepattern="Solid" symbolantialias="true" symbolsize="8" symboltype="None" symbolborderthickness="1" symbolbordercolor="Black" symbolfillcolor="White" />
+          <trace seriesname="I5" isy2data="false" isvisible="true" plotmethod="Lines" lineantialias="true" linecolor="Fuchsia" linethickness="1" linepattern="Solid" symbolantialias="true" symbolsize="8" symboltype="None" symbolborderthickness="1" symbolbordercolor="Black" symbolfillcolor="White" />
+        </traces>
+        <input>
+          <e type="operand">ωt</e>
+          <e type="function" args="1">i.in</e>
+          <e type="operand">I.pk1</e>
+          <e type="operand">ωt</e>
+          <e type="operand">I.ph1</e>
+          <e type="operator" args="2">+</e>
+          <e type="function" args="1">sin</e>
+          <e type="operator" args="2">*</e>
+          <e type="operand">I.pk3</e>
+          <e type="operand">3</e>
+          <e type="operand">ωt</e>
+          <e type="operator" args="2">*</e>
+          <e type="operand">I.ph3</e>
+          <e type="operator" args="2">+</e>
+          <e type="function" args="1">sin</e>
+          <e type="operator" args="2">*</e>
+          <e type="operand">I.pk5</e>
+          <e type="operand">5</e>
+          <e type="operand">ωt</e>
+          <e type="operator" args="2">*</e>
+          <e type="operand">I.ph5</e>
+          <e type="operator" args="2">+</e>
+          <e type="function" args="1">sin</e>
+          <e type="operator" args="2">*</e>
+          <e type="operand">4</e>
+          <e type="operand">1</e>
+          <e type="function" args="6">sys</e>
+        </input>
+      </xyplot>
+    </region>
+    <region left="18" top="657" width="274" height="23" color="#000000" fontSize="10">
+      <text lang="eng" fontFamily="Arial" fontSize="10">
+        <content>
+          <p>a) Qual o valor eficaz da corrente de carga?</p>
+        </content>
+      </text>
+    </region>
+    <region left="18" top="684" width="331" height="71" color="#000000" fontSize="10">
+      <math>
+        <input>
+          <e type="operand">I.RMS</e>
+          <e type="operand">1</e>
+          <e type="operand">2</e>
+          <e type="operand">π</e>
+          <e type="operator" args="2">*</e>
+          <e type="operator" args="2">/</e>
+          <e type="operand">ωt</e>
+          <e type="function" args="1">i.in</e>
+          <e type="bracket">(</e>
+          <e type="operand">2</e>
+          <e type="operator" args="2">^</e>
+          <e type="operand">ωt</e>
+          <e type="operand">0</e>
+          <e type="operand">2</e>
+          <e type="operand">π</e>
+          <e type="operator" args="2">*</e>
+          <e type="function" args="4">int</e>
+          <e type="operator" args="2">*</e>
+          <e type="function" args="1">sqrt</e>
+          <e type="operator" args="2">:</e>
+        </input>
+        <result action="numeric">
+          <e type="operand">11.5326</e>
+          <e type="operand" style="unit">A</e>
+          <e type="operator" args="2">*</e>
+        </result>
+      </math>
+    </region>
+    <region left="414" top="684" width="263" height="60" color="#000000" fontSize="10">
+      <math>
+        <input>
+          <e type="operand">I.pk1</e>
+          <e type="operand">2</e>
+          <e type="operator" args="2">^</e>
+          <e type="operand">I.pk3</e>
+          <e type="operand">2</e>
+          <e type="operator" args="2">^</e>
+          <e type="operator" args="2">+</e>
+          <e type="operand">I.pk5</e>
+          <e type="operand">2</e>
+          <e type="operator" args="2">^</e>
+          <e type="operator" args="2">+</e>
+          <e type="function" args="1">sqrt</e>
+          <e type="operand">2</e>
+          <e type="function" args="1">sqrt</e>
+          <e type="operator" args="2">/</e>
+        </input>
+        <result action="numeric">
+          <e type="operand">11.5326</e>
+          <e type="operand" style="unit">A</e>
+          <e type="operator" args="2">*</e>
+        </result>
+      </math>
+    </region>
+    <region left="18" top="756" width="370" height="23" color="#000000" fontSize="10">
+      <text lang="eng" fontFamily="Arial" fontSize="10">
+        <content>
+          <p>b) Qual o valor eficaz da fundamental de corrente de carga?</p>
+        </content>
+      </text>
+    </region>
+    <region left="27" top="792" width="162" height="49" color="#000000" fontSize="10">
+      <math>
+        <input>
+          <e type="operand">I.1</e>
+          <e type="operand">I.pk1</e>
+          <e type="operand">2</e>
+          <e type="function" args="1">sqrt</e>
+          <e type="operator" args="2">/</e>
+          <e type="operator" args="2">:</e>
+        </input>
+        <result action="numeric">
+          <e type="operand">10.6066</e>
+          <e type="operand" style="unit">A</e>
+          <e type="operator" args="2">*</e>
+        </result>
+      </math>
+    </region>
+    <region left="18" top="846" width="371" height="23" color="#000000" fontSize="10">
+      <text lang="eng" fontFamily="Arial" fontSize="10">
+        <content>
+          <p>c) Qual o valor eficaz dos harmônicos de corrente de carga?</p>
+        </content>
+      </text>
+    </region>
+    <region left="27" top="882" width="234" height="60" color="#000000" fontSize="10">
+      <math>
+        <input>
+          <e type="operand">I.H</e>
+          <e type="operand">I.pk3</e>
+          <e type="operand">2</e>
+          <e type="operator" args="2">^</e>
+          <e type="operand">I.pk5</e>
+          <e type="operand">2</e>
+          <e type="operator" args="2">^</e>
+          <e type="operator" args="2">+</e>
+          <e type="function" args="1">sqrt</e>
+          <e type="operand">2</e>
+          <e type="function" args="1">sqrt</e>
+          <e type="operator" args="2">/</e>
+          <e type="operator" args="2">:</e>
+        </input>
+        <result action="numeric">
+          <e type="operand">4.5277</e>
+          <e type="operand" style="unit">A</e>
+          <e type="operator" args="2">*</e>
+        </result>
+      </math>
+    </region>
+    <region left="432" top="882" width="181" height="41" color="#000000" fontSize="10">
+      <math>
+        <input>
+          <e type="operand">I.RMS</e>
+          <e type="operand">2</e>
+          <e type="operator" args="2">^</e>
+          <e type="operand">I.1</e>
+          <e type="operand">2</e>
+          <e type="operator" args="2">^</e>
+          <e type="operator" args="2">-</e>
+          <e type="function" args="1">sqrt</e>
+        </input>
+        <result action="numeric">
+          <e type="operand">4.5277</e>
+          <e type="operand" style="unit">A</e>
+          <e type="operator" args="2">*</e>
+        </result>
+      </math>
+    </region>
+    <region left="18" top="945" width="262" height="23" color="#000000" fontSize="10">
+      <text lang="eng" fontFamily="Arial" fontSize="10">
+        <content>
+          <p>d) Qual o valor eficaz da tensão na fonte?</p>
+        </content>
+      </text>
+    </region>
+    <region left="18" top="972" width="331" height="71" color="#000000" fontSize="10">
+      <math>
+        <input>
+          <e type="operand">V.RMS</e>
+          <e type="operand">1</e>
+          <e type="operand">2</e>
+          <e type="operand">π</e>
+          <e type="operator" args="2">*</e>
+          <e type="operator" args="2">/</e>
+          <e type="operand">ωt</e>
+          <e type="function" args="1">v.in</e>
+          <e type="bracket">(</e>
+          <e type="operand">2</e>
+          <e type="operator" args="2">^</e>
+          <e type="operand">ωt</e>
+          <e type="operand">0</e>
+          <e type="operand">2</e>
+          <e type="operand">π</e>
+          <e type="operator" args="2">*</e>
+          <e type="function" args="4">int</e>
+          <e type="operator" args="2">*</e>
+          <e type="function" args="1">sqrt</e>
+          <e type="operator" args="2">:</e>
+        </input>
+        <result action="numeric">
+          <e type="operand">176.812</e>
+          <e type="operand" style="unit">V</e>
+          <e type="operator" args="2">*</e>
+        </result>
+      </math>
+    </region>
+    <region left="405" top="972" width="207" height="60" color="#000000" fontSize="10">
+      <math>
+        <input>
+          <e type="operand">V.pk1</e>
+          <e type="operand">2</e>
+          <e type="operator" args="2">^</e>
+          <e type="operand">V.pk3</e>
+          <e type="operand">2</e>
+          <e type="operator" args="2">^</e>
+          <e type="operator" args="2">+</e>
+          <e type="function" args="1">sqrt</e>
+          <e type="operand">2</e>
+          <e type="function" args="1">sqrt</e>
+          <e type="operator" args="2">/</e>
+        </input>
+        <result action="numeric">
+          <e type="operand">176.812</e>
+          <e type="operand" style="unit">V</e>
+          <e type="operator" args="2">*</e>
+        </result>
+      </math>
+    </region>
+    <region left="18" top="1089" width="359" height="23" color="#000000" fontSize="10">
+      <text lang="eng" fontFamily="Arial" fontSize="10">
+        <content>
+          <p>e) Qual o valor eficaz dos harmônicos de tensão na fonte?</p>
+        </content>
+      </text>
+    </region>
+    <region left="18" top="1107" width="154" height="49" color="#000000" fontSize="10">
+      <math>
+        <input>
+          <e type="operand">V.H</e>
+          <e type="operand">V.pk3</e>
+          <e type="operand">2</e>
+          <e type="function" args="1">sqrt</e>
+          <e type="operator" args="2">/</e>
+          <e type="operator" args="2">:</e>
+        </input>
+        <result action="numeric">
+          <e type="operand">3.5355</e>
+          <e type="operand" style="unit">V</e>
+          <e type="operator" args="2">*</e>
+        </result>
+      </math>
+    </region>
+    <region left="18" top="1179" width="278" height="23" color="#000000" fontSize="10">
+      <text lang="eng" fontFamily="Arial" fontSize="10">
+        <content>
+          <p>f) Qual o valor da THD de corrente na fonte?</p>
+        </content>
+      </text>
+    </region>
+    <region left="261" top="1206" width="187" height="64" color="#000000" fontSize="10">
+      <math>
+        <input>
+          <e type="operand">I.pk3</e>
+          <e type="operand">2</e>
+          <e type="operator" args="2">^</e>
+          <e type="operand">I.pk5</e>
+          <e type="operand">2</e>
+          <e type="operator" args="2">^</e>
+          <e type="operator" args="2">+</e>
+          <e type="function" args="1">sqrt</e>
+          <e type="operand">I.pk1</e>
+          <e type="operator" args="2">/</e>
+        </input>
+        <result action="numeric">
+          <e type="operand">0.4269</e>
+        </result>
+      </math>
+    </region>
+    <region left="513" top="1206" width="166" height="66" color="#000000" fontSize="10">
+      <math>
+        <input>
+          <e type="operand">I.RMS</e>
+          <e type="operand">I.1</e>
+          <e type="operator" args="2">/</e>
+          <e type="bracket">(</e>
+          <e type="operand">2</e>
+          <e type="operator" args="2">^</e>
+          <e type="operand">1</e>
+          <e type="operator" args="2">-</e>
+          <e type="function" args="1">sqrt</e>
+        </input>
+        <result action="numeric">
+          <e type="operand">0.4269</e>
+        </result>
+      </math>
+    </region>
+    <region left="27" top="1215" width="145" height="53" color="#000000" fontSize="10">
+      <math>
+        <input>
+          <e type="operand">THD.i</e>
+          <e type="operand">I.H</e>
+          <e type="operand">I.1</e>
+          <e type="operator" args="2">/</e>
+          <e type="operator" args="2">:</e>
+        </input>
+        <result action="numeric">
+          <e type="operand">0.4269</e>
+        </result>
+      </math>
+    </region>
+    <region left="18" top="1287" width="222" height="23" color="#000000" fontSize="10">
+      <text lang="eng" fontFamily="Arial" fontSize="10">
+        <content>
+          <p>g) Qual a potência ativa na carga? </p>
+        </content>
+      </text>
+    </region>
+    <region left="27" top="1323" width="205" height="30" color="#000000" fontSize="10">
+      <math>
+        <input>
+          <e type="operand">ωt</e>
+          <e type="function" args="1">p.in</e>
+          <e type="operand">ωt</e>
+          <e type="function" args="1">v.in</e>
+          <e type="operand">ωt</e>
+          <e type="function" args="1">i.in</e>
+          <e type="operator" args="2">*</e>
+          <e type="operator" args="2">:</e>
+        </input>
+      </math>
+    </region>
+    <region left="27" top="1359" width="305" height="69" color="#000000" fontSize="10">
+      <math>
+        <input>
+          <e type="operand">P.in</e>
+          <e type="operand">1</e>
+          <e type="operand">2</e>
+          <e type="operand">π</e>
+          <e type="operator" args="2">*</e>
+          <e type="operator" args="2">/</e>
+          <e type="operand">ωt</e>
+          <e type="function" args="1">p.in</e>
+          <e type="operand">ωt</e>
+          <e type="operand">0</e>
+          <e type="operand">2</e>
+          <e type="operand">π</e>
+          <e type="operator" args="2">*</e>
+          <e type="function" args="4">int</e>
+          <e type="operator" args="2">*</e>
+          <e type="operator" args="2">:</e>
+        </input>
+        <result action="numeric">
+          <e type="operand">1761.9237</e>
+          <e type="operand" style="unit">W</e>
+          <e type="operator" args="2">*</e>
+        </result>
+      </math>
+    </region>
+    <region left="27" top="1449" width="239" height="23" color="#000000" fontSize="10">
+      <text lang="eng" fontFamily="Arial" fontSize="10">
+        <content>
+          <p>h) Qual a potência aparente na fonte?</p>
+        </content>
+      </text>
+    </region>
+    <region left="36" top="1485" width="210" height="30" color="#000000" fontSize="10">
+      <math>
+        <input>
+          <e type="operand">S.in</e>
+          <e type="operand">V.RMS</e>
+          <e type="operand">I.RMS</e>
+          <e type="operator" args="2">*</e>
+          <e type="operator" args="2">:</e>
+        </input>
+        <result action="numeric">
+          <e type="operand">2039.096</e>
+          <e type="operand" style="unit">W</e>
+          <e type="operator" args="2">*</e>
+        </result>
+      </math>
+    </region>
+    <region left="27" top="1539" width="175" height="23" color="#000000" fontSize="10">
+      <text lang="eng" fontFamily="Arial" fontSize="10">
+        <content>
+          <p>i) Qual o fator de potência?</p>
+        </content>
+      </text>
+    </region>
+    <region left="36" top="1575" width="137" height="53" color="#000000" fontSize="10">
+      <math>
+        <input>
+          <e type="operand">FP</e>
+          <e type="operand">P.in</e>
+          <e type="operand">S.in</e>
+          <e type="operator" args="2">/</e>
+          <e type="operator" args="2">:</e>
+        </input>
+        <result action="numeric">
+          <e type="operand">0.8641</e>
+        </result>
+      </math>
+    </region>
+    <region left="27" top="1647" width="247" height="23" color="#000000" fontSize="10">
+      <text lang="eng" fontFamily="Arial" fontSize="10">
+        <content>
+          <p>Análise harmônica da corrente na fonte</p>
+        </content>
+      </text>
+    </region>
+    <region left="36" top="1683" width="134" height="30" color="#000000" fontSize="10">
+      <math>
+        <input>
+          <e type="operand">ωt</e>
+          <e type="function" args="1">f.x</e>
+          <e type="operand">ωt</e>
+          <e type="function" args="1">i.in</e>
+          <e type="operator" args="2">:</e>
+        </input>
+      </math>
+    </region>
+    <region left="36" top="1728" width="274" height="69" color="#000000" fontSize="10">
+      <math>
+        <input>
+          <e type="operand">n</e>
+          <e type="function" args="1">a</e>
+          <e type="operand">1</e>
+          <e type="operand">π</e>
+          <e type="operator" args="2">/</e>
+          <e type="operand">ωt</e>
+          <e type="function" args="1">f.x</e>
+          <e type="operand">n</e>
+          <e type="operand">ωt</e>
+          <e type="operator" args="2">*</e>
+          <e type="function" args="1">cos</e>
+          <e type="operator" args="2">*</e>
+          <e type="operand">ωt</e>
+          <e type="operand">π</e>
+          <e type="operator" args="1">-</e>
+          <e type="operand">π</e>
+          <e type="function" args="4">int</e>
+          <e type="operator" args="2">*</e>
+          <e type="operator" args="2">:</e>
+        </input>
+      </math>
+    </region>
+    <region left="378" top="1728" width="274" height="69" color="#000000" fontSize="10">
+      <math>
+        <input>
+          <e type="operand">n</e>
+          <e type="function" args="1">b</e>
+          <e type="operand">1</e>
+          <e type="operand">π</e>
+          <e type="operator" args="2">/</e>
+          <e type="operand">ωt</e>
+          <e type="function" args="1">f.x</e>
+          <e type="operand">n</e>
+          <e type="operand">ωt</e>
+          <e type="operator" args="2">*</e>
+          <e type="function" args="1">sin</e>
+          <e type="operator" args="2">*</e>
+          <e type="operand">ωt</e>
+          <e type="operand">π</e>
+          <e type="operator" args="1">-</e>
+          <e type="operand">π</e>
+          <e type="function" args="4">int</e>
+          <e type="operator" args="2">*</e>
+          <e type="operator" args="2">:</e>
+        </input>
+      </math>
+    </region>
+    <region left="36" top="1809" width="185" height="37" color="#000000" fontSize="10">
+      <math>
+        <input>
+          <e type="operand">n</e>
+          <e type="function" args="1">c</e>
+          <e type="operand">n</e>
+          <e type="function" args="1">a</e>
+          <e type="operand">2</e>
+          <e type="operator" args="2">^</e>
+          <e type="operand">n</e>
+          <e type="function" args="1">b</e>
+          <e type="operand">2</e>
+          <e type="operator" args="2">^</e>
+          <e type="operator" args="2">+</e>
+          <e type="function" args="1">sqrt</e>
+          <e type="operator" args="2">:</e>
+        </input>
+      </math>
+    </region>
+    <region left="378" top="1809" width="191" height="47" color="#000000" fontSize="10">
+      <math>
+        <input>
+          <e type="operand">n</e>
+          <e type="function" args="1">δ</e>
+          <e type="operand">n</e>
+          <e type="function" args="1">b</e>
+          <e type="operand">n</e>
+          <e type="function" args="1">a</e>
+          <e type="operator" args="2">/</e>
+          <e type="operator" args="1">-</e>
+          <e type="function" args="1">atan</e>
+          <e type="operand">π</e>
+          <e type="operand">2</e>
+          <e type="operator" args="2">/</e>
+          <e type="operator" args="2">+</e>
+          <e type="operator" args="2">:</e>
+        </input>
+      </math>
+    </region>
+    <region left="36" top="1872" width="109" height="45" color="#000000" fontSize="10">
+      <math>
+        <input>
+          <e type="operand">n</e>
+          <e type="function" args="1">I.h</e>
+          <e type="operand">n</e>
+          <e type="function" args="1">c</e>
+          <e type="operand">2</e>
+          <e type="function" args="1">sqrt</e>
+          <e type="operator" args="2">/</e>
+          <e type="operator" args="2">:</e>
+        </input>
+      </math>
+    </region>
+    <region left="333" top="1890" width="128" height="49" color="#000000" fontSize="10">
+      <math>
+        <input>
+          <e type="operand">I.pk1</e>
+          <e type="operand">2</e>
+          <e type="function" args="1">sqrt</e>
+          <e type="operator" args="2">/</e>
+        </input>
+        <result action="numeric">
+          <e type="operand">10.6066</e>
+          <e type="operand" style="unit">A</e>
+          <e type="operator" args="2">*</e>
+        </result>
+      </math>
+    </region>
+    <region left="576" top="1890" width="103" height="30" color="#000000" fontSize="10">
+      <math>
+        <input>
+          <e type="operand">I.ph1</e>
+        </input>
+        <result action="numeric">
+          <e type="operand">0.3491</e>
+        </result>
+      </math>
+    </region>
+    <region left="36" top="1926" width="169" height="31" color="#000000" fontSize="10">
+      <math>
+        <input>
+          <e type="operand">I.1</e>
+          <e type="operand">1</e>
+          <e type="function" args="1">I.h</e>
+          <e type="operator" args="2">:</e>
+        </input>
+        <result action="numeric">
+          <e type="operand">10.6066</e>
+          <e type="operand" style="unit">A</e>
+          <e type="operator" args="2">*</e>
+        </result>
+      </math>
+    </region>
+    <region left="567" top="1926" width="107" height="26" color="#000000" fontSize="10">
+      <math>
+        <input>
+          <e type="operand">1</e>
+          <e type="function" args="1">δ</e>
+        </input>
+        <result action="numeric">
+          <e type="operand">0.3491</e>
+        </result>
+      </math>
+    </region>
+    <region left="333" top="1944" width="120" height="49" color="#000000" fontSize="10">
+      <math>
+        <input>
+          <e type="operand">I.pk3</e>
+          <e type="operand">2</e>
+          <e type="function" args="1">sqrt</e>
+          <e type="operator" args="2">/</e>
+        </input>
+        <result action="numeric">
+          <e type="operand">3.5355</e>
+          <e type="operand" style="unit">A</e>
+          <e type="operator" args="2">*</e>
+        </result>
+      </math>
+    </region>
+    <region left="576" top="1971" width="103" height="30" color="#000000" fontSize="10">
+      <math>
+        <input>
+          <e type="operand">I.ph3</e>
+        </input>
+        <result action="numeric">
+          <e type="operand">2.3562</e>
+        </result>
+      </math>
+    </region>
+    <region left="36" top="1980" width="161" height="31" color="#000000" fontSize="10">
+      <math>
+        <input>
+          <e type="operand">I.3</e>
+          <e type="operand">3</e>
+          <e type="function" args="1">I.h</e>
+          <e type="operator" args="2">:</e>
+        </input>
+        <result action="numeric">
+          <e type="operand">3.5355</e>
+          <e type="operand" style="unit">A</e>
+          <e type="operator" args="2">*</e>
+        </result>
+      </math>
+    </region>
+    <region left="333" top="1998" width="120" height="49" color="#000000" fontSize="10">
+      <math>
+        <input>
+          <e type="operand">I.pk5</e>
+          <e type="operand">2</e>
+          <e type="function" args="1">sqrt</e>
+          <e type="operator" args="2">/</e>
+        </input>
+        <result action="numeric">
+          <e type="operand">2.8284</e>
+          <e type="operand" style="unit">A</e>
+          <e type="operator" args="2">*</e>
+        </result>
+      </math>
+    </region>
+    <region left="567" top="2007" width="107" height="26" color="#000000" fontSize="10">
+      <math>
+        <input>
+          <e type="operand">3</e>
+          <e type="function" args="1">δ</e>
+        </input>
+        <result action="numeric">
+          <e type="operand">2.3562</e>
+        </result>
+      </math>
+    </region>
+    <region left="36" top="2025" width="161" height="31" color="#000000" fontSize="10">
+      <math>
+        <input>
+          <e type="operand">I.5</e>
+          <e type="operand">5</e>
+          <e type="function" args="1">I.h</e>
+          <e type="operator" args="2">:</e>
+        </input>
+        <result action="numeric">
+          <e type="operand">2.8284</e>
+          <e type="operand" style="unit">A</e>
+          <e type="operator" args="2">*</e>
+        </result>
+      </math>
+    </region>
+  </regions>
+  <regions type="header">
+    <region left="3" top="0" width="273" height="68" color="#000000" fontSize="8">
+      <text lang="por" fontFamily="Arial" fontSize="10">
+        <content>
+          <p>
+            <span style="font-size: 8px;">Universidade Tecnológica Federal do Paraná - UTFPR</span>
+            <br />
+            <span style="font-size: 8px;">Departamento Acadêmico de Eletrotécnica - DAELT</span>
+            <br />
+            <span style="font-size: 8px;">Prof. Adriano Ruseler, Dr. Eng.</span>
+            <br />
+          </p>
+        </content>
+      </text>
+    </region>
+  </regions>
+</worksheet>

@@ -1,0 +1,611 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<?application progid="SMath Studio Desktop" version="1.0.8253.4763"?>
+<worksheet xmlns="http://smath.info/schemas/worksheet/1.0">
+  <settings ppi="96">
+    <identity>
+      <id>18a0993b-6ec3-4459-8372-8c09f79fcf41</id>
+      <revision>112</revision>
+    </identity>
+    <metadata lang="eng">
+      <author>Adriano Ruseler</author>
+    </metadata>
+    <calculation>
+      <precision>4</precision>
+      <exponentialThreshold>5</exponentialThreshold>
+      <trailingZeros>false</trailingZeros>
+      <significantDigitsMode>false</significantDigitsMode>
+      <roundingMode>0</roundingMode>
+      <approximateEqualAccuracy>0</approximateEqualAccuracy>
+      <fractions>decimal</fractions>
+    </calculation>
+    <pageModel active="false" viewMode="2" printGrid="false" printAreas="true" simpleEqualsOnly="false" printBackgroundImages="true">
+      <paper id="9" orientation="Portrait" width="827" height="1169" />
+      <margins left="39" right="39" top="49" bottom="49" />
+      <header alignment="Center" color="#a9a9a9">&amp;[DATE] &amp;[TIME] - &amp;[FILENAME]</header>
+      <footer alignment="Center" color="#a9a9a9">&amp;[PAGENUM] / &amp;[COUNT]</footer>
+      <backgrounds />
+    </pageModel>
+    <dependencies>
+      <assembly name="SMath Studio Desktop" version="1.0.8253.4763" guid="a37cba83-b69c-4c71-9992-55ff666763bd" />
+      <assembly name="MathRegion" version="1.11.8253.4763" guid="02f1ab51-215b-466e-a74d-5d8b1cf85e8d" />
+      <assembly name="PictureRegion" version="1.10.8253.4763" guid="06b5df04-393e-4be7-9107-305196fcb861" />
+      <assembly name="SpecialFunctions" version="1.12.8253.4763" guid="2814e667-4e12-48b1-8d51-194e480eabc5" />
+      <assembly name="TextRegion" version="1.11.8253.4763" guid="485d28c5-349a-48b6-93be-12a35a1c1e39" />
+      <assembly name="X-Y Plot Region (JXCharts)" version="0.2.8209.38826" guid="c12231ec-4873-43c1-a7d0-a167ebd17066" />
+    </dependencies>
+  </settings>
+  <regions type="content">
+    <region left="18" top="27" width="81" height="30" color="#000000" fontSize="10">
+      <math>
+        <input>
+          <e type="operand">V.i</e>
+          <e type="operand">150</e>
+          <e type="operand" style="unit">V</e>
+          <e type="operator" args="2">*</e>
+          <e type="operator" args="2">:</e>
+        </input>
+      </math>
+    </region>
+    <region left="162" top="27" width="189" height="32" color="#000000" fontSize="10">
+      <math>
+        <input>
+          <e type="operand">V.ipk</e>
+          <e type="operand">V.i</e>
+          <e type="operand">2</e>
+          <e type="function" args="1">sqrt</e>
+          <e type="operator" args="2">*</e>
+          <e type="operator" args="2">:</e>
+        </input>
+        <result action="numeric">
+          <e type="operand">212.132</e>
+          <e type="operand" style="unit">V</e>
+          <e type="operator" args="2">*</e>
+        </result>
+      </math>
+    </region>
+    <region left="486" top="27" width="194" height="135" color="#000000">
+      <picture>
+        <raw format="png" encoding="base64">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</raw>
+      </picture>
+    </region>
+    <region left="18" top="54" width="81" height="30" color="#000000" fontSize="10">
+      <math>
+        <input>
+          <e type="operand">f.i</e>
+          <e type="operand">60</e>
+          <e type="operand" style="unit">Hz</e>
+          <e type="operator" args="2">*</e>
+          <e type="operator" args="2">:</e>
+        </input>
+      </math>
+    </region>
+    <region left="18" top="81" width="81" height="30" color="#000000" fontSize="10">
+      <math>
+        <input>
+          <e type="operand">L.0</e>
+          <e type="operand">68</e>
+          <e type="operand" style="unit">mH</e>
+          <e type="operator" args="2">*</e>
+          <e type="operator" args="2">:</e>
+        </input>
+      </math>
+    </region>
+    <region left="153" top="81" width="81" height="30" color="#000000" fontSize="10">
+      <math>
+        <input>
+          <e type="operand">R.0</e>
+          <e type="operand">2.7</e>
+          <e type="operand" style="unit">Ω</e>
+          <e type="operator" args="2">*</e>
+          <e type="operator" args="2">:</e>
+        </input>
+      </math>
+    </region>
+    <region left="18" top="126" width="195" height="30" color="#000000" fontSize="10">
+      <math>
+        <input>
+          <e type="operand">ω.0</e>
+          <e type="operand">2</e>
+          <e type="operand">π</e>
+          <e type="operator" args="2">*</e>
+          <e type="operand">f.i</e>
+          <e type="operator" args="2">*</e>
+          <e type="operator" args="2">:</e>
+        </input>
+        <result action="numeric">
+          <e type="operand">376.9911</e>
+          <e type="operand" style="unit">Hz</e>
+          <e type="operator" args="2">*</e>
+        </result>
+      </math>
+    </region>
+    <region left="18" top="162" width="170" height="30" color="#000000" fontSize="10">
+      <math>
+        <input>
+          <e type="operand">X.0</e>
+          <e type="operand">ω.0</e>
+          <e type="operand">L.0</e>
+          <e type="operator" args="2">*</e>
+          <e type="operator" args="2">:</e>
+        </input>
+        <result action="numeric">
+          <e type="operand">25.6354</e>
+          <e type="operand" style="unit">Ω</e>
+          <e type="operator" args="2">*</e>
+        </result>
+      </math>
+    </region>
+    <region left="261" top="162" width="169" height="30" color="#000000" fontSize="10">
+      <math>
+        <input>
+          <e type="operand">2</e>
+          <e type="operand">π</e>
+          <e type="operator" args="2">*</e>
+          <e type="operand">f.i</e>
+          <e type="operator" args="2">*</e>
+          <e type="operand">L.0</e>
+          <e type="operator" args="2">*</e>
+        </input>
+        <result action="numeric">
+          <e type="operand">25.6354</e>
+          <e type="operand" style="unit">Ω</e>
+          <e type="operator" args="2">*</e>
+        </result>
+      </math>
+    </region>
+    <region left="468" top="189" width="200" height="55" color="#000000" fontSize="10">
+      <math>
+        <input>
+          <e type="operand">2</e>
+          <e type="operand">π</e>
+          <e type="operator" args="2">*</e>
+          <e type="operand">f.i</e>
+          <e type="operator" args="2">*</e>
+          <e type="operand">L.0</e>
+          <e type="operator" args="2">*</e>
+          <e type="operand">R.0</e>
+          <e type="operator" args="2">/</e>
+          <e type="function" args="1">atan</e>
+        </input>
+        <result action="numeric">
+          <e type="operand">1.4659</e>
+        </result>
+      </math>
+    </region>
+    <region left="18" top="207" width="212" height="41" color="#000000" fontSize="10">
+      <math>
+        <input>
+          <e type="operand">Z.0</e>
+          <e type="operand">R.0</e>
+          <e type="operand">2</e>
+          <e type="operator" args="2">^</e>
+          <e type="operand">X.0</e>
+          <e type="operand">2</e>
+          <e type="operator" args="2">^</e>
+          <e type="operator" args="2">+</e>
+          <e type="function" args="1">sqrt</e>
+          <e type="operator" args="2">:</e>
+        </input>
+        <result action="numeric">
+          <e type="operand">25.7772</e>
+          <e type="operand" style="unit">Ω</e>
+          <e type="operator" args="2">*</e>
+        </result>
+      </math>
+    </region>
+    <region left="18" top="270" width="176" height="55" color="#000000" fontSize="10">
+      <math>
+        <input>
+          <e type="operand">θ.0</e>
+          <e type="operand">X.0</e>
+          <e type="operand">R.0</e>
+          <e type="operator" args="2">/</e>
+          <e type="function" args="1">atan</e>
+          <e type="operator" args="2">:</e>
+        </input>
+        <result action="numeric">
+          <e type="operand">1.4659</e>
+        </result>
+      </math>
+    </region>
+    <region left="450" top="270" width="182" height="53" color="#000000" fontSize="10">
+      <math>
+        <input>
+          <e type="operand">Δ.t</e>
+          <e type="operand">θ.0</e>
+          <e type="operand">2</e>
+          <e type="operand">π</e>
+          <e type="operator" args="2">*</e>
+          <e type="operand">f.i</e>
+          <e type="operator" args="2">*</e>
+          <e type="operator" args="2">/</e>
+          <e type="operator" args="2">:</e>
+        </input>
+        <contract>
+          <e type="operand" style="unit">ms</e>
+        </contract>
+        <result action="numeric">
+          <e type="operand">3.8883</e>
+        </result>
+      </math>
+    </region>
+    <region left="225" top="279" width="135" height="41" color="#000000" fontSize="10">
+      <math>
+        <input>
+          <e type="operand">θ.0</e>
+          <e type="operand">180</e>
+          <e type="operand">π</e>
+          <e type="operator" args="2">/</e>
+          <e type="operator" args="2">*</e>
+        </input>
+        <result action="numeric">
+          <e type="operand">83.9876</e>
+        </result>
+      </math>
+    </region>
+    <region left="495" top="333" width="224" height="78" color="#000000" fontSize="10">
+      <math>
+        <input>
+          <e type="operand">2</e>
+          <e type="operand">π</e>
+          <e type="operator" args="2">*</e>
+          <e type="operand">f.i</e>
+          <e type="operator" args="2">*</e>
+          <e type="operand">L.0</e>
+          <e type="operator" args="2">*</e>
+          <e type="operand">R.0</e>
+          <e type="operator" args="2">/</e>
+          <e type="function" args="1">atan</e>
+          <e type="operand">2</e>
+          <e type="operand">π</e>
+          <e type="operator" args="2">*</e>
+          <e type="operand">f.i</e>
+          <e type="operator" args="2">*</e>
+          <e type="operator" args="2">/</e>
+        </input>
+        <contract>
+          <e type="operand" style="unit">ms</e>
+        </contract>
+        <result action="numeric">
+          <e type="operand">3.8883</e>
+        </result>
+      </math>
+    </region>
+    <region left="243" top="351" width="139" height="23" color="#000000" fontSize="10" isBreakable="false">
+      <text lang="eng" width="139" fontFamily="Arial" fontSize="10">
+        <content>
+          <p>Corrente na carga:</p>
+        </content>
+      </text>
+    </region>
+    <region left="9" top="360" width="114" height="23" color="#000000" fontSize="10">
+      <text lang="eng" width="110" fontFamily="Arial" fontSize="10">
+        <content>
+          <p>Tensão na fonte:</p>
+        </content>
+      </text>
+    </region>
+    <region left="243" top="378" width="214" height="53" color="#000000" fontSize="10">
+      <math>
+        <input>
+          <e type="operand">ωt</e>
+          <e type="function" args="1">i.in</e>
+          <e type="operand">V.ipk</e>
+          <e type="operand">Z.0</e>
+          <e type="operator" args="2">/</e>
+          <e type="operand">ωt</e>
+          <e type="operand">θ.0</e>
+          <e type="operator" args="2">-</e>
+          <e type="function" args="1">sin</e>
+          <e type="operator" args="2">*</e>
+          <e type="operator" args="2">:</e>
+        </input>
+      </math>
+    </region>
+    <region left="9" top="387" width="179" height="31" color="#000000" fontSize="10">
+      <math>
+        <input>
+          <e type="operand">ωt</e>
+          <e type="function" args="1">v.in</e>
+          <e type="operand">V.ipk</e>
+          <e type="operand">ωt</e>
+          <e type="function" args="1">sin</e>
+          <e type="operator" args="2">*</e>
+          <e type="operator" args="2">:</e>
+        </input>
+      </math>
+    </region>
+    <region left="9" top="423" width="353" height="219" color="#000000" bgColor="#ffffff" fontSize="10">
+      <xyplot width="343" height="211" points="100" name="XYPlot">
+        <chartstyle backcolor="White" bordercolor="Black" />
+        <propertiessource index="1" sourcetype="PropertyGrid" />
+        <grid gridcolor="LightGray" gridpattern="Dash" gridthickness="1" isxgrid="true" isygrid="true" isy2grid="false" />
+        <xaxes xmin="0" xmax="6.28" xtick="0.7854" visible="True" decimalplaces="3" numberformat="General" />
+        <yaxes ymin="-291" ymax="309" ytick="50" visible="True" decimalplaces="3" numberformat="General" />
+        <y2axes isy2axis="false" y2min="-1" y2max="1" y2tick="0.5" visible="True" decimalplaces="3" numberformat="General" />
+        <title2d title="" titlefont="Arial, 10pt" titlefontcolor="Black" />
+        <xylabel labelfont="Arial, 10pt" labelfontcolor="Black" tickfont="Arial, 8pt" tickfontcolor="Black" xlabel="wt" ylabel="Vin" y2label="y2" />
+        <legend isbordervisible="true" islegendvisible="true" legendbackcolor="White" legendbordercolor="Black" legendfont="Arial, 8pt" legendposition="NorthEast" textcolor="Black" />
+        <traces>
+          <trace seriesname="Vi" isy2data="false" isvisible="true" plotmethod="Lines" lineantialias="true" linecolor="Blue" linethickness="1" linepattern="Solid" symbolantialias="true" symbolsize="8" symboltype="None" symbolborderthickness="1" symbolbordercolor="Black" symbolfillcolor="White" />
+          <trace seriesname="" isy2data="false" isvisible="true" plotmethod="Lines" lineantialias="true" linecolor="Red" linethickness="1" linepattern="Solid" symbolantialias="true" symbolsize="8" symboltype="None" symbolborderthickness="1" symbolbordercolor="Black" symbolfillcolor="White" />
+        </traces>
+        <input>
+          <e type="operand">ωt</e>
+          <e type="function" args="1">v.in</e>
+          <e type="operand">ωt</e>
+          <e type="function" args="1">i.in</e>
+          <e type="operand">2</e>
+          <e type="operand">1</e>
+          <e type="function" args="4">sys</e>
+        </input>
+      </xyplot>
+    </region>
+    <region left="18" top="729" width="274" height="23" color="#000000" fontSize="10">
+      <text lang="eng" fontFamily="Arial" fontSize="10">
+        <content>
+          <p>a) Qual o valor eficaz da corrente de carga?</p>
+        </content>
+      </text>
+    </region>
+    <region left="18" top="756" width="323" height="71" color="#000000" fontSize="10">
+      <math>
+        <input>
+          <e type="operand">I.RMS</e>
+          <e type="operand">1</e>
+          <e type="operand">2</e>
+          <e type="operand">π</e>
+          <e type="operator" args="2">*</e>
+          <e type="operator" args="2">/</e>
+          <e type="operand">ωt</e>
+          <e type="function" args="1">i.in</e>
+          <e type="bracket">(</e>
+          <e type="operand">2</e>
+          <e type="operator" args="2">^</e>
+          <e type="operand">ωt</e>
+          <e type="operand">0</e>
+          <e type="operand">2</e>
+          <e type="operand">π</e>
+          <e type="operator" args="2">*</e>
+          <e type="function" args="4">int</e>
+          <e type="operator" args="2">*</e>
+          <e type="function" args="1">sqrt</e>
+          <e type="operator" args="2">:</e>
+        </input>
+        <result action="numeric">
+          <e type="operand">5.8191</e>
+          <e type="operand" style="unit">A</e>
+          <e type="operator" args="2">*</e>
+        </result>
+      </math>
+    </region>
+    <region left="414" top="774" width="107" height="53" color="#000000" fontSize="10">
+      <math>
+        <input>
+          <e type="operand">V.i</e>
+          <e type="operand">Z.0</e>
+          <e type="operator" args="2">/</e>
+        </input>
+        <result action="numeric">
+          <e type="operand">5.8191</e>
+          <e type="operand" style="unit">A</e>
+          <e type="operator" args="2">*</e>
+        </result>
+      </math>
+    </region>
+    <region left="18" top="837" width="286" height="23" color="#000000" fontSize="10">
+      <text lang="eng" fontFamily="Arial" fontSize="10">
+        <content>
+          <p>b) Qual o valor do ângulo de carga em graus?</p>
+        </content>
+      </text>
+    </region>
+    <region left="18" top="882" width="176" height="55" color="#000000" fontSize="10">
+      <math>
+        <input>
+          <e type="operand">θ.0</e>
+          <e type="operand">X.0</e>
+          <e type="operand">R.0</e>
+          <e type="operator" args="2">/</e>
+          <e type="function" args="1">atan</e>
+          <e type="operator" args="2">:</e>
+        </input>
+        <result action="numeric">
+          <e type="operand">1.4659</e>
+        </result>
+      </math>
+    </region>
+    <region left="225" top="891" width="135" height="41" color="#000000" fontSize="10">
+      <math>
+        <input>
+          <e type="operand">θ.0</e>
+          <e type="operand">180</e>
+          <e type="operand">π</e>
+          <e type="operator" args="2">/</e>
+          <e type="operator" args="2">*</e>
+        </input>
+        <result action="numeric">
+          <e type="operand">83.9876</e>
+        </result>
+      </math>
+    </region>
+    <region left="18" top="1080" width="221" height="23" color="#000000" fontSize="10">
+      <text lang="eng" fontFamily="Arial" fontSize="10">
+        <content>
+          <p>c) Qual a potência ativa na carga? </p>
+        </content>
+      </text>
+    </region>
+    <region left="378" top="1107" width="167" height="23" color="#000000" fontSize="10">
+      <text lang="eng" fontFamily="Arial" fontSize="10">
+        <content>
+          <p>Válido para caso senoidal</p>
+        </content>
+      </text>
+    </region>
+    <region left="27" top="1116" width="205" height="30" color="#000000" fontSize="10">
+      <math>
+        <input>
+          <e type="operand">ωt</e>
+          <e type="function" args="1">p.in</e>
+          <e type="operand">ωt</e>
+          <e type="function" args="1">v.in</e>
+          <e type="operand">ωt</e>
+          <e type="function" args="1">i.in</e>
+          <e type="operator" args="2">*</e>
+          <e type="operator" args="2">:</e>
+        </input>
+      </math>
+    </region>
+    <region left="378" top="1134" width="213" height="32" color="#000000" fontSize="10">
+      <math>
+        <input>
+          <e type="operand">V.i</e>
+          <e type="operand">I.RMS</e>
+          <e type="operator" args="2">*</e>
+          <e type="operand">θ.0</e>
+          <e type="function" args="1">cos</e>
+          <e type="operator" args="2">*</e>
+        </input>
+        <result action="numeric">
+          <e type="operand">91.4271</e>
+          <e type="operand" style="unit">W</e>
+          <e type="operator" args="2">*</e>
+        </result>
+      </math>
+    </region>
+    <region left="27" top="1152" width="289" height="69" color="#000000" fontSize="10">
+      <math>
+        <input>
+          <e type="operand">P.in</e>
+          <e type="operand">1</e>
+          <e type="operand">2</e>
+          <e type="operand">π</e>
+          <e type="operator" args="2">*</e>
+          <e type="operator" args="2">/</e>
+          <e type="operand">ωt</e>
+          <e type="function" args="1">p.in</e>
+          <e type="operand">ωt</e>
+          <e type="operand">0</e>
+          <e type="operand">2</e>
+          <e type="operand">π</e>
+          <e type="operator" args="2">*</e>
+          <e type="function" args="4">int</e>
+          <e type="operator" args="2">*</e>
+          <e type="operator" args="2">:</e>
+        </input>
+        <result action="numeric">
+          <e type="operand">91.4271</e>
+          <e type="operand" style="unit">W</e>
+          <e type="operator" args="2">*</e>
+        </result>
+      </math>
+    </region>
+    <region left="378" top="1179" width="189" height="62" color="#000000" fontSize="10">
+      <math>
+        <input>
+          <e type="operand">V.i</e>
+          <e type="operand">2</e>
+          <e type="operator" args="2">^</e>
+          <e type="operand">Z.0</e>
+          <e type="operator" args="2">/</e>
+          <e type="operand">θ.0</e>
+          <e type="function" args="1">cos</e>
+          <e type="operator" args="2">*</e>
+        </input>
+        <result action="numeric">
+          <e type="operand">91.4271</e>
+          <e type="operand" style="unit">W</e>
+          <e type="operator" args="2">*</e>
+        </result>
+      </math>
+    </region>
+    <region left="27" top="1278" width="239" height="23" color="#000000" fontSize="10">
+      <text lang="eng" fontFamily="Arial" fontSize="10">
+        <content>
+          <p>d) Qual a potência aparente na fonte?</p>
+        </content>
+      </text>
+    </region>
+    <region left="387" top="1305" width="133" height="62" color="#000000" fontSize="10">
+      <math>
+        <input>
+          <e type="operand">V.i</e>
+          <e type="operand">2</e>
+          <e type="operator" args="2">^</e>
+          <e type="operand">Z.0</e>
+          <e type="operator" args="2">/</e>
+        </input>
+        <result action="numeric">
+          <e type="operand">872.8647</e>
+          <e type="operand" style="unit">W</e>
+          <e type="operator" args="2">*</e>
+        </result>
+      </math>
+    </region>
+    <region left="36" top="1314" width="198" height="30" color="#000000" fontSize="10">
+      <math>
+        <input>
+          <e type="operand">S.in</e>
+          <e type="operand">V.i</e>
+          <e type="operand">I.RMS</e>
+          <e type="operator" args="2">*</e>
+          <e type="operator" args="2">:</e>
+        </input>
+        <result action="numeric">
+          <e type="operand">872.8647</e>
+          <e type="operand" style="unit">W</e>
+          <e type="operator" args="2">*</e>
+        </result>
+      </math>
+    </region>
+    <region left="27" top="1368" width="179" height="23" color="#000000" fontSize="10">
+      <text lang="eng" fontFamily="Arial" fontSize="10">
+        <content>
+          <p>e) Qual o fator de potência?</p>
+        </content>
+      </text>
+    </region>
+    <region left="36" top="1404" width="137" height="53" color="#000000" fontSize="10">
+      <math>
+        <input>
+          <e type="operand">FP</e>
+          <e type="operand">P.in</e>
+          <e type="operand">S.in</e>
+          <e type="operator" args="2">/</e>
+          <e type="operator" args="2">:</e>
+        </input>
+        <result action="numeric">
+          <e type="operand">0.1047</e>
+        </result>
+      </math>
+    </region>
+    <region left="387" top="1413" width="130" height="32" color="#000000" fontSize="10">
+      <math>
+        <input>
+          <e type="operand">θ.0</e>
+          <e type="function" args="1">cos</e>
+        </input>
+        <result action="numeric">
+          <e type="operand">0.1047</e>
+        </result>
+      </math>
+    </region>
+  </regions>
+  <regions type="header">
+    <region left="3" top="0" width="273" height="68" color="#000000" fontSize="8">
+      <text lang="por" fontFamily="Arial" fontSize="10">
+        <content>
+          <p>
+            <span style="font-size: 8px;">Universidade Tecnológica Federal do Paraná - UTFPR</span>
+            <br />
+            <span style="font-size: 8px;">Departamento Acadêmico de Eletrotécnica - DAELT</span>
+            <br />
+            <span style="font-size: 8px;">Prof. Adriano Ruseler, Dr. Eng.</span>
+            <br />
+          </p>
+        </content>
+      </text>
+    </region>
+  </regions>
+</worksheet>
