@@ -1,0 +1,427 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<?application progid="SMath Studio Desktop" version="1.0.8348.30405"?>
+<worksheet xmlns="http://smath.info/schemas/worksheet/1.0">
+  <settings ppi="120">
+    <identity>
+      <id>67716a1f-8974-4cfa-a9ed-0f6624519de0</id>
+      <revision>85</revision>
+    </identity>
+    <metadata lang="eng">
+      <author>Adriano Ruseler</author>
+    </metadata>
+    <calculation>
+      <precision>4</precision>
+      <exponentialThreshold>5</exponentialThreshold>
+      <trailingZeros>false</trailingZeros>
+      <significantDigitsMode>false</significantDigitsMode>
+      <roundingMode>0</roundingMode>
+      <approximateEqualAccuracy>0</approximateEqualAccuracy>
+      <fractions>decimal</fractions>
+    </calculation>
+    <pageModel active="false" viewMode="2" printGrid="false" printAreas="true" simpleEqualsOnly="false" printBackgroundImages="true">
+      <paper id="9" orientation="Portrait" width="827" height="1169" />
+      <margins left="39" right="39" top="49" bottom="49" />
+      <header alignment="Center" color="#a9a9a9">&amp;[DATE] &amp;[TIME] - &amp;[FILENAME]</header>
+      <footer alignment="Center" color="#a9a9a9">&amp;[PAGENUM] / &amp;[COUNT]</footer>
+      <backgrounds />
+    </pageModel>
+    <dependencies>
+      <assembly name="SMath Studio Desktop" version="1.0.8348.30405" guid="a37cba83-b69c-4c71-9992-55ff666763bd" />
+      <assembly name="MathRegion" version="1.11.8348.30405" guid="02f1ab51-215b-466e-a74d-5d8b1cf85e8d" />
+      <assembly name="PictureRegion" version="1.10.8348.30405" guid="06b5df04-393e-4be7-9107-305196fcb861" />
+      <assembly name="SpecialFunctions" version="1.12.8348.30405" guid="2814e667-4e12-48b1-8d51-194e480eabc5" />
+    </dependencies>
+  </settings>
+  <regions type="content">
+    <region left="477" top="9" width="242" height="154" color="#000000">
+      <picture>
+        <raw format="png" encoding="base64">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</raw>
+      </picture>
+    </region>
+    <region left="18" top="18" width="73" height="30" color="#000000" fontSize="10">
+      <math>
+        <input>
+          <e type="operand">V.i</e>
+          <e type="operand">20</e>
+          <e type="operand" style="unit">V</e>
+          <e type="operator" args="2">*</e>
+          <e type="operator" args="2">:</e>
+        </input>
+      </math>
+    </region>
+    <region left="153" top="18" width="101" height="30" color="#000000" fontSize="10">
+      <math>
+        <input>
+          <e type="operand">V.on1</e>
+          <e type="operand">500</e>
+          <e type="operand" style="unit">mV</e>
+          <e type="operator" args="2">*</e>
+          <e type="operator" args="2">:</e>
+        </input>
+      </math>
+    </region>
+    <region left="297" top="18" width="101" height="30" color="#000000" fontSize="10">
+      <math>
+        <input>
+          <e type="operand">V.on3</e>
+          <e type="operand">2.25</e>
+          <e type="operand" style="unit">V</e>
+          <e type="operator" args="2">*</e>
+          <e type="operator" args="2">:</e>
+        </input>
+      </math>
+    </region>
+    <region left="18" top="45" width="81" height="30" color="#000000" fontSize="10">
+      <math>
+        <input>
+          <e type="operand">R.1</e>
+          <e type="operand">160</e>
+          <e type="operand" style="unit">Ω</e>
+          <e type="operator" args="2">*</e>
+          <e type="operator" args="2">:</e>
+        </input>
+      </math>
+    </region>
+    <region left="153" top="45" width="101" height="30" color="#000000" fontSize="10">
+      <math>
+        <input>
+          <e type="operand">V.on2</e>
+          <e type="operand">600</e>
+          <e type="operand" style="unit">mV</e>
+          <e type="operator" args="2">*</e>
+          <e type="operator" args="2">:</e>
+        </input>
+      </math>
+    </region>
+    <region left="171" top="90" width="215" height="35" color="#000000" fontSize="10">
+      <math>
+        <input>
+          <e type="operand">V.on</e>
+          <e type="operand">V.on1</e>
+          <e type="operand">V.on2</e>
+          <e type="operand">1</e>
+          <e type="operand">2</e>
+          <e type="function" args="4">mat</e>
+          <e type="function" args="1">min</e>
+          <e type="operand">V.on3</e>
+          <e type="operator" args="2">+</e>
+          <e type="operator" args="2">:</e>
+        </input>
+      </math>
+    </region>
+    <region left="18" top="108" width="127" height="198" color="#000000" fontSize="10">
+      <math>
+        <input>
+          <e type="operand">V.on1</e>
+          <e type="operand">V.on2</e>
+          <e type="operator" args="2">≡</e>
+          <e type="operand">D1</e>
+          <e type="operand" style="string">ON</e>
+          <e type="operator" args="2">:</e>
+          <e type="operand">D2</e>
+          <e type="operand" style="string">ON</e>
+          <e type="operator" args="2">:</e>
+          <e type="operand">2</e>
+          <e type="operand">1</e>
+          <e type="function" args="4">sys</e>
+          <e type="operand">V.on1</e>
+          <e type="operand">V.on2</e>
+          <e type="operator" args="2">&gt;</e>
+          <e type="operand">D1</e>
+          <e type="operand" style="string">OFF</e>
+          <e type="operator" args="2">:</e>
+          <e type="operand">D2</e>
+          <e type="operand" style="string">ON</e>
+          <e type="operator" args="2">:</e>
+          <e type="operand">2</e>
+          <e type="operand">1</e>
+          <e type="function" args="4">sys</e>
+          <e type="operand">D1</e>
+          <e type="operand" style="string">ON</e>
+          <e type="operator" args="2">:</e>
+          <e type="operand">D2</e>
+          <e type="operand" style="string">OFF</e>
+          <e type="operator" args="2">:</e>
+          <e type="operand">2</e>
+          <e type="operand">1</e>
+          <e type="function" args="4">sys</e>
+          <e type="function" args="3">if</e>
+          <e type="function" args="3">if</e>
+        </input>
+      </math>
+    </region>
+    <region left="171" top="144" width="232" height="197" color="#000000" fontSize="10">
+      <math>
+        <input>
+          <e type="operand">V.i</e>
+          <e type="operand">V.on1</e>
+          <e type="operand">V.on2</e>
+          <e type="operand">1</e>
+          <e type="operand">2</e>
+          <e type="function" args="4">mat</e>
+          <e type="function" args="1">min</e>
+          <e type="operand">V.on3</e>
+          <e type="operator" args="2">+</e>
+          <e type="operator" args="2">≥</e>
+          <e type="operand">LED1</e>
+          <e type="operand" style="string">ON</e>
+          <e type="operator" args="2">:</e>
+          <e type="operand">i.D</e>
+          <e type="operand">V.i</e>
+          <e type="operand">V.on</e>
+          <e type="operator" args="2">-</e>
+          <e type="operand">R.1</e>
+          <e type="operator" args="2">/</e>
+          <e type="operator" args="2">:</e>
+          <e type="operand">2</e>
+          <e type="operand">1</e>
+          <e type="function" args="4">sys</e>
+          <e type="operand">LED1</e>
+          <e type="operand" style="string">OFF</e>
+          <e type="operator" args="2">:</e>
+          <e type="operand">D1</e>
+          <e type="operand" style="string">OFF</e>
+          <e type="operator" args="2">:</e>
+          <e type="operand">D2</e>
+          <e type="operand" style="string">OFF</e>
+          <e type="operator" args="2">:</e>
+          <e type="operand">i.D</e>
+          <e type="operand">0</e>
+          <e type="operand" style="unit">A</e>
+          <e type="operator" args="2">*</e>
+          <e type="operator" args="2">:</e>
+          <e type="operand">4</e>
+          <e type="operand">1</e>
+          <e type="function" args="6">sys</e>
+          <e type="function" args="3">if</e>
+        </input>
+      </math>
+    </region>
+    <region left="468" top="171" width="181" height="35" color="#000000" fontSize="10">
+      <math>
+        <input>
+          <e type="operand">V.on1</e>
+          <e type="operand">V.on2</e>
+          <e type="operand">1</e>
+          <e type="operand">2</e>
+          <e type="function" args="4">mat</e>
+          <e type="function" args="1">min</e>
+        </input>
+        <result action="numeric">
+          <e type="operand">0.5</e>
+          <e type="operand" style="unit">V</e>
+          <e type="operator" args="2">*</e>
+        </result>
+      </math>
+    </region>
+    <region left="468" top="207" width="93" height="30" color="#000000" fontSize="10">
+      <math>
+        <input>
+          <e type="operand">V.on</e>
+        </input>
+        <result action="numeric">
+          <e type="operand">2.75</e>
+          <e type="operand" style="unit">V</e>
+          <e type="operator" args="2">*</e>
+        </result>
+      </math>
+    </region>
+    <region left="342" top="288" width="76" height="24" color="#000000" fontSize="10">
+      <math>
+        <input>
+          <e type="operand">D1</e>
+        </input>
+        <result action="numeric">
+          <e type="operand" style="string">ON</e>
+        </result>
+      </math>
+    </region>
+    <region left="450" top="288" width="84" height="24" color="#000000" fontSize="10">
+      <math>
+        <input>
+          <e type="operand">D2</e>
+        </input>
+        <result action="numeric">
+          <e type="operand" style="string">OFF</e>
+        </result>
+      </math>
+    </region>
+    <region left="558" top="288" width="92" height="24" color="#000000" fontSize="10">
+      <math>
+        <input>
+          <e type="operand">LED1</e>
+        </input>
+        <result action="numeric">
+          <e type="operand" style="string">ON</e>
+        </result>
+      </math>
+    </region>
+    <region left="342" top="324" width="126" height="30" color="#000000" fontSize="10">
+      <math>
+        <input>
+          <e type="operand">i.D</e>
+        </input>
+        <contract>
+          <e type="operand" style="unit">mA</e>
+        </contract>
+        <result action="numeric">
+          <e type="operand">107.8125</e>
+        </result>
+      </math>
+    </region>
+    <region left="18" top="342" width="126" height="268" color="#000000" fontSize="10">
+      <math>
+        <input>
+          <e type="operand">V.on1</e>
+          <e type="operand">V.on2</e>
+          <e type="operator" args="2">≡</e>
+          <e type="operand">i.D1</e>
+          <e type="operand">i.D</e>
+          <e type="operand">2</e>
+          <e type="operator" args="2">/</e>
+          <e type="operator" args="2">:</e>
+          <e type="operand">i.D2</e>
+          <e type="operand">i.D</e>
+          <e type="operand">2</e>
+          <e type="operator" args="2">/</e>
+          <e type="operator" args="2">:</e>
+          <e type="operand">2</e>
+          <e type="operand">1</e>
+          <e type="function" args="4">sys</e>
+          <e type="operand">V.on1</e>
+          <e type="operand">V.on2</e>
+          <e type="operator" args="2">&gt;</e>
+          <e type="operand">i.D1</e>
+          <e type="operand">0</e>
+          <e type="operand" style="unit">A</e>
+          <e type="operator" args="2">*</e>
+          <e type="operator" args="2">:</e>
+          <e type="operand">i.D2</e>
+          <e type="operand">i.D</e>
+          <e type="operator" args="2">:</e>
+          <e type="operand">2</e>
+          <e type="operand">1</e>
+          <e type="function" args="4">sys</e>
+          <e type="operand">i.D1</e>
+          <e type="operand">i.D</e>
+          <e type="operator" args="2">:</e>
+          <e type="operand">i.D2</e>
+          <e type="operand">0</e>
+          <e type="operand" style="unit">A</e>
+          <e type="operator" args="2">*</e>
+          <e type="operator" args="2">:</e>
+          <e type="operand">2</e>
+          <e type="operand">1</e>
+          <e type="function" args="4">sys</e>
+          <e type="function" args="3">if</e>
+          <e type="function" args="3">if</e>
+        </input>
+      </math>
+    </region>
+    <region left="180" top="396" width="133" height="30" color="#000000" fontSize="10">
+      <math>
+        <input>
+          <e type="operand">i.D1</e>
+        </input>
+        <contract>
+          <e type="operand" style="unit">mA</e>
+        </contract>
+        <result action="numeric">
+          <e type="operand">107.8125</e>
+        </result>
+      </math>
+    </region>
+    <region left="180" top="441" width="77" height="30" color="#000000" fontSize="10">
+      <math>
+        <input>
+          <e type="operand">i.D2</e>
+        </input>
+        <contract>
+          <e type="operand" style="unit">mA</e>
+        </contract>
+        <result action="numeric">
+          <e type="operand">0</e>
+        </result>
+      </math>
+    </region>
+    <region left="180" top="486" width="174" height="30" color="#000000" fontSize="10">
+      <math>
+        <input>
+          <e type="operand">i.LED</e>
+          <e type="operand">i.D</e>
+          <e type="operator" args="2">:</e>
+        </input>
+        <contract>
+          <e type="operand" style="unit">mA</e>
+        </contract>
+        <result action="numeric">
+          <e type="operand">107.8125</e>
+        </result>
+      </math>
+    </region>
+    <region left="180" top="531" width="167" height="30" color="#000000" fontSize="10">
+      <math>
+        <input>
+          <e type="operand">i.R1</e>
+          <e type="operand">i.D</e>
+          <e type="operator" args="2">:</e>
+        </input>
+        <contract>
+          <e type="operand" style="unit">mA</e>
+        </contract>
+        <result action="numeric">
+          <e type="operand">107.8125</e>
+        </result>
+      </math>
+    </region>
+    <region left="180" top="585" width="167" height="30" color="#000000" fontSize="10">
+      <math>
+        <input>
+          <e type="operand">v.R1</e>
+          <e type="operand">R.1</e>
+          <e type="operand">i.R1</e>
+          <e type="operator" args="2">*</e>
+          <e type="operator" args="2">:</e>
+        </input>
+        <result action="numeric">
+          <e type="operand">17.25</e>
+          <e type="operand" style="unit">V</e>
+          <e type="operator" args="2">*</e>
+        </result>
+      </math>
+    </region>
+    <region left="180" top="630" width="212" height="30" color="#000000" fontSize="10">
+      <math>
+        <input>
+          <e type="operand">P.LED</e>
+          <e type="operand">V.on3</e>
+          <e type="operand">i.D</e>
+          <e type="operator" args="2">*</e>
+          <e type="operator" args="2">:</e>
+        </input>
+        <contract>
+          <e type="operand" style="unit">mW</e>
+        </contract>
+        <result action="numeric">
+          <e type="operand">242.5781</e>
+        </result>
+      </math>
+    </region>
+  </regions>
+  <regions type="header">
+    <region left="0" top="9" width="338" height="38" color="#000000" fontSize="10">
+      <text lang="eng" fontFamily="Arial" fontSize="10">
+        <content>
+          <p>Universidade Tecnológica Federal do Paraná - UTFPR<br />Departamento Acadêmico de Eletrotécnica - DAELT</p>
+        </content>
+      </text>
+    </region>
+    <region left="552" top="9" width="198" height="38" color="#000000" fontSize="10">
+      <text lang="eng" width="197" fontFamily="Arial" fontSize="10">
+        <content>
+          <p>Eletrônica 1 - ET74C <br />Prof. Adriano Ruseler, Dr. Eng.</p>
+        </content>
+      </text>
+    </region>
+  </regions>
+</worksheet>
