@@ -1,0 +1,18 @@
+* C:\Users\ruseler\Documents\GitHub\AOS-QUIZES\TE02\LTspice\COMB00op.asc
+Vcc A 0 {Vcc}
+R1 C 0 {R1}
+D§LED B C D3
+D1 A B D1
+D2 A B D2
+.model D D
+.lib C:\Users\ruseler\AppData\Local\LTspice\lib\cmp\standard.dio
+.op
+.param Vcc=2.500e+01 R1=1.200e+02
+.model D1 D(Is=1.000e-14 n=1.200e+00)
+.model D2 D(Is=2.000e-14 n=2.000e+00)
+.model D3 D(Is=2.000e-14 n=1.400e+00)
+.meas vd param v(A)-v(B)
+.meas vled param v(B)-v(C)
+.meas pled param I(LED)*vled
+.backanno
+.end
