@@ -1,0 +1,16 @@
+* C:\Users\ruseler\Documents\GitHub\AOS-QUIZES\TE00\LTspice\RLC.asc
+C0 x 0 {C0}
+R0 x 0 {R0}
+L0 i x {L0}
+Vi i 0 SINE(0 {Vipk} {fi})
+.param Vipk=100 fi=60 L0=16m C0=150u R0=2.7
+.tran 0 0.1667 0.01667
+.meas vl0rms RMS V(i)-V(x)
+.meas il0rms RMS I(L0)
+.meas virms RMS V(i)
+.meas z0 param virms/il0rms
+.meas p0 AVG V(i)*I(L0)
+.meas si param virms*il0rms
+.meas fp param p0/si
+.backanno
+.end
