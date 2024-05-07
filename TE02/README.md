@@ -1,2 +1,2 @@
-# TE01 - Fundamentas dos Semicondutores
-Revisão da teoria de banda. Formação cristal do tipo N e P;
+# TE02 - Diodos semicondutores
+Formação do Diodo Semicondutor. Tipos de Polarização. Modelo Matemático. Modelo Elétrico. Folha de especificações.
