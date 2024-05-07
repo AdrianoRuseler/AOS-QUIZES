@@ -1,0 +1,333 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<?application progid="SMath Studio Desktop" version="1.0.8253.4763"?>
+<worksheet xmlns="http://smath.info/schemas/worksheet/1.0">
+  <settings ppi="96">
+    <identity>
+      <id>3fdf0c16-fb21-45cf-9c16-84e888434592</id>
+      <revision>41</revision>
+    </identity>
+    <calculation>
+      <precision>4</precision>
+      <exponentialThreshold>5</exponentialThreshold>
+      <trailingZeros>false</trailingZeros>
+      <significantDigitsMode>false</significantDigitsMode>
+      <roundingMode>0</roundingMode>
+      <approximateEqualAccuracy>0</approximateEqualAccuracy>
+      <fractions>decimal</fractions>
+    </calculation>
+    <pageModel active="false" viewMode="2" printGrid="false" printAreas="true" simpleEqualsOnly="false" printBackgroundImages="true">
+      <paper id="9" orientation="Portrait" width="827" height="1169" />
+      <margins left="39" right="39" top="49" bottom="49" />
+      <header alignment="Center" color="#a9a9a9">&amp;[DATE] &amp;[TIME] - &amp;[FILENAME]</header>
+      <footer alignment="Center" color="#a9a9a9">&amp;[PAGENUM] / &amp;[COUNT]</footer>
+      <backgrounds />
+    </pageModel>
+    <dependencies>
+      <assembly name="SMath Studio Desktop" version="1.0.8253.4763" guid="a37cba83-b69c-4c71-9992-55ff666763bd" />
+      <assembly name="MathRegion" version="1.11.8253.4763" guid="02f1ab51-215b-466e-a74d-5d8b1cf85e8d" />
+      <assembly name="PictureRegion" version="1.10.8253.4763" guid="06b5df04-393e-4be7-9107-305196fcb861" />
+      <assembly name="TextRegion" version="1.11.8253.4763" guid="485d28c5-349a-48b6-93be-12a35a1c1e39" />
+      <assembly name="Writer Region" version="0.23.8034.36139" guid="5922d677-323f-4327-8c68-be902d8339ad" />
+    </dependencies>
+  </settings>
+  <regions type="content">
+    <region left="279" top="36" width="196" height="26" color="#000000">
+      <writer lang="por"><![CDATA[<span style="font-family: 'Arial'; font-size: 10pt; font-weight: normal; font-style: normal; color: windowtext; background-color: Transparent; vertical-align: baseline; text-align: left; margin-left: 0pt; text-indent: 0pt; line-height: 115%">
+<div>Polariza&#231;&#227;o de Emissor – NPN</div></span>]]></writer>
+    </region>
+    <region left="333" top="63" width="159" height="163" color="#000000">
+      <picture>
+        <raw format="png" encoding="base64">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</raw>
+      </picture>
+    </region>
+    <region left="36" top="81" width="79" height="30" color="#000000" fontSize="10">
+      <math>
+        <input>
+          <e type="operand">V.CC</e>
+          <e type="operand">30</e>
+          <e type="operand" style="unit">V</e>
+          <e type="operator" args="2">*</e>
+          <e type="operator" args="2">:</e>
+        </input>
+      </math>
+    </region>
+    <region left="180" top="81" width="89" height="30" color="#000000" fontSize="10">
+      <math>
+        <input>
+          <e type="operand">R.B</e>
+          <e type="operand">3.2</e>
+          <e type="operand" style="unit">kΩ</e>
+          <e type="operator" args="2">*</e>
+          <e type="operator" args="2">:</e>
+        </input>
+      </math>
+    </region>
+    <region left="36" top="108" width="95" height="30" color="#000000" fontSize="10">
+      <math>
+        <input>
+          <e type="operand">V.BE</e>
+          <e type="operand">0.65</e>
+          <e type="operand" style="unit">V</e>
+          <e type="operator" args="2">*</e>
+          <e type="operator" args="2">:</e>
+        </input>
+      </math>
+    </region>
+    <region left="180" top="117" width="81" height="30" color="#000000" fontSize="10">
+      <math>
+        <input>
+          <e type="operand">R.C</e>
+          <e type="operand">252</e>
+          <e type="operand" style="unit">Ω</e>
+          <e type="operator" args="2">*</e>
+          <e type="operator" args="2">:</e>
+        </input>
+      </math>
+    </region>
+    <region left="36" top="135" width="106" height="30" color="#000000" fontSize="10">
+      <math>
+        <input>
+          <e type="operand">V.CEsat</e>
+          <e type="operand">0.4</e>
+          <e type="operand" style="unit">V</e>
+          <e type="operator" args="2">*</e>
+          <e type="operator" args="2">:</e>
+        </input>
+      </math>
+    </region>
+    <region left="36" top="162" width="54" height="24" color="#000000" fontSize="10">
+      <math>
+        <input>
+          <e type="operand">β</e>
+          <e type="operand">55</e>
+          <e type="operator" args="2">:</e>
+        </input>
+      </math>
+    </region>
+    <region left="180" top="162" width="81" height="30" color="#000000" fontSize="10">
+      <math>
+        <input>
+          <e type="operand">R.E</e>
+          <e type="operand">909</e>
+          <e type="operand" style="unit">Ω</e>
+          <e type="operator" args="2">*</e>
+          <e type="operator" args="2">:</e>
+        </input>
+      </math>
+    </region>
+    <region left="45" top="315" width="120" height="23" color="#000000" fontSize="10">
+      <text lang="por" fontFamily="Arial" fontSize="10">
+        <content>
+          <p>Modo Ativo Direto</p>
+        </content>
+      </text>
+    </region>
+    <region left="441" top="315" width="112" height="23" color="#000000" fontSize="10" isBreakable="false">
+      <text lang="por" fontFamily="Arial" fontSize="10">
+        <content>
+          <p>Modo Saturação</p>
+        </content>
+      </text>
+    </region>
+    <region left="351" top="342" width="347" height="99" color="#000000" fontSize="10">
+      <math>
+        <input>
+          <e type="operand">i.Bsat</e>
+          <e type="operand">V.CC</e>
+          <e type="operand">V.BE</e>
+          <e type="operator" args="2">-</e>
+          <e type="operand">R.E</e>
+          <e type="operand">R.C</e>
+          <e type="operator" args="2">/</e>
+          <e type="operand">V.BE</e>
+          <e type="operand">V.CEsat</e>
+          <e type="operator" args="2">-</e>
+          <e type="bracket">(</e>
+          <e type="operator" args="2">*</e>
+          <e type="operator" args="2">-</e>
+          <e type="operand">R.B</e>
+          <e type="operand">R.E</e>
+          <e type="operator" args="2">+</e>
+          <e type="operand">R.E</e>
+          <e type="operand">R.B</e>
+          <e type="operator" args="2">*</e>
+          <e type="operand">R.C</e>
+          <e type="operator" args="2">/</e>
+          <e type="operator" args="2">+</e>
+          <e type="operator" args="2">/</e>
+          <e type="operator" args="2">:</e>
+        </input>
+        <contract>
+          <e type="operand" style="unit">mA</e>
+        </contract>
+        <result action="numeric">
+          <e type="operand">1.8176</e>
+        </result>
+      </math>
+    </region>
+    <region left="9" top="351" width="253" height="54" color="#000000" fontSize="10">
+      <math>
+        <input>
+          <e type="operand">i.B</e>
+          <e type="operand">V.CC</e>
+          <e type="operand">V.BE</e>
+          <e type="operator" args="2">-</e>
+          <e type="operand">R.B</e>
+          <e type="operand">β</e>
+          <e type="operand">1</e>
+          <e type="operator" args="2">+</e>
+          <e type="bracket">(</e>
+          <e type="operand">R.E</e>
+          <e type="operator" args="2">*</e>
+          <e type="operator" args="2">+</e>
+          <e type="operator" args="2">/</e>
+          <e type="operator" args="2">:</e>
+        </input>
+        <contract>
+          <e type="operand" style="unit">μA</e>
+        </contract>
+        <result action="numeric">
+          <e type="operand">542.4738</e>
+        </result>
+      </math>
+    </region>
+    <region left="9" top="423" width="172" height="30" color="#000000" fontSize="10">
+      <math>
+        <input>
+          <e type="operand">i.C</e>
+          <e type="operand">β</e>
+          <e type="operand">i.B</e>
+          <e type="operator" args="2">*</e>
+          <e type="operator" args="2">:</e>
+        </input>
+        <contract>
+          <e type="operand" style="unit">mA</e>
+        </contract>
+        <result action="numeric">
+          <e type="operand">29.8361</e>
+        </result>
+      </math>
+    </region>
+    <region left="351" top="441" width="316" height="53" color="#000000" fontSize="10">
+      <math>
+        <input>
+          <e type="operand">i.Csat</e>
+          <e type="operand">V.BE</e>
+          <e type="operand">V.CEsat</e>
+          <e type="operator" args="2">-</e>
+          <e type="operand">R.B</e>
+          <e type="operand">i.Bsat</e>
+          <e type="operator" args="2">*</e>
+          <e type="operator" args="2">+</e>
+          <e type="operand">R.C</e>
+          <e type="operator" args="2">/</e>
+          <e type="operator" args="2">:</e>
+        </input>
+        <contract>
+          <e type="operand" style="unit">mA</e>
+        </contract>
+        <result action="numeric">
+          <e type="operand">24.0722</e>
+        </result>
+      </math>
+    </region>
+    <region left="9" top="459" width="208" height="31" color="#000000" fontSize="10">
+      <math>
+        <input>
+          <e type="operand">i.E</e>
+          <e type="operand">β</e>
+          <e type="operand">1</e>
+          <e type="operator" args="2">+</e>
+          <e type="bracket">(</e>
+          <e type="operand">i.B</e>
+          <e type="operator" args="2">*</e>
+          <e type="operator" args="2">:</e>
+        </input>
+        <contract>
+          <e type="operand" style="unit">mA</e>
+        </contract>
+        <result action="numeric">
+          <e type="operand">30.3785</e>
+        </result>
+      </math>
+    </region>
+    <region left="9" top="495" width="275" height="30" color="#000000" fontSize="10">
+      <math>
+        <input>
+          <e type="operand">V.CE</e>
+          <e type="operand">V.CC</e>
+          <e type="operand">R.C</e>
+          <e type="operand">i.C</e>
+          <e type="operator" args="2">*</e>
+          <e type="operator" args="2">-</e>
+          <e type="operand">R.E</e>
+          <e type="operand">i.E</e>
+          <e type="operator" args="2">*</e>
+          <e type="operator" args="2">-</e>
+          <e type="operator" args="2">:</e>
+        </input>
+        <result action="numeric">
+          <e type="operand">5.1328</e>
+          <e type="operand" style="unit">V</e>
+          <e type="operator" args="2">*</e>
+          <e type="operator" args="1">-</e>
+        </result>
+      </math>
+    </region>
+    <region left="351" top="495" width="243" height="30" color="#000000" fontSize="10">
+      <math>
+        <input>
+          <e type="operand">i.Esat</e>
+          <e type="operand">i.Bsat</e>
+          <e type="operand">i.Csat</e>
+          <e type="operator" args="2">+</e>
+          <e type="operator" args="2">:</e>
+        </input>
+        <contract>
+          <e type="operand" style="unit">mA</e>
+        </contract>
+        <result action="numeric">
+          <e type="operand">25.8898</e>
+        </result>
+      </math>
+    </region>
+    <region left="9" top="531" width="188" height="30" color="#000000" fontSize="10">
+      <math>
+        <input>
+          <e type="operand">V.CB</e>
+          <e type="operand">V.BE</e>
+          <e type="operand">V.CE</e>
+          <e type="operator" args="2">-</e>
+          <e type="operator" args="2">:</e>
+        </input>
+        <result action="numeric">
+          <e type="operand">5.7828</e>
+          <e type="operand" style="unit">V</e>
+          <e type="operator" args="2">*</e>
+        </result>
+      </math>
+    </region>
+  </regions>
+  <regions type="header">
+    <region left="0" top="6" width="338" height="38" color="#000000" fontSize="10">
+      <text lang="por" fontFamily="Arial" fontSize="10">
+        <content>
+          <p>
+            <span style="font-size: 10px;">Universidade Tecnológica Federal do Paraná - UTFPR</span>
+            <span />
+            <br />
+            <span style="font-size: 10px;">Departamento Acadêmico de Eletrotécnica - DAELT</span>
+            <span />
+          </p>
+        </content>
+      </text>
+    </region>
+    <region left="549" top="6" width="198" height="38" color="#000000" fontSize="10">
+      <text lang="por" fontFamily="Arial" fontSize="10">
+        <content>
+          <p>Eletrônica 1 - ET74C - ADNP<br />Prof. Adriano Ruseler, Dr. Eng.</p>
+        </content>
+      </text>
+    </region>
+  </regions>
+</worksheet>
