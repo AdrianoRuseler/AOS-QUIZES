@@ -1,0 +1,13 @@
+* C:\Users\ruseler\Documents\GitHub\AOS-QUIZES\TE05\LTspice\TBJPNP03CAop.asc
+Rb B 0 {RB}
+Vcc cc 0 {Vcc}
+RE cc N001 {RE}
+Q1 0 B N001 0 TBJ
+.model NPN NPN
+.model PNP PNP
+.lib C:\Users\ruseler\AppData\Local\LTspice\lib\cmp\standard.bjt
+.param Vcc=30 RB=820k RE=220
+.op
+.model TBJ PNP(IS=10F BF=350 VAF=100)
+.backanno
+.end
