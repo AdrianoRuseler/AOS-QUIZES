@@ -1,0 +1,14 @@
+* C:\Users\ruseler\Documents\GitHub\AOS-QUIZES\TE07\LTspice\FET06op.asc
+Rg g N003 {Rg}
+Vdd N001 0 {Vdd}
+Vgg N003 0 {Vgg}
+Rd N001 N002 {Rd}
+M1 N002 g 0 0 MOSFET
+.model NMOS NMOS
+.model PMOS PMOS
+.lib C:\Users\ruseler\AppData\Local\LTspice\lib\cmp\standard.mos
+.op
+.model MOSFET nmos(Kp=1m Vto=4)
+.param Vdd=50 Vgg=6 Rd=330 Rg=1Meg
+.backanno
+.end
