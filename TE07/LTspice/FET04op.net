@@ -1,0 +1,14 @@
+* C:\Users\ruseler\Documents\GitHub\AOS-QUIZES\TE07\LTspice\FET04op.asc
+Vdd N001 0 {Vdd}
+Rd N001 N002 {Rd}
+Rs N003 0 {Rs}
+Rg g 0 {Rg}
+J1 N002 g N003 JFET
+.model NJF NJF
+.model PJF PJF
+.lib C:\Users\ruseler\AppData\Local\LTspice\lib\cmp\standard.jft
+.op
+.model JFET pjf(Beta=1m Vto=-6)
+.param Vdd=-20 Rs=270 Rd=330 Rg=1Meg
+.backanno
+.end
