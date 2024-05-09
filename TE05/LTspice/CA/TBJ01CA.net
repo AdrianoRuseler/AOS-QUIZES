@@ -1,0 +1,44 @@
+* C:\Users\ruseler\Documents\GitHub\AOS-QUIZES\TE05\LTspice\CA\TBJ01CA.asc
+Rb cc B {Rb}
+Rc cc C {Rc}
+Vcc cc 0 {Vcc}
+Q1 C B 0 0 TBJ
+Ci B CAin {Cx}
+Co CAout C {Cx}
+Vca CAin 0 SINE(0 0.01m 10k)
+RL CAout 0 10Meg
+Rb1 N001 N003 {Rb}
+Rc1 N001 N002 {Rc}
+Vcc1 N001 0 {Vcc}
+Q2 N002 N003 0 0 TBJ
+Ci1 N003 0 {Cx}
+Co1 CAout2 N002 {Cx}
+Vca1 CAout2 0 SINE(0 0.1m 10k)
+.model NPN NPN
+.model PNP PNP
+.lib C:\Users\ruseler\AppData\Local\LTspice\lib\cmp\standard.bjt
+.tran 0 0.001 0
+.param Vcc=1.500e+01 Rb=1.200e+04 Rc=5.600e+02 Cx=1.000e-04
+.model TBJ NPN(IS=1.000e-14 BF=1.250e+02 VAF=5.000e+01)
+.meas Vipp PP V(CAin)
+.meas Iipp PP I(Ci)
+.meas Zi param Vipp/Iipp
+.meas Vopp PP V(CAout)
+.meas Av param -Vopp/Vipp
+.meas Vopp2 PP V(CAout2)
+.meas Iopp2 PP I(Co1)
+.meas Zo param Vopp2/Iopp2
+.meas Virms RMS V(CAin)
+.meas Iirms RMS I(Ci)
+.meas Zirms param Virms/Iirms
+.meas Vorms RMS V(CAout)
+.meas Avrms param -Vorms/Virms
+.meas Vorms2 RMS V(CAout2)
+.meas Iorms2 RMS I(Co1)
+.meas Zorms param Vorms2/Iorms2
+.meas re param Rpiq1tbj/BetaDCq1tbj
+.meas zocalc param Roq1tbj*Rc/(Roq1tbj+Rc)
+.meas zicalc param Rb*BetaDCq1tbj*re/(Rb+BetaDCq1tbj*re)
+.meas avcalc param -zocalc/re
+.backanno
+.end
