@@ -1,0 +1,23 @@
+* C:\Users\ruseler\Documents\GitHub\AOS-QUIZES\TE07\LTspice\TJB+FETs\COMB06op.asc
+J1 C G B JFET
+R2 B E {R2}
+RL Vpp C {RL}
+Q1 C B E 0 TBJ
+R1 E 0 {R1}
+XU1 N001 E Vpp Vnn G level2 Avol=1Meg GBW=10Meg Slew=10Meg Ilimit=25m Rail=0 Vos=0 En=0 Enk=0 In=0 Ink=0 Rin=500Meg
+V1 Vpp 0 {Vs}
+V2 0 Vnn {Vs}
+V3 N001 0 {Vi}
+.model NPN NPN
+.model PNP PNP
+.lib C:\Users\ruseler\AppData\Local\LTspice\lib\cmp\standard.bjt
+.model NJF NJF
+.model PJF PJF
+.lib C:\Users\ruseler\AppData\Local\LTspice\lib\cmp\standard.jft
+.op
+.model JFET njf(Beta=5m Vto=-1)
+.param Vi=5 Vs=20 R2=68k R1=220 RL=120
+.model TBJ NPN(IS=10F BF=150)
+.lib UniversalOpAmp2.lib
+.backanno
+.end
