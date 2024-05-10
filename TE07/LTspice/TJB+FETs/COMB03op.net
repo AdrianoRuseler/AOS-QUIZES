@@ -1,0 +1,18 @@
+* C:\Users\ruseler\Documents\GitHub\AOS-QUIZES\TE07\LTspice\TJB+FETs\COMB03op.asc
+RC cc N001 {RC}
+Vcc cc 0 {Vcc}
+Q1 N002 b1 N003 0 TBJ1
+RE N003 0 {RE}
+R1 cc b2 {R1}
+R2 b2 b1 {R2}
+Q2 N001 b2 N002 0 TBJ2
+R3 b1 0 {R3}
+.model NPN NPN
+.model PNP PNP
+.lib C:\Users\ruseler\AppData\Local\LTspice\lib\cmp\standard.bjt
+.op
+.param Vcc=30 R1=33k R2=18k R3=15k RC=680 RE=330
+.model TBJ1 NPN(IS=10F BF=350)
+.model TBJ2 NPN(IS=10F BF=350)
+.backanno
+.end
