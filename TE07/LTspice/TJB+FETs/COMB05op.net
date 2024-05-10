@@ -1,0 +1,15 @@
+* C:\Users\ruseler\Documents\GitHub\AOS-QUIZES\TE07\LTspice\TJB+FETs\COMB05op.asc
+RE N003 0 {RE}
+Vcc cc 0 {Vcc}
+Q2 cc N002 N003 0 TBJ2
+RB cc N001 {RB}
+Q1 cc N001 N002 0 TBJ1
+.model NPN NPN
+.model PNP PNP
+.lib C:\Users\ruseler\AppData\Local\LTspice\lib\cmp\standard.bjt
+.op
+.param Vcc=25 RB=150k RE=180
+.model TBJ1 NPN(IS=15F BF=5)
+.model TBJ2 NPN(IS=15F BF=5)
+.backanno
+.end
