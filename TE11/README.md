@@ -1,0 +1,2 @@
+# TE11 - Osciladores
+Estabilidade e condições para oscilação. Osciladores RC.  Osciladores LC. Configurações típicas RC, RL: com elementos passivos e com amplificadores operacionais.  Cristais piezoelétricos.
