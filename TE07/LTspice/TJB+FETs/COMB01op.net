@@ -1,0 +1,21 @@
+* C:\Users\ruseler\Documents\GitHub\AOS-QUIZES\TE07\LTspice\TJB+FETs\COMB01op.asc
+J1 D G S JFET
+Rb cc B {Rb}
+Rc cc C {Rc}
+Vcc cc 0 {Vcc}
+Q1 C B D 0 TBJ
+Rs S 0 {Rs}
+R1 cc G {R1}
+R2 G 0 {R2}
+.model NPN NPN
+.model PNP PNP
+.lib C:\Users\ruseler\AppData\Local\LTspice\lib\cmp\standard.bjt
+.model NJF NJF
+.model PJF PJF
+.lib C:\Users\ruseler\AppData\Local\LTspice\lib\cmp\standard.jft
+.op
+.model JFET njf(Beta=1m Vto=-6)
+.param Vcc=30 R1=33k R2=18k Rb=820k Rc=680 Rs=330
+.model TBJ NPN(IS=10F BF=350)
+.backanno
+.end
