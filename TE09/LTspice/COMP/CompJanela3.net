@@ -1,0 +1,24 @@
+* C:\Users\ruseler\Documents\GitHub\AOS-QUIZES\TE09\LTspice\COMP\CompJanela3.asc
+V1 Vpp 0 {Vs}
+V2 0 Vnn {Vs}
+RL Vo Vnn {RL}
+R1 Vpp Vx {R1}
+V3 N001 0 SINE(0 {Vi} {fi})
+R2 Vx Vy {R2}
+R3 Vy Vnn {R3}
+D1 N002 Vo Dx
+D2 N003 Vo Dx
+XU1 N001 Vx Vpp Vnn N002 level2 Avol=1Meg GBW=10Meg Slew=10Meg Ilimit=25m Rail=0 Vos=0 En=0 Enk=0 In=0 Ink=0 Rin=500Meg
+XU2 Vy N001 Vpp Vnn N003 level2 Avol=1Meg GBW=10Meg Slew=10Meg Ilimit=25m Rail=0 Vos=0 En=0 Enk=0 In=0 Ink=0 Rin=500Meg
+.model D D
+.lib C:\Users\ruseler\AppData\Local\LTspice\lib\cmp\standard.dio
+.param Vi=15 Vs=15 fi=1k R1=1k R2=1k R3=1k RL=100k
+.tran 0.01
+.model Dx D(Vfwd=.7)
+.meas Vx AVG(V(Vx))
+.meas Vy AVG(V(Vy))
+.meas VoMax MAX(V(Vo))
+.meas VoMin MIN(V(Vo))
+.lib UniversalOpAmp2.lib
+.backanno
+.end
