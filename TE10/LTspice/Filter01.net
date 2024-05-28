@@ -1,0 +1,20 @@
+* C:\Users\ruseler\Documents\GitHub\AOS-QUIZES\TE10\LTspice\Filter01.asc
+V1 Vpp 0 {Vs}
+V2 0 Vnn {Vs}
+RL o 0 {RL}
+Vi i 0 AC 1.
+XU1 0 N001 Vpp Vnn o level2 Avol=1Meg GBW=10Meg Slew=10Meg Ilimit=25m Rail=0 Vos=0 En=0 Enk=0 In=0 Ink=0 Rin=500Meg
+C2 o N001 {C2}
+R1 N001 i {R1}
+R2 o N001 {R2}
+.param Vs=15 R1=1.3k R2=1k C2=30n RL=110k
+.ac dec 10 1 100k
+.meas AC H FIND V(o) AT 10Hz
+.meas ac H0m max mag(V(o))
+.meas H0 param -R2/R1
+.meas ac cfreq when mag(V(o))=mag(H0/sqrt(2))
+.meas w0 param 1/(R2*C2)
+.meas ac wc param 2*pi*cfreq
+.lib UniversalOpAmp2.lib
+.backanno
+.end
