@@ -1,0 +1,118 @@
+clear all
+clc
+
+% Sets simulation dir
+circuit.name = 'Filter06'; % File name
+circuit.dir = [pwd '\'];  % Sets simulation dir
+circuit.theme  = 'boost'; % clean or boost
+
+% Config simulation
+circuit.parnamesim={'Vs','R1','R2','C1','C2','RL'}; % Variables names
+circuit.parname={'Vs','R1','R2','C1','C2','RL'}; % Variables names
+circuit.parunit={'V','&Omega;','&Omega;','F','F','&Omega;'}; % Variables unit
+
+circuit.funcstr  = {'filter04func1(parvalues)','filter01func2(parvalues)','filter03func3(parvalues)','filter03func4(parvalues)','filter03func5(parvalues)','filter03func6(parvalues)'}; % Array of strings evalstr
+
+
+% parameters input
+Vs=15:5:20; 
+% Vi=[-5:-1 1:5]; 
+
+% Vz=[2.7 3.3 3.9 4.7 5.6 6.8 8.2 3.0 3.6 4.3 5.1 6.2 7.5 9.1];
+R1 = combnres(1,100,'E24',6);
+R2 = combnres(1,100,'E24',6);
+RL = combnres(1,10000,'E24',6);
+
+C1 = combnres(1,1e-9,'E24',6);
+C2 = combnres(1,1e-10,'E24',6);
+
+% Rb = combres(1,[100],'E12'); %
+circuit.Xi=CombVec(Vs,R1,R2,C1,C2,RL); %%
+circuit.timeout = 5; % Simulation timeout in seconds
+% circuit.multiplesims=[50 50]; % Number of simulations
+circuit.nsims = 16; % Numero de circuitos a serem simulados
+
+circuit.cmdtype = '.ac'; % AC analysis
+circuit.cmdupdate = 0; % 
+
+% % Generate question
+quiz.enunciado = 'Para o filtro passa-faixa apresentado na Figura 1, determine:';
+
+% Text a ser colocado abaixo da figura
+quiz.extratext{1} = 'Forma padronizada: \(H(s) = H_o\dfrac{\dfrac{s}{ \omega_L }}{1+\dfrac{s}{ \omega_L }}\dfrac{1}{1+\dfrac{s}{ \omega_H }}\)';
+
+quiz.rowfigdirective=1; % Imprima os parâmetros ao lado da figura
+quiz.autoitem=1; % Auto add item letter: a), b)... 97 - 122;
+
+q=0;
+q=q+1;
+quiz.question{q}.str='Qual o valor de \(H_o\)?';
+quiz.question{q}.units={'V/V'};
+quiz.question{q}.options={1}; % Only lowcase
+quiz.question{q}.vartype={'func'}; % meas 
+quiz.question{q}.optscore=[100]; % Score per option
+quiz.question{q}.opttol=[5]; % tolerance in percentage %
+quiz.question{q}.type='NUMERICAL';
+
+q=q+1;
+quiz.question{q}.str='Qual o valor de \(H_o\) em decibels?';
+quiz.question{q}.units={'dB'};
+quiz.question{q}.options={2}; % Only lowcase
+quiz.question{q}.vartype={'func'}; % meas 
+quiz.question{q}.optscore=[100]; % Score per option
+quiz.question{q}.opttol=[5]; % tolerance in percentage %
+quiz.question{q}.type='NUMERICAL';
+
+q=q+1;
+quiz.question{q}.str='Qual o valor de \(\omega_L\)?';
+quiz.question{q}.units={'rad/s'};
+quiz.question{q}.options={3}; % Only lowcase
+quiz.question{q}.vartype={'func'}; % meas 
+quiz.question{q}.optscore=[100]; % Score per option
+quiz.question{q}.opttol=[5]; % tolerance in percentage %
+quiz.question{q}.type='NUMERICAL';
+
+q=q+1;
+quiz.question{q}.str='Qual o valor da frequência de corte das baixas?';
+quiz.question{q}.units={'Hz'};
+quiz.question{q}.options={4}; % Only lowcase
+quiz.question{q}.vartype={'func'}; % meas 
+quiz.question{q}.optscore=[100]; % Score per option
+quiz.question{q}.opttol=[5]; % tolerance in percentage %
+quiz.question{q}.type='NUMERICAL';
+
+q=q+1;
+quiz.question{q}.str='Qual o valor de \(\omega_H\)?';
+quiz.question{q}.units={'rad/s'};
+quiz.question{q}.options={5}; % Only lowcase
+quiz.question{q}.vartype={'func'}; % meas 
+quiz.question{q}.optscore=[100]; % Score per option
+quiz.question{q}.opttol=[5]; % tolerance in percentage %
+quiz.question{q}.type='NUMERICAL';
+
+q=q+1;
+quiz.question{q}.str='Qual o valor da frequência de corte das altas?';
+quiz.question{q}.units={'Hz'};
+quiz.question{q}.options={6}; % Only lowcase
+quiz.question{q}.vartype={'func'}; % meas 
+quiz.question{q}.optscore=[100]; % Score per option
+quiz.question{q}.opttol=[5]; % tolerance in percentage %
+quiz.question{q}.type='NUMERICAL';
+
+
+
+%% Generate quizes
+if isfield(circuit,'multiplesims')
+    for ms=1:length(circuit.multiplesims)
+        circuit.nsims=circuit.multiplesims(ms); % Number of simulations
+        quiz.nquiz = circuit.nsims;
+        ltspicemd2xml(circuit,quiz);
+    end
+else
+    quiz.nquiz = circuit.nsims;
+    ltspicemd2xml(circuit,quiz);
+end
+
+
+
+
