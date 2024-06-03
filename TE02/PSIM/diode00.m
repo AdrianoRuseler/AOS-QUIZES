@@ -23,7 +23,7 @@ R2 = combres(1,[10],'E24'); %
 
 X0=CombVec(Vi,Von,Vz,Vled,R1,R2);
 % circuit.multiplesims=[25 25]; % Number of simulations
-circuit.nsims = 10; % Numero de circuitos a serem simulados
+circuit.nsims = 16; % Numero de circuitos a serem simulados
 
 [~,y]=size(X0);
 nq=randperm(y,3*circuit.nsims); % escolha as questoes
