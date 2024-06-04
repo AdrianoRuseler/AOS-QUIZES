@@ -44,6 +44,8 @@ quiz.extratext{1} = 'Forma padronizada: \(H(s) = H_o\dfrac{1}{1+\dfrac{s}{ \omeg
 quiz.rowfigdirective=1; % Imprima os parâmetros ao lado da figura
 quiz.autoitem=1; % Auto add item letter: a), b)... 97 - 122;
 
+% quiz.onlyfunc=1; % do not simulate, only functions
+
 q=0;
 q=q+1;
 quiz.question{q}.str='Qual o valor de \(H_o\)?';
@@ -81,8 +83,7 @@ quiz.question{q}.optscore=[100]; % Score per option
 quiz.question{q}.opttol=[5]; % tolerance in percentage %
 quiz.question{q}.type='NUMERICAL';
 
-
-
+% isonlyfunc(quiz)
 
 %% Generate quizes
 if isfield(circuit,'multiplesims')
