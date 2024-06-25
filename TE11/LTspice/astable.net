@@ -1,0 +1,25 @@
+* C:\Users\ruseler\Documents\GitHub\AOS-QUIZES\TE11\LTspice\astable.asc
+R1 N001 c1 {Rc}
+R2 N001 out {Rc}
+R3 N001 b1 {Rr}
+R4 N001 b2 {Rr}
+C1 b1 c1 {Cr}
+C2 out b2 {Cr}
+V1 N001 0 {Vcc}
+Q1 out b1 0 0 TBJ
+Q2 c1 b2 0 0 TBJ
+.model NPN NPN
+.model PNP PNP
+.lib C:\Users\ruseler\AppData\Local\LTspice\lib\cmp\standard.bjt
+.tran 1 startup
+.meas tran Tf1 find time when V(out)=Vcc/2 fall 3
+.meas tran Tr1 find time when V(out)=Vcc/2 rise 3
+.meas tran Tf2 find time when V(out)=Vcc/2 fall 4
+.meas tran Tr2 find time when V(out)=Vcc/2 rise 4
+.meas tran th param Tf1-Tr1
+.meas tran tl param Tr2-Tf1
+.meas tran fosc param 1/(Tf2-Tf1)
+.param Vcc=25 Rc=2k Rr=100k Cr=0.05u
+.model TBJ NPN(BF=150 TF=400E-10 TR=400E-10)
+.backanno
+.end
