@@ -1,0 +1,12 @@
+* C:\Users\ruseler\Documents\GitHub\AOS-QUIZES\TE09\LTspice\NonIdeal\LarguraBanda.asc
+V1 N001 0 ac 1
+XU1 N001 0 +V -V 2 level2 Avol=1Meg GBW=0.8Meg Slew=10Meg Ilimit=25m Rail=0 Vos=0 En=0 Enk=0 In=0 Ink=0 Rin=500Meg
+V2 +V 0 {Vs}
+V3 0 -V {Vs}
+;.ac oct 10 .1 100Meg
+* A single pole opamp with one internal node,\nslew rate limit and output voltage and current limit.\nAvol=DC gain  GBW=GBW product\nSlew=Slewrate limit  ilimit=current limit\nrail=output stage saturation voltage\nVos=offset voltage\nen=equiv. input noise voltage density\nenk=equiv. input noise voltage density corner freq.\nin=equiv. input noise current density\nink=equiv. input noise current density corner freq.\nRin=Input resistance
+.param Vs=15
+.op
+.lib UniversalOpAmp2.lib
+.backanno
+.end
