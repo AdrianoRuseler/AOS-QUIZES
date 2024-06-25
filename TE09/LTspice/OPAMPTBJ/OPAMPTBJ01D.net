@@ -1,0 +1,16 @@
+* C:\Users\ruseler\Documents\GitHub\AOS-QUIZES\TE09\LTspice\OPAMPTBJ\OPAMPTBJ01D.asc
+V1 Vpp 0 {Vs}
+V2 0 Vnn {Vs}
+RL o 0 {RL}
+Vi i 0 {Vi}
+XU1 0 neg Vpp Vnn o level2 Avol=1Meg GBW=10Meg Slew=10Meg Ilimit=25m Rail=0 Vos=0 En=0 Enk=0 In=0 Ink=0 Rin=500Meg
+R1 i neg {R1}
+D2 neg o D2
+.model D D
+.lib C:\Users\ruseler\AppData\Local\LTspice\lib\cmp\standard.dio
+.param Vi=10 Vs=15 R1=1k RL=10k
+.op
+.model D2 D(IS=10F N=1.2)
+.lib UniversalOpAmp2.lib
+.backanno
+.end
