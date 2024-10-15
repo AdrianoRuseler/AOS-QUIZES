@@ -7,6 +7,6 @@ Functions to generate quiz for moodle
 Clone or download project: https://github.com/AdrianoRuseler/quiz2matlab
 Add to Matlab search path
 ```matlab
-addpath('DOWNLOADED DIR/quiz2matlab') % TODO
+addpath('DOWNLOADED DIR/quiz2matlab/functions') % TODO
 savepath % Save search path
 ```
