@@ -1,6 +1,6 @@
 # AOS-QUIZES
 AOS-Amplificadores Operacionais e Semicondutores TEMPLATE
-Como utilizar: https://youtu.be/fjl-JvZ7XEU
+- Como utilizar: https://youtu.be/fjl-JvZ7XEU
 
 ## Dependência: quiz2matlab
 Functions to generate quiz for moodle
