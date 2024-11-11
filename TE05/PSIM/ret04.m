@@ -28,7 +28,7 @@ C0 = combcap(1,10e-6,'E12');
 
 circuit.Xi=CombVec(Vi,fi,Von,ron,C0,R0); %%
 % circuit.multiplesims=[25 25]; % Number of simulations
-circuit.nsims = 16; % Numero de circuitos a serem simulados
+circuit.nsims = 32; % Numero de circuitos a serem simulados
 
 circuit.fundfreqind=2; % 
 circuit.cycles = 10; % Total number of cycles
@@ -67,42 +67,42 @@ quiz.question{q}.optscore=[100]; % Score per option
 quiz.question{q}.opttol=[10]; % tolerance in percentage %
 quiz.question{q}.type='NUMERICAL';
 
-q=q+1;
-quiz.question{q}.str='Qual o valor em graus do ângulo de entrada em condução do diodo D1?';
-quiz.question{q}.units={'graus'};
-quiz.question{q}.vartype={'mean'}; %
-quiz.question{q}.options={'thetac'};
-quiz.question{q}.optscore=[100]; % Score per option
-quiz.question{q}.opttol=[10]; % tolerance in percentage %
-quiz.question{q}.type='NUMERICAL';
+% q=q+1;
+% quiz.question{q}.str='Qual o valor em graus do ângulo de entrada em condução do diodo D1?';
+% quiz.question{q}.units={'graus'};
+% quiz.question{q}.vartype={'mean'}; %
+% quiz.question{q}.options={'thetac'};
+% quiz.question{q}.optscore=[100]; % Score per option
+% quiz.question{q}.opttol=[10]; % tolerance in percentage %
+% quiz.question{q}.type='NUMERICAL';
 
 
-q=q+1;
-quiz.question{q}.str='Qual o valor em graus do ângulo de bloqueiro do diodo D1?';
-quiz.question{q}.units={'graus'};
-quiz.question{q}.vartype={'mean'}; %
-quiz.question{q}.options={'thetab'};
-quiz.question{q}.optscore=[100]; % Score per option
-quiz.question{q}.opttol=[10]; % tolerance in percentage %
-quiz.question{q}.type='NUMERICAL';
+% q=q+1;
+% quiz.question{q}.str='Qual o valor em graus do ângulo de bloqueiro do diodo D1?';
+% quiz.question{q}.units={'graus'};
+% quiz.question{q}.vartype={'mean'}; %
+% quiz.question{q}.options={'thetab'};
+% quiz.question{q}.optscore=[100]; % Score per option
+% quiz.question{q}.opttol=[10]; % tolerance in percentage %
+% quiz.question{q}.type='NUMERICAL';
+% 
+% q=q+1;
+% quiz.question{q}.str='Qual o valor em graus do ângulo de condução diodo D1?';
+% quiz.question{q}.units={'graus'};
+% quiz.question{q}.vartype={'mean'}; %
+% quiz.question{q}.options={'gammad'};
+% quiz.question{q}.optscore=[100]; % Score per option
+% quiz.question{q}.opttol=[10]; % tolerance in percentage %
+% quiz.question{q}.type='NUMERICAL';
 
-q=q+1;
-quiz.question{q}.str='Qual o valor em graus do ângulo de condução diodo D1?';
-quiz.question{q}.units={'graus'};
-quiz.question{q}.vartype={'mean'}; %
-quiz.question{q}.options={'gammad'};
-quiz.question{q}.optscore=[100]; % Score per option
-quiz.question{q}.opttol=[10]; % tolerance in percentage %
-quiz.question{q}.type='NUMERICAL';
-
-q=q+1;
-quiz.question{q}.str='Qual a potência total dissipada nos diodos?';
-quiz.question{q}.units={'W'}; % 
-quiz.question{q}.vartype={'mean'}; % Not implemented
-quiz.question{q}.options={'pd'}; % Variables from PSIM simulation
-quiz.question{q}.optscore=[100]; % Score per option
-quiz.question{q}.opttol=[10]; % tolerance in percentage %
-quiz.question{q}.type='NUMERICAL';
+% q=q+1;
+% quiz.question{q}.str='Qual a potência total dissipada nos diodos?';
+% quiz.question{q}.units={'W'}; % 
+% quiz.question{q}.vartype={'mean'}; % Not implemented
+% quiz.question{q}.options={'pd'}; % Variables from PSIM simulation
+% quiz.question{q}.optscore=[100]; % Score per option
+% quiz.question{q}.opttol=[10]; % tolerance in percentage %
+% quiz.question{q}.type='NUMERICAL';
 
 q=q+1;
 quiz.question{q}.str='Qual o valor eficaz da corrente na fonte?';
@@ -141,32 +141,32 @@ quiz.question{q}.optscore=[100]; % Score per option
 quiz.question{q}.opttol=[10]; % tolerance in percentage %
 quiz.question{q}.type='NUMERICAL';
 % 
-q=q+1;
-quiz.question{q}.str='Qual a taxa de distorção harmônica THD da corrente na fonte?';
-quiz.question{q}.units={'A/A'}; % 
-quiz.question{q}.vartype={'mean'}; % Not implemented
-quiz.question{q}.options={'thdi'}; % Variables from PSIM simulation
-quiz.question{q}.optscore=[100]; % Score per option
-quiz.question{q}.opttol=[10]; % tolerance in percentage %
-quiz.question{q}.type='NUMERICAL';
-% 
-q=q+1;
-quiz.question{q}.str='Qual o valor eficaz da componente fundamental da corrente na fonte?';
-quiz.question{q}.units={'A'}; % 
-quiz.question{q}.vartype={'mean'}; % Not implemented
-quiz.question{q}.options={'ifrms'}; % Variables from PSIM simulation
-quiz.question{q}.optscore=[100]; % Score per option
-quiz.question{q}.opttol=[10]; % tolerance in percentage %
-quiz.question{q}.type='NUMERICAL';
+% q=q+1;
+% quiz.question{q}.str='Qual a taxa de distorção harmônica THD da corrente na fonte?';
+% quiz.question{q}.units={'A/A'}; % 
+% quiz.question{q}.vartype={'mean'}; % Not implemented
+% quiz.question{q}.options={'thdi'}; % Variables from PSIM simulation
+% quiz.question{q}.optscore=[100]; % Score per option
+% quiz.question{q}.opttol=[10]; % tolerance in percentage %
+% quiz.question{q}.type='NUMERICAL';
+% % 
+% q=q+1;
+% quiz.question{q}.str='Qual o valor eficaz da componente fundamental da corrente na fonte?';
+% quiz.question{q}.units={'A'}; % 
+% quiz.question{q}.vartype={'mean'}; % Not implemented
+% quiz.question{q}.options={'ifrms'}; % Variables from PSIM simulation
+% quiz.question{q}.optscore=[100]; % Score per option
+% quiz.question{q}.opttol=[10]; % tolerance in percentage %
+% quiz.question{q}.type='NUMERICAL';
 
-q=q+1;
-quiz.question{q}.str='Qual o valor eficaz das componentes harmônicas da corrente na fonte?';
-quiz.question{q}.units={'A'}; % 
-quiz.question{q}.vartype={'mean'}; % Not implemented
-quiz.question{q}.options={'ihrms'}; % Variables from PSIM simulation
-quiz.question{q}.optscore=[100]; % Score per option
-quiz.question{q}.opttol=[10]; % tolerance in percentage %
-quiz.question{q}.type='NUMERICAL';
+% q=q+1;
+% quiz.question{q}.str='Qual o valor eficaz das componentes harmônicas da corrente na fonte?';
+% quiz.question{q}.units={'A'}; % 
+% quiz.question{q}.vartype={'mean'}; % Not implemented
+% quiz.question{q}.options={'ihrms'}; % Variables from PSIM simulation
+% quiz.question{q}.optscore=[100]; % Score per option
+% quiz.question{q}.opttol=[10]; % tolerance in percentage %
+% quiz.question{q}.type='NUMERICAL';
 
 
 
