@@ -1,4 +1,5 @@
-clear all
+% clear all
+clear circuit quiz
 clc
 
 % Sets simulation dir
@@ -34,18 +35,18 @@ circuit.Xi=CombVec(Vs,fi,Avol,GBW); %%
 circuit.timeout = 5; % Simulation timeout in seconds
 
 % circuit.multiplesims=[50 50]; % Number of simulations
-circuit.nsims = 16; % Numero de circuitos a serem simulados
+circuit.nsims = 32; % Numero de circuitos a serem simulados
 
 circuit.cmdtype = '.ac'; % AC analysis
 circuit.cmdupdate = 0; % 
 
 % % Generate question
-quiz.enunciado = 'Para o circuito amplificador não-ideal com ganho DC Avol e largura de banda GBW, determine:';
+quiz.enunciado = 'Para o circuito amplificador nÃ£o-ideal com ganho DC Avol e largura de banda GBW, determine:';
 
 % Text a ser colocado abaixo da figura
 quiz.extratext{2} = 'Forma padronizada: \(H(s) = H_o\dfrac{1}{1+\dfrac{s}{ \omega_o }} \)';
 
-quiz.rowfigdirective=1; % Imprima os parâmetros ao lado da figura
+quiz.rowfigdirective=1; % Imprima os parÃ¢metros ao lado da figura
 quiz.autoitem=1; % Auto add item letter: a), b)... 97 - 122;
 
 q=0;
@@ -59,7 +60,7 @@ quiz.question{q}.opttol=[5]; % tolerance in percentage %
 quiz.question{q}.type='NUMERICAL';
 
 q=q+1;
-quiz.question{q}.str='Qual o valor da magnitude de  \(H(s)\) em decibels na frequência de corte?';
+quiz.question{q}.str='Qual o valor da magnitude de  \(H(s)\) em decibels na frequÃªncia de corte?';
 quiz.question{q}.units={'dB'};
 quiz.question{q}.options={2}; % Only lowcase
 quiz.question{q}.vartype={'func'}; % meas 
@@ -68,7 +69,7 @@ quiz.question{q}.opttol=[5]; % tolerance in percentage %
 quiz.question{q}.type='NUMERICAL';
 
 q=q+1;
-quiz.question{q}.str='Qual o valor da frequência de corte \(\omega_o\)?';
+quiz.question{q}.str='Qual o valor da frequÃªncia de corte \(\omega_o\)?';
 quiz.question{q}.units={'rad/s'};
 quiz.question{q}.options={3}; % Only lowcase
 quiz.question{q}.vartype={'func'}; % meas 
@@ -78,7 +79,7 @@ quiz.question{q}.type='NUMERICAL';
 
 
 q=q+1;
-quiz.question{q}.str='Qual o valor da magnitude de \(H(s)\) em decibels na frequência fi?';
+quiz.question{q}.str='Qual o valor da magnitude de \(H(s)\) em decibels na frequÃªncia fi?';
 quiz.question{q}.units={'dB'};
 quiz.question{q}.options={4}; % Only lowcase
 quiz.question{q}.vartype={'func'}; % meas 
@@ -87,7 +88,7 @@ quiz.question{q}.opttol=[5]; % tolerance in percentage %
 quiz.question{q}.type='NUMERICAL';
 
 q=q+1;
-quiz.question{q}.str='Qual o valor da fase  de \(H(s)\) em graus na frequência fi?';
+quiz.question{q}.str='Qual o valor da fase  de \(H(s)\) em graus na frequÃªncia fi?';
 quiz.question{q}.units={'graus'};
 quiz.question{q}.options={5}; % Only lowcase
 quiz.question{q}.vartype={'func'}; % meas 

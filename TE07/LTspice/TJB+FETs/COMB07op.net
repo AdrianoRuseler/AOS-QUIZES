@@ -10,10 +10,10 @@ V3 N001 0 {Vi}
 XU2 C N001 0 Vnn G level2 Avol=1Meg GBW=10Meg Slew=10Meg Ilimit=25m Rail=0 Vos=0 En=0 Enk=0 In=0 Ink=0 Rin=500Meg
 .model NPN NPN
 .model PNP PNP
-.lib C:\Users\ruseler\AppData\Local\LTspice\lib\cmp\standard.bjt
+.lib C:\Users\ruseler\Documents\LTspiceXVII\lib\cmp\standard.bjt
 .model NJF NJF
 .model PJF PJF
-.lib C:\Users\ruseler\AppData\Local\LTspice\lib\cmp\standard.jft
+.lib C:\Users\ruseler\Documents\LTspiceXVII\lib\cmp\standard.jft
 .op
 .model JFET NJF(Beta=4m Vto=-3)
 .param Vi=-1.75 Vs=20 R1=100 R2=3.9k RL=36

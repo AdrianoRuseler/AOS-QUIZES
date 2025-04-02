@@ -1,4 +1,5 @@
-clear all
+% clear all
+clear circuit quiz
 clc
 
 % Sets simulation dir
@@ -10,7 +11,7 @@ circuit.theme  = 'boost'; % clean or boost
 % Config simulation
 circuit.parnamesim={'Vcc','R1','R2','R3','T1'}; % Variables names
 circuit.parname={'Vcc','R1','R2','R3','T1'}; % Variables names
-circuit.parunit={'V','&Omega;','&Omega;','&Omega;','ºC'}; % Variables unit
+circuit.parunit={'V','&Omega;','&Omega;','&Omega;','ÂºC'}; % Variables unit
 
 % parameters input
 Vcc=20:5:30; 
@@ -36,7 +37,7 @@ Temp=50:5:80;
 % Rb = combres(1,[100],'E12'); %
 circuit.Xi=CombVec(Vcc,R1,R2,R3,Temp,Vrev1,Rrev1,Vrev2,Rrev2); %%
 % circuit.multiplesims=[50 50]; % Number of simulations
-circuit.nsims = 16; % Numero de circuitos a serem simulados
+circuit.nsims = 32; % Numero de circuitos a serem simulados
 
 circuit.parind=[1:5];
 
@@ -76,8 +77,8 @@ circuit.cmdupdate = 0; % Update the cmdtype from sim file
 circuit.LTspice.net.run = 0;
 
 % Generate question
-quiz.enunciado = 'Simule no LTspice o ponto de operação (.op) do circuito apresentado na Figura 1 e determine:';
-% quiz.rowfigparam=1; % Imprima os parâmetros ao lado da figura
+quiz.enunciado = 'Simule no LTspice o ponto de operaÃ§Ã£o (.op) do circuito apresentado na Figura 1 e determine:';
+% quiz.rowfigparam=1; % Imprima os parÃ¢metros ao lado da figura
 quiz.rowfigdirective=1;
 quiz.autoitem=1; % Auto add item letter: a), b)... 97 - 122;  
 % Text a ser colocado abaixo da figura
@@ -104,7 +105,7 @@ quiz.question{q}.opttol=[10]; % tolerance in percentage %
 quiz.question{q}.type='NUMERICAL';
 
 q=q+1;
-quiz.question{q}.str='Qual o valor da tensão no diodo zener DZ1?';
+quiz.question{q}.str='Qual o valor da tensÃ£o no diodo zener DZ1?';
 quiz.question{q}.units={'V'};
 quiz.question{q}.options={'vz1'};
 quiz.question{q}.vartype={'meas'}; % meas 
@@ -113,7 +114,7 @@ quiz.question{q}.opttol=[10]; % tolerance in percentage %
 quiz.question{q}.type='NUMERICAL';
 
 q=q+1;
-quiz.question{q}.str='Qual o valor da tensão no diodo zener DZ2?';
+quiz.question{q}.str='Qual o valor da tensÃ£o no diodo zener DZ2?';
 quiz.question{q}.units={'V'};
 quiz.question{q}.options={'vz2'};
 quiz.question{q}.vartype={'meas'}; % meas 
@@ -122,7 +123,7 @@ quiz.question{q}.opttol=[10]; % tolerance in percentage %
 quiz.question{q}.type='NUMERICAL';
 
 q=q+1;
-quiz.question{q}.str='Qual a potência fornecida pela fonte?';
+quiz.question{q}.str='Qual a potÃªncia fornecida pela fonte?';
 quiz.question{q}.units={'W'};
 quiz.question{q}.options={'pf'};
 quiz.question{q}.vartype={'meas'}; % meas 

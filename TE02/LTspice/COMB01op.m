@@ -1,4 +1,5 @@
-clear all
+% clear all
+clear circuit quiz
 clc
 
 % Sets simulation dir
@@ -34,7 +35,7 @@ n2=1:0.1:1.5;
 % Rb = combres(1,[100],'E12'); %
 circuit.Xi=CombVec(Vcc,R1,R2,Is1,n1,BV1,Is2,n2,BV2); %%
 % circuit.multiplesims=[50 50]; % Number of simulations
-circuit.nsims = 16; % Numero de circuitos a serem simulados
+circuit.nsims = 32; % Numero de circuitos a serem simulados
 
 
 circuit.parind=[1:3];
@@ -67,8 +68,8 @@ circuit.cmdupdate = 0; % Update the cmdtype from sim file
 circuit.LTspice.net.run = 0;
 
 % Generate question
-quiz.enunciado = 'Simule no LTspice o ponto de operaÁ„o (.op) do circuito apresentado na Figura 1 e determine:';
-quiz.rowfigparam=1; % Imprima os par‚metros ao lado da figura
+quiz.enunciado = 'Simule no LTspice o ponto de opera√ß√£o (.op) do circuito apresentado na Figura 1 e determine:';
+quiz.rowfigparam=1; % Imprima os par√¢metros ao lado da figura
 quiz.rowfigdirective=1;
 quiz.autoitem=1; % Auto add item letter: a), b)... 97 - 122; 
 
@@ -103,7 +104,7 @@ quiz.question{q}.opttol=[10]; % tolerance in percentage %
 quiz.question{q}.type='NUMERICAL';
 
 q=q+1;
-quiz.question{q}.str='Qual o valor da tens„o no diodo zener DZ1?';
+quiz.question{q}.str='Qual o valor da tens√£o no diodo zener DZ1?';
 quiz.question{q}.units={'V'};
 quiz.question{q}.options={'vz1'};
 quiz.question{q}.vartype={'meas'}; % meas 
@@ -112,7 +113,7 @@ quiz.question{q}.opttol=[10]; % tolerance in percentage %
 quiz.question{q}.type='NUMERICAL';
 
 q=q+1;
-quiz.question{q}.str='Qual o valor da tens„o no diodo zener DZ2?';
+quiz.question{q}.str='Qual o valor da tens√£o no diodo zener DZ2?';
 quiz.question{q}.units={'V'};
 quiz.question{q}.options={'vz2'};
 quiz.question{q}.vartype={'meas'}; % meas 
@@ -121,7 +122,7 @@ quiz.question{q}.opttol=[10]; % tolerance in percentage %
 quiz.question{q}.type='NUMERICAL';
 
 q=q+1;
-quiz.question{q}.str='Qual o valor da tens„o no resistor R1?';
+quiz.question{q}.str='Qual o valor da tens√£o no resistor R1?';
 quiz.question{q}.units={'V'};
 quiz.question{q}.options={'vb'};
 quiz.question{q}.vartype={'op'}; % meas 
@@ -132,7 +133,7 @@ quiz.question{q}.type='NUMERICAL';
 % 
 % % 
 % q=4;
-% quiz.question{q}.str='d) Qual o valor da tens„o sobre os diodos D1 e D2?';
+% quiz.question{q}.str='d) Qual o valor da tens√£o sobre os diodos D1 e D2?';
 % quiz.question{q}.units={'V'};
 % quiz.question{q}.options={'vd'};
 % quiz.question{q}.vartype={'meas'}; % meas 
@@ -142,7 +143,7 @@ quiz.question{q}.type='NUMERICAL';
 % 
 % 
 % q=5;
-% quiz.question{q}.str='e) Qual a potÍncia dissipada no diodo LED?';
+% quiz.question{q}.str='e) Qual a pot√™ncia dissipada no diodo LED?';
 % quiz.question{q}.units={'W'};
 % quiz.question{q}.options={'pled'}; % Device:Var
 % quiz.question{q}.vartype={'meas'}; % From log file

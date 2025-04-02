@@ -1,4 +1,5 @@
-clear all
+% clear all
+clear circuit quiz
 clc
 
 % Sets simulation dir
@@ -43,7 +44,7 @@ ibv1=[5:10]*1e-6;
 % Rb = combres(1,[100],'E12'); %
 circuit.Xi=CombVec(Vcc,R0,Is1,n1,Rs1,tt1,cjo1,m1,bv1,ibv1); %%
 % circuit.multiplesims=[50 50]; % Number of simulations
-circuit.nsims = 16; % Numero de circuitos a serem simulados
+circuit.nsims = 32; % Numero de circuitos a serem simulados
 
 circuit.parind=[1:2];
 circuit.modind(1,:)=[3:10]; % Index for model parameters
@@ -65,14 +66,14 @@ circuit.cmdupdate = 0; % Update the cmdtype from sim file
 circuit.LTspice.net.run = 0;
 
 % Generate question
-quiz.enunciado = 'Utilize o arquivo fornecido com o modelo do diodo, simule no LTspice o ponto de operaÁ„o (.op) do circuito apresentado na Figura 1 e determine:';
-quiz.rowfigdirective=1; % Imprima os par‚metros ao lado da figura
+quiz.enunciado = 'Utilize o arquivo fornecido com o modelo do diodo, simule no LTspice o ponto de opera√ß√£o (.op) do circuito apresentado na Figura 1 e determine:';
+quiz.rowfigdirective=1; % Imprima os par√¢metros ao lado da figura
 quiz.autoitem=1; % Auto add item letter: a), b)... 97 - 122; 
 quiz.modelfile=1; % Add link to model file
 
 q=0;
 q=q+1;
-quiz.question{q}.str='Qual a tens„o Vd do diodo?';
+quiz.question{q}.str='Qual a tens√£o Vd do diodo?';
 quiz.question{q}.units={'V'};
 quiz.question{q}.options={'d0:Vd'}; % Device:Var
 quiz.question{q}.vartype={'log'}; % From log file
@@ -90,7 +91,7 @@ quiz.question{q}.opttol=[10]; % tolerance in percentage %
 quiz.question{q}.type='NUMERICAL';
 
 % q=q+1;
-% quiz.question{q}.str='Qual o valor da resistÍncia Ron do modelo linear do diodo?';
+% quiz.question{q}.str='Qual o valor da resist√™ncia Ron do modelo linear do diodo?';
 % quiz.question{q}.units={'&Omega;'};
 % quiz.question{q}.options={'d0:Req'}; % Device:Var
 % quiz.question{q}.vartype={'log'}; % From log file
@@ -108,7 +109,7 @@ quiz.question{q}.type='NUMERICAL';
 % % quiz.question{q}.type='NUMERICAL';
 % 
 % q=q+1;
-% quiz.question{q}.str='Qual o valor da tens„o Vfwd do modelo linear do diodo?';
+% quiz.question{q}.str='Qual o valor da tens√£o Vfwd do modelo linear do diodo?';
 % quiz.question{q}.units={'V'};
 % quiz.question{q}.options={'von'};
 % quiz.question{q}.vartype={'meas'}; % meas 
@@ -135,7 +136,7 @@ quiz.question{q}.type='NUMERICAL';
 % quiz.question{q}.type='NUMERICAL';
 % 
 % q=q+1;
-% quiz.question{q}.str='Qual o valor da tens„o no diodo zener DZ1?';
+% quiz.question{q}.str='Qual o valor da tens√£o no diodo zener DZ1?';
 % quiz.question{q}.units={'V'};
 % quiz.question{q}.options={'vz1'};
 % quiz.question{q}.vartype={'meas'}; % meas 
@@ -144,7 +145,7 @@ quiz.question{q}.type='NUMERICAL';
 % quiz.question{q}.type='NUMERICAL';
 % 
 % q=q+1;
-% quiz.question{q}.str='Qual o valor da tens„o no diodo zener DZ2?';
+% quiz.question{q}.str='Qual o valor da tens√£o no diodo zener DZ2?';
 % quiz.question{q}.units={'V'};
 % quiz.question{q}.options={'vz2'};
 % quiz.question{q}.vartype={'meas'}; % meas 

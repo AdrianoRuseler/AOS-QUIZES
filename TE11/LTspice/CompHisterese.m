@@ -1,4 +1,5 @@
-clear all
+% clear all
+clear circuit quiz
 clc
 
 % Sets simulation dir
@@ -34,7 +35,7 @@ C0 = combnres(1,1e-9,'E24',12);
 circuit.Xi=CombVec(Vs,R1,R2,R0,C0); %%
 circuit.timeout = 50; % Simulation timeout in seconds
 % circuit.multiplesims=[50 50]; % Number of simulations
-circuit.nsims = 16; % Numero de circuitos a serem simulados
+circuit.nsims = 32; % Numero de circuitos a serem simulados
 
 % 
 % circuit.parind=1:4;
@@ -58,7 +59,7 @@ quiz.requiremeas=1; % Require meas field in log
 % quiz.tbjeval = 0; % Evaluate tbj op
 % % Generate question
 quiz.enunciado = 'Para o circuito oscilador via comparador de histerese apresentado na Figura 1, determine:';
-quiz.rowfigdirective=1; % Imprima os par‚metros ao lado da figura
+quiz.rowfigdirective=1; % Imprima os par√¢metros ao lado da figura
 quiz.autoitem=1; % Auto add item letter: a), b)... 97 - 122; 
 
 % Text a ser colocado abaixo da figura
@@ -66,7 +67,7 @@ quiz.autoitem=1; % Auto add item letter: a), b)... 97 - 122;
 %                     ' +CJO=2.97P VJ=.75 M=.333 TT=4.32U Iave=40m Vpk=4 type=LED)']; % modelo do diodo
 q=0;
 q=q+1;
-quiz.question{q}.str='Qual o valor de comparaÁ„o V+ para Vo positivo?';
+quiz.question{q}.str='Qual o valor de compara√ß√£o V+ para Vo positivo?';
 quiz.question{q}.units={'V'};
 quiz.question{q}.options={'vx'}; % Only lowcase
 quiz.question{q}.vartype={'meas'}; % meas 
@@ -76,7 +77,7 @@ quiz.question{q}.type='NUMERICAL';
 
 
 q=q+1;
-quiz.question{q}.str='Qual o valor de comparaÁ„o V+ para Vo negativo?';
+quiz.question{q}.str='Qual o valor de compara√ß√£o V+ para Vo negativo?';
 quiz.question{q}.units={'V'};
 quiz.question{q}.options={'vy'}; % Only lowcase
 quiz.question{q}.vartype={'meas'}; % meas 
@@ -85,7 +86,7 @@ quiz.question{q}.opttol=[5]; % tolerance in percentage %
 quiz.question{q}.type='NUMERICAL';
 
 q=q+1;
-quiz.question{q}.str='Qual o valor da relaÁ„o \( \dfrac{V_s R_1}{R_1+R_2} \)?';
+quiz.question{q}.str='Qual o valor da rela√ß√£o \( \dfrac{V_s R_1}{R_1+R_2} \)?';
 quiz.question{q}.units={'V'};
 quiz.question{q}.options={2}; % Only lowcase
 quiz.question{q}.vartype={'func'}; % meas 
@@ -95,7 +96,7 @@ quiz.question{q}.type='NUMERICAL';
 
 
 q=q+1;
-quiz.question{q}.str='Qual o valor da frequÍncia de oscilaÁ„o?';
+quiz.question{q}.str='Qual o valor da frequ√™ncia de oscila√ß√£o?';
 quiz.question{q}.units={'Hz'};
 quiz.question{q}.options={'fosc'}; % Only lowcase
 quiz.question{q}.vartype={'meas'}; % meas 
@@ -104,7 +105,7 @@ quiz.question{q}.opttol=[5]; % tolerance in percentage %
 quiz.question{q}.type='NUMERICAL';
 
 q=q+1;
-quiz.question{q}.str='Qual o valor da relaÁ„o \( \dfrac{-1}{2 R_0 C_0 ln(\frac{R_2}{2 R_1+R_2}) } \)?';
+quiz.question{q}.str='Qual o valor da rela√ß√£o \( \dfrac{-1}{2 R_0 C_0 ln(\frac{R_2}{2 R_1+R_2}) } \)?';
 quiz.question{q}.units={'Hz'};
 quiz.question{q}.options={1}; % Only lowcase
 quiz.question{q}.vartype={'func'}; % meas 
@@ -113,7 +114,7 @@ quiz.question{q}.opttol=[5]; % tolerance in percentage %
 quiz.question{q}.type='NUMERICAL';
 
 % q=2;
-% quiz.question{q}.str='b) Qual o valor da imped‚ncia de saÌda Zo?';
+% quiz.question{q}.str='b) Qual o valor da imped√¢ncia de sa√≠da Zo?';
 % quiz.question{q}.units={'&Omega;'};
 % quiz.question{q}.options={'zo'};
 % quiz.question{q}.vartype={'meas'}; % meas 
@@ -122,7 +123,7 @@ quiz.question{q}.type='NUMERICAL';
 % quiz.question{q}.type='NUMERICAL';
 % 
 % q=3;
-% quiz.question{q}.str='c) Qual o valor do ganho de tens„o vo/vi?';
+% quiz.question{q}.str='c) Qual o valor do ganho de tens√£o vo/vi?';
 % quiz.question{q}.units={'V/V'};
 % quiz.question{q}.options={'av'};
 % quiz.question{q}.vartype={'meas'}; % meas 

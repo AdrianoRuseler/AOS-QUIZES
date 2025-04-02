@@ -10,10 +10,10 @@ V2 0 Vnn {Vs}
 V3 N001 0 {Vi}
 .model NPN NPN
 .model PNP PNP
-.lib C:\Users\ruseler\AppData\Local\LTspice\lib\cmp\standard.bjt
+.lib C:\Users\ruseler\Documents\LTspiceXVII\lib\cmp\standard.bjt
 .model NJF NJF
 .model PJF PJF
-.lib C:\Users\ruseler\AppData\Local\LTspice\lib\cmp\standard.jft
+.lib C:\Users\ruseler\Documents\LTspiceXVII\lib\cmp\standard.jft
 .op
 .model JFET njf(Beta=5m Vto=-1)
 .param Vi=5 Vs=20 R2=68k R1=220 RL=120

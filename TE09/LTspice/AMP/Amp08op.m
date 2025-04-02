@@ -1,4 +1,5 @@
-clear all
+% clear all
+clear circuit quiz
 clc
 
 % Sets simulation dir
@@ -27,14 +28,14 @@ R5 = combnres(1,1000,'E24',5);
 circuit.Xi=CombVec(Vs,Vi,R1,R2,R3,R4,R5); %%
 circuit.timeout = 5; % Simulation timeout in seconds
 % circuit.multiplesims=[50 50 50]; % Number of simulations
-circuit.nsims = 16; % Numero de circuitos a serem simulados
+circuit.nsims = 32; % Numero de circuitos a serem simulados
 
 circuit.cmdtype = '.op'; % Operation Point Simulation
 circuit.cmdupdate = 0; % 
 
 % % Generate question
 quiz.enunciado = 'Para o circuito amplificador apresentado na Figura 1, determine:';
-quiz.rowfigdirective=1; % Imprima os par‚metros ao lado da figura
+quiz.rowfigdirective=1; % Imprima os par√¢metros ao lado da figura
 quiz.autoitem=1; % Auto add item letter: a), b)... 97 - 122;
 
 q=0;
@@ -87,7 +88,7 @@ quiz.question{q}.type='NUMERICAL';
 
 
 q=q+1;
-quiz.question{q}.str='Qual o valor da tens„o Vo1?';
+quiz.question{q}.str='Qual o valor da tens√£o Vo1?';
 quiz.question{q}.units={'V'};
 quiz.question{q}.options={'vo1'}; % Only lowcase
 quiz.question{q}.vartype={'op'}; % meas 
@@ -97,7 +98,7 @@ quiz.question{q}.type='NUMERICAL';
 
 
 q=q+1;
-quiz.question{q}.str='Qual o valor do ganho de tens„o Vo1/Vi?';
+quiz.question{q}.str='Qual o valor do ganho de tens√£o Vo1/Vi?';
 quiz.question{q}.units={'V/V'};
 quiz.question{q}.options={'g'}; % Only lowcase
 quiz.question{q}.vartype={'meas'}; % meas 

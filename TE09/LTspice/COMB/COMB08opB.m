@@ -1,4 +1,5 @@
-clear all
+% clear all
+clear circuit quiz
 clc
 
 % Sets simulation dir
@@ -37,7 +38,7 @@ BF=50:25:150;
 Xi=CombVec(Vi,Vs,R1,R2,RL,Rs,IS,BF); %%
 [circuitmode]=getcomb08mode(Xi);
 
-% Mostra estatÌtica de modos encontrados
+% Mostra estat√≠tica de modos encontrados
 Tmode = table(sum(circuitmode(:)==1),sum(circuitmode(:)==2)) ;
 Tmode.Properties.VariableNames = ["SAT","AD"];
 disp(Tmode)
@@ -46,7 +47,7 @@ indx=find(circuitmode==2); % 4 -> ativo direto
 circuit.Xi=Xi(:,indx);
 
 % circuit.multiplesims=[50 50]; % Number of simulations
-circuit.nsims = 16; % Numero de circuitos a serem simulados
+circuit.nsims = 32; % Numero de circuitos a serem simulados
 
 circuit.parind=[1:6];
 
@@ -77,8 +78,8 @@ circuit.cmdupdate = 0; % Update the cmdtype from sim file
 circuit.LTspice.net.run = 0;
 
 % Generate question
-quiz.enunciado = 'Analise e simule no LTspice o ponto de operaÁ„o (.op) do circuito apresentado na Figura 1 e determine:';
-quiz.rowfigdirective=1; % Imprima os par‚metros ao lado da figura
+quiz.enunciado = 'Analise e simule no LTspice o ponto de opera√ß√£o (.op) do circuito apresentado na Figura 1 e determine:';
+quiz.rowfigdirective=1; % Imprima os par√¢metros ao lado da figura
 quiz.autoitem=1; % Auto add item letter: a), b)... 97 - 122; 
 
 % Text a ser colocado abaixo da figura
@@ -108,7 +109,7 @@ quiz.autoitem=1; % Auto add item letter: a), b)... 97 - 122;
 q=0;
 
 q=q+1;
-quiz.question{q}.str='Qual o modo de operaÁ„o do TBJ?';
+quiz.question{q}.str='Qual o modo de opera√ß√£o do TBJ?';
 quiz.question{q}.units={'V'};
 quiz.question{q}.options={'q1:npn'}; % Device:Var
 quiz.question{q}.vartype={'mop'}; % From log file
@@ -117,7 +118,7 @@ quiz.question{q}.opttol=[10]; % tolerance in percentage %
 quiz.question{q}.type='TBJ';
 
 % q=q+1;
-% quiz.question{q}.str='Qual equaÁ„o calcula o valor da corrente em RL?';
+% quiz.question{q}.str='Qual equa√ß√£o calcula o valor da corrente em RL?';
 % quiz.question{q}.units={'A'};
 % quiz.question{q}.options=quiz.eqnum; % Only lowcase
 % quiz.question{q}.vartype=quiz.vartype; % meas 
@@ -127,7 +128,7 @@ quiz.question{q}.type='TBJ';
 
 
 q=q+1;
-quiz.question{q}.str='Qual o valor da tens„o em Rs?';
+quiz.question{q}.str='Qual o valor da tens√£o em Rs?';
 quiz.question{q}.units={'V'};
 quiz.question{q}.options={'vx'};
 quiz.question{q}.vartype={'op'}; % meas 
@@ -150,7 +151,7 @@ quiz.question{q}.type='NUMERICAL';
 % 
 % 
 % q=q+1;
-% quiz.question{q}.str='Qual equaÁ„o calcula o valor da corrente de base Ib?';
+% quiz.question{q}.str='Qual equa√ß√£o calcula o valor da corrente de base Ib?';
 % quiz.question{q}.units={'A'};
 % quiz.question{q}.options=quiz.eqnum; % Only lowcase
 % quiz.question{q}.vartype=quiz.vartype; % meas 
@@ -179,7 +180,7 @@ quiz.question{q}.type='NUMERICAL';
 
 
 % q=q+1;
-% quiz.question{q}.str='Qual equaÁ„o calcula o valor da tens„o coletor-emissor Vce?';
+% quiz.question{q}.str='Qual equa√ß√£o calcula o valor da tens√£o coletor-emissor Vce?';
 % quiz.question{q}.units={'V'};
 % quiz.question{q}.options=quiz.eqnum; % Only lowcase
 % quiz.question{q}.vartype=quiz.vartype; % meas 
@@ -188,7 +189,7 @@ quiz.question{q}.type='NUMERICAL';
 % quiz.question{q}.type='STRING'; 
 
 q=q+1;
-quiz.question{q}.str='Qual o valor da tens„o coletor-emissor Vce?';
+quiz.question{q}.str='Qual o valor da tens√£o coletor-emissor Vce?';
 quiz.question{q}.units={'V'};
 quiz.question{q}.options={'q1:Vce'};
 quiz.question{q}.vartype={'log'}; % meas 

@@ -67,17 +67,23 @@ for k = 1:length(filteredFiles)
 end
 
 
-% Run files matching all patterns in the full path (e.g., 'example' and 'test')
+%% Run files matching all patterns in the full path (e.g., 'example' and 'test')
 % patternFilter = {'TE00', 'PSIM'};
-patternFilter = {'diode00'};
+patternFilter = {'LTspice'};
+% patternFilter = {'PSIM'};
 
 % Define the new value for circuit.nsims
-newValue = 8;
+newValue = 32;
 
 % Call the function to modify circuit.nsims in the matched files
 modifyCircuitNsims(filteredFiles, patternFilter, newValue);
 
+% Get current time
+datastr=char(datetime('now', 'Format', 'yyyyMMdd_HHmmss'));
+diary(['Log_' strjoin(patternFilter,'_') '_' datastr '.txt'])
 runFilteredFiles(filteredFiles, patternFilter);
+diary off
+
 
 % Run all files (empty pattern filter)
 % patternFilter = {};
@@ -85,7 +91,7 @@ runFilteredFiles(filteredFiles, patternFilter);
 
 
 % Call the function to clear the content of all .xml and .html files
-clearXmlHtmlFilesContent(folderPath);
+% clearXmlHtmlFilesContent(folderPath);
 
 
 
@@ -104,3 +110,18 @@ clearXmlHtmlFilesContent(folderPath);
 % 
 % % Run files and set circuit.nsims to 20
 % runMFiles('C:\MATLAB\Work', 20)
+
+% isSupported = checkSoftwareVersion(softwareName,maxVersion)
+% 
+%% LTspiceVersion
+
+% checkSoftwareVersion('LTspice',17)
+[ltspiceVersion,ltspiceExecutable]=FindLTspiceVersion();
+
+%% PSIMVersion
+% checkSoftwareVersion('PSIM',25)
+[psimVersion,psimExecutable,psimCmdExecutable,psimCmdResult]=FindPSIMVersion();
+
+%% ngspice
+% checkSoftwareVersion('ngspice',25)
+[ngspiceVersion,ngspiceExecutable,ngspice_conExecutable]=FindNgspiceVersion();

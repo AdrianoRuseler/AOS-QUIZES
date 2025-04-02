@@ -1,4 +1,5 @@
-clear all
+% clear all
+clear circuit quiz
 clc
 
 % Sets simulation dir
@@ -33,7 +34,7 @@ Tr=(100:50:400)*1e-10;
 X0=CombVec(Vcc,Rc,Rr,Cr,Beta,Tf,Tr); %%
 circuit.timeout = 50; % Simulation timeout in seconds
 % circuit.multiplesims=[50 50 25]; % Number of simulations
-circuit.nsims = 16; % Numero de circuitos a serem simulados
+circuit.nsims = 32; % Numero de circuitos a serem simulados
 
 [~,y]=size(X0);
 nq=randperm(y,3*circuit.nsims); % escolha as questoes
@@ -41,7 +42,7 @@ Xi=X0(:,nq);
 
 % Xi=CombVec(Vcc,Rc,Rr,Cr,Beta,Tf,Tr); %%
 [tbjmode,logdata]=gettbjnpn01mode(Xi);
-indx=find(tbjmode==2); % 2 - SaturaÁ„o; 3 - Regi„o ativa;
+indx=find(tbjmode==2); % 2 - Satura√ß√£o; 3 - Regi√£o ativa;
 circuit.Xi=Xi(:,indx);
 
 circuit.parind=[1 2 3 4]; % Index for circuit parameters
@@ -64,8 +65,8 @@ circuit.cmdupdate = 0; %
 % quiz.tbjtype = 'q1:npn';
 % quiz.tbjeval = 0; % Evaluate tbj op
 % % Generate question
-quiz.enunciado = 'Para o circuito oscilador ast·vel com TBJ apresentado na Figura 1, determine:';
-quiz.rowfigdirective=1; % Imprima os par‚metros ao lado da figura
+quiz.enunciado = 'Para o circuito oscilador ast√°vel com TBJ apresentado na Figura 1, determine:';
+quiz.rowfigdirective=1; % Imprima os par√¢metros ao lado da figura
 quiz.autoitem=1; % Auto add item letter: a), b)... 97 - 122; 
 
 quiz.modelfile=0;
@@ -75,7 +76,7 @@ quiz.modelfile=0;
 %                     ' +CJO=2.97P VJ=.75 M=.333 TT=4.32U Iave=40m Vpk=4 type=LED)']; % modelo do diodo
 q=0;
 q=q+1;
-quiz.question{q}.str='Qual o valor da duraÁ„o do nÌvel alto na saÌda?';
+quiz.question{q}.str='Qual o valor da dura√ß√£o do n√≠vel alto na sa√≠da?';
 quiz.question{q}.units={'s'};
 quiz.question{q}.options={'th'}; % Only lowcase
 quiz.question{q}.vartype={'meas'}; % meas 
@@ -84,7 +85,7 @@ quiz.question{q}.opttol=[5]; % tolerance in percentage %
 quiz.question{q}.type='NUMERICAL';
 
 q=q+1;
-quiz.question{q}.str='Qual o valor da relaÁ„o \( t_H = ln(2)R_r C_r \)?'; % out = log(2)*(RA+RB)*CA; % tH
+quiz.question{q}.str='Qual o valor da rela√ß√£o \( t_H = ln(2)R_r C_r \)?'; % out = log(2)*(RA+RB)*CA; % tH
 quiz.question{q}.units={'s'};
 quiz.question{q}.options={1}; % Only lowcase
 quiz.question{q}.vartype={'func'}; % meas 
@@ -93,7 +94,7 @@ quiz.question{q}.opttol=[5]; % tolerance in percentage %
 quiz.question{q}.type='NUMERICAL';
 
 % q=q+1;
-% quiz.question{q}.str='Qual o valor da duraÁ„o do nÌvel baixo na saÌda?';
+% quiz.question{q}.str='Qual o valor da dura√ß√£o do n√≠vel baixo na sa√≠da?';
 % quiz.question{q}.units={'s'};
 % quiz.question{q}.options={'tl'}; % Only lowcase
 % quiz.question{q}.vartype={'meas'}; % meas 
@@ -102,7 +103,7 @@ quiz.question{q}.type='NUMERICAL';
 % quiz.question{q}.type='NUMERICAL';
 % 
 % q=q+1;
-% quiz.question{q}.str='Qual o valor da relaÁ„o \( t_L = ln(2) R_B C_A \)?'; % out = log(2)*(RB)*CA; % tL
+% quiz.question{q}.str='Qual o valor da rela√ß√£o \( t_L = ln(2) R_B C_A \)?'; % out = log(2)*(RB)*CA; % tL
 % quiz.question{q}.units={'s'};
 % quiz.question{q}.options={2}; % Only lowcase
 % quiz.question{q}.vartype={'func'}; % meas 
@@ -111,7 +112,7 @@ quiz.question{q}.type='NUMERICAL';
 % quiz.question{q}.type='NUMERICAL';
 
 q=q+1;
-quiz.question{q}.str='Qual o valor da frequÍncia de oscilaÁ„o?';
+quiz.question{q}.str='Qual o valor da frequ√™ncia de oscila√ß√£o?';
 quiz.question{q}.units={'Hz'};
 quiz.question{q}.options={'fosc'}; % Only lowcase
 quiz.question{q}.vartype={'meas'}; % meas 
@@ -120,7 +121,7 @@ quiz.question{q}.opttol=[5]; % tolerance in percentage %
 quiz.question{q}.type='NUMERICAL';
 
 q=q+1;
-quiz.question{q}.str='Qual o valor da relaÁ„o \( f_{OSC} = \dfrac{1}{2 ln(2) R_r C_r}\)?'; % out = 1/(log(2)*(RA+2*RB)*CA); % freq.
+quiz.question{q}.str='Qual o valor da rela√ß√£o \( f_{OSC} = \dfrac{1}{2 ln(2) R_r C_r}\)?'; % out = 1/(log(2)*(RA+2*RB)*CA); % freq.
 quiz.question{q}.units={'Hz'};
 quiz.question{q}.options={2}; % Only lowcase
 quiz.question{q}.vartype={'func'}; % meas 
@@ -131,7 +132,7 @@ quiz.question{q}.type='NUMERICAL';
 
 
 % q=q+1;
-% quiz.question{q}.str='Qual o valor de comparaÁ„o V+ para Vo positivo?';
+% quiz.question{q}.str='Qual o valor de compara√ß√£o V+ para Vo positivo?';
 % quiz.question{q}.units={'V'};
 % quiz.question{q}.options={'vx'}; % Only lowcase
 % quiz.question{q}.vartype={'meas'}; % meas 
@@ -141,7 +142,7 @@ quiz.question{q}.type='NUMERICAL';
 % 
 % 
 % q=q+1;
-% quiz.question{q}.str='Qual o valor de comparaÁ„o V+ para Vo negativo?';
+% quiz.question{q}.str='Qual o valor de compara√ß√£o V+ para Vo negativo?';
 % quiz.question{q}.units={'V'};
 % quiz.question{q}.options={'vy'}; % Only lowcase
 % quiz.question{q}.vartype={'meas'}; % meas 
@@ -150,7 +151,7 @@ quiz.question{q}.type='NUMERICAL';
 % quiz.question{q}.type='NUMERICAL';
 
 % q=q+1;
-% quiz.question{q}.str='Qual o valor da relaÁ„o \( \dfrac{V_s R_1}{R_1+R_2} \)?';
+% quiz.question{q}.str='Qual o valor da rela√ß√£o \( \dfrac{V_s R_1}{R_1+R_2} \)?';
 % quiz.question{q}.units={'V'};
 % quiz.question{q}.options={2}; % Only lowcase
 % quiz.question{q}.vartype={'func'}; % meas 
@@ -160,7 +161,7 @@ quiz.question{q}.type='NUMERICAL';
 
 
 % q=q+1;
-% quiz.question{q}.str='Qual o valor da frequÍncia de oscilaÁ„o?';
+% quiz.question{q}.str='Qual o valor da frequ√™ncia de oscila√ß√£o?';
 % quiz.question{q}.units={'Hz'};
 % quiz.question{q}.options={'fosc'}; % Only lowcase
 % quiz.question{q}.vartype={'meas'}; % meas 
@@ -169,7 +170,7 @@ quiz.question{q}.type='NUMERICAL';
 % quiz.question{q}.type='NUMERICAL';
 % 
 % q=q+1;
-% quiz.question{q}.str='Qual o valor da relaÁ„o \( \dfrac{-1}{2 R_0 C_0 ln(\frac{R_2}{2 R_1+R_2}) } \)?';
+% quiz.question{q}.str='Qual o valor da rela√ß√£o \( \dfrac{-1}{2 R_0 C_0 ln(\frac{R_2}{2 R_1+R_2}) } \)?';
 % quiz.question{q}.units={'Hz'};
 % quiz.question{q}.options={1}; % Only lowcase
 % quiz.question{q}.vartype={'func'}; % meas 
@@ -178,7 +179,7 @@ quiz.question{q}.type='NUMERICAL';
 % quiz.question{q}.type='NUMERICAL';
 
 % q=2;
-% quiz.question{q}.str='b) Qual o valor da imped‚ncia de saÌda Zo?';
+% quiz.question{q}.str='b) Qual o valor da imped√¢ncia de sa√≠da Zo?';
 % quiz.question{q}.units={'&Omega;'};
 % quiz.question{q}.options={'zo'};
 % quiz.question{q}.vartype={'meas'}; % meas 
@@ -187,7 +188,7 @@ quiz.question{q}.type='NUMERICAL';
 % quiz.question{q}.type='NUMERICAL';
 % 
 % q=3;
-% quiz.question{q}.str='c) Qual o valor do ganho de tens„o vo/vi?';
+% quiz.question{q}.str='c) Qual o valor do ganho de tens√£o vo/vi?';
 % quiz.question{q}.units={'V/V'};
 % quiz.question{q}.options={'av'};
 % quiz.question{q}.vartype={'meas'}; % meas 

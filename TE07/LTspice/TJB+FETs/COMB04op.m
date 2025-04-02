@@ -1,4 +1,5 @@
-clear all
+% clear all
+clear circuit quiz
 clc
 
 % Sets simulation dir
@@ -43,15 +44,15 @@ BF2=25:5:50;
 circuit.Xi=CombVec(Vcc,RC,RB,IS1,BF1,IS2,BF2); %%
     % 0 -> TBJ1 Corte + TBJ2 Corte
     % 1 -> TBJ1 Ativo Direto + TBJ2 Ativo Direto
-    % 2 -> TBJ1 Ativo Direto + TBJ2 SaturaÁ„o
-    % 3 -> TBJ1 SaturaÁ„o + TBJ2 Ativo Direto
-    % 4 -> TBJ1 SaturaÁ„o + TBJ2 SaturaÁ„o
+    % 2 -> TBJ1 Ativo Direto + TBJ2 Satura√ß√£o
+    % 3 -> TBJ1 Satura√ß√£o + TBJ2 Ativo Direto
+    % 4 -> TBJ1 Satura√ß√£o + TBJ2 Satura√ß√£o
 % [combmode]=getcomb04mode(Xi);
 % indx=find(combmode==1); %  
 % circuit.Xi=Xi(:,indx);
 
 % circuit.multiplesims=[50 50]; % Number of simulations
-circuit.nsims = 16; % Numero de circuitos a serem simulados
+circuit.nsims = 32; % Numero de circuitos a serem simulados
 
 circuit.parind=[1:3];
 
@@ -82,8 +83,8 @@ circuit.cmdupdate = 0; % Update the cmdtype from sim file
 circuit.LTspice.net.run = 0;
 
 % Generate question
-quiz.enunciado = 'Simule no LTspice o ponto de operaÁ„o (.op) do circuito apresentado na Figura 1 e determine:';
-quiz.rowfigdirective=1; % Imprima os par‚metros ao lado da figura
+quiz.enunciado = 'Simule no LTspice o ponto de opera√ß√£o (.op) do circuito apresentado na Figura 1 e determine:';
+quiz.rowfigdirective=1; % Imprima os par√¢metros ao lado da figura
 quiz.autoitem=1; % Auto add item letter: a), b)... 97 - 122; 
 
 % Text a ser colocado abaixo da figura
@@ -100,7 +101,7 @@ quiz.tbjeval = 0; % Evaluate tbj op
 
 q=0;
 q=q+1;
-quiz.question{q}.str='Qual o valor da tens„o base-emissor Vbe em Q1?';
+quiz.question{q}.str='Qual o valor da tens√£o base-emissor Vbe em Q1?';
 quiz.question{q}.units={'V'};
 quiz.question{q}.options={'q1:Vbe'};
 quiz.question{q}.vartype={'log'}; % meas 
@@ -129,7 +130,7 @@ quiz.question{q}.type='NUMERICAL';
 
 
 q=q+1;
-quiz.question{q}.str='Qual o modo de operaÁ„o do TBJ Q1?';
+quiz.question{q}.str='Qual o modo de opera√ß√£o do TBJ Q1?';
 quiz.question{q}.units={'V'};
 quiz.question{q}.options={'q1:pnp'}; % Device:Var
 quiz.question{q}.vartype={'mop'}; % From log file
@@ -138,7 +139,7 @@ quiz.question{q}.opttol=[10]; % tolerance in percentage %
 quiz.question{q}.type='TBJ';
 
 q=q+1;
-quiz.question{q}.str='Qual o valor da tens„o base-emissor Vbe em Q2?';
+quiz.question{q}.str='Qual o valor da tens√£o base-emissor Vbe em Q2?';
 quiz.question{q}.units={'V'};
 quiz.question{q}.options={'q2:Vbe'};
 quiz.question{q}.vartype={'log'}; % meas 
@@ -166,7 +167,7 @@ quiz.question{q}.type='NUMERICAL';
 
 
 q=q+1;
-quiz.question{q}.str='Qual o modo de operaÁ„o do TBJ Q2?';
+quiz.question{q}.str='Qual o modo de opera√ß√£o do TBJ Q2?';
 quiz.question{q}.units={'V'};
 quiz.question{q}.options={'q2:npn'}; % Device:Var
 quiz.question{q}.vartype={'mop'}; % From log file

@@ -6,7 +6,7 @@ Q1 N003 N002 N001 0 TBJ1
 RB N002 0 {RB}
 .model NPN NPN
 .model PNP PNP
-.lib C:\Users\ruseler\AppData\Local\LTspice\lib\cmp\standard.bjt
+.lib C:\Users\ruseler\Documents\LTspiceXVII\lib\cmp\standard.bjt
 .op
 .param Vcc=25 RB=1.5Meg RC=18
 .model TBJ1 PNP(IS=15F BF=5)

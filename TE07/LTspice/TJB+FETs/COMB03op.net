@@ -9,7 +9,7 @@ Q2 N001 b2 N002 0 TBJ2
 R3 b1 0 {R3}
 .model NPN NPN
 .model PNP PNP
-.lib C:\Users\ruseler\AppData\Local\LTspice\lib\cmp\standard.bjt
+.lib C:\Users\ruseler\Documents\LTspiceXVII\lib\cmp\standard.bjt
 .op
 .param Vcc=30 R1=33k R2=18k R3=15k RC=680 RE=330
 .model TBJ1 NPN(IS=10F BF=350)

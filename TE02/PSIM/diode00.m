@@ -1,4 +1,5 @@
-clear all
+% clear all
+clear circuit quiz
 clc
 
 % Config simulation
@@ -23,14 +24,14 @@ R2 = combres(1,[10],'E24'); %
 
 X0=CombVec(Vi,Von,Vz,Vled,R1,R2);
 % circuit.multiplesims=[25 25]; % Number of simulations
-circuit.nsims = 16; % Numero de circuitos a serem simulados
+circuit.nsims = 32; % Numero de circuitos a serem simulados
 
 [~,y]=size(X0);
 nq=randperm(y,3*circuit.nsims); % escolha as questoes
 Xi=X0(:,nq);
 
 [circuitmode]=getdiode00mode(Xi);
-% Mostra estatÌtica de modos encontrados
+% Mostra estat√≠tica de modos encontrados
 Tmode = table(sum(circuitmode(:)==0),sum(circuitmode(:)==1),sum(circuitmode(:)==2));
 Tmode.Properties.VariableNames = ["All Off","Zener Off","Zener On"];
 disp(Tmode)
@@ -43,18 +44,18 @@ circuit.Xi=Xi(:,indx);
 
 % Generate question
 
-quiz.enunciado = ['Para o circuito contendo um diodo e um diodo zener com tensıes de polarizaÁ„o direta Von'...
-    ', o zener com tens„o de polarizaÁ„o reversa Vz e um diodo LED de tens„o direta Vled apresentado na Figura 1, determine:' ]; % Enunciado da pergunta!
-quiz.rowfigparam=1; % Imprima os par‚metros ao lado da figura
+quiz.enunciado = ['Para o circuito contendo um diodo e um diodo zener com tens√µes de polariza√ß√£o direta Von'...
+    ', o zener com tens√£o de polariza√ß√£o reversa Vz e um diodo LED de tens√£o direta Vled apresentado na Figura 1, determine:' ]; % Enunciado da pergunta!
+quiz.rowfigparam=1; % Imprima os par√¢metros ao lado da figura
 quiz.autoitem=1; % Auto add item letter: a), b)... 97 - 122;  
 quiz.incfrom=0; % Increment from
 
 % https://www.tutorialspoint.com/latex_equation_editor.htm
-quiz.exptable=0; % Cria tabela para responder com express„o matem·tica
+quiz.exptable=0; % Cria tabela para responder com express√£o matem√°tica
 
 q=0;
 q=q+1;
-quiz.question{q}.str='Qual o valor mÈdio da corrente no resistor R1?';
+quiz.question{q}.str='Qual o valor m√©dio da corrente no resistor R1?';
 quiz.question{q}.units={'A'};
 quiz.question{q}.options={'IR1'};
 quiz.question{q}.vartype={'mean'}; %
@@ -65,7 +66,7 @@ quiz.question{q}.expmath='\( \frac{V_{CC}-V_{BE}}{R_B} \)'; %TODO
 quiz.question{q}.expopts={'Corrente de Base','Corrente de Coletor','Corrente de Emissor','Corrente na Fonte'}; % Primeira correta %TODO
 
 q=q+1;
-quiz.question{q}.str='Qual o valor mÈdio da tens„o no resistor R2?';
+quiz.question{q}.str='Qual o valor m√©dio da tens√£o no resistor R2?';
 quiz.question{q}.units={'V'};
 quiz.question{q}.options={'VR2'};
 quiz.question{q}.vartype={'mean'}; %
@@ -76,7 +77,7 @@ quiz.question{q}.expmath='\( \frac{V_{CC}-V_{BE}}{R_B} \)'; %TODO
 quiz.question{q}.expopts={'Corrente de Base','Corrente de Coletor','Corrente de Emissor','Corrente na Fonte'}; % Primeira correta %TODO
 % 
 q=q+1;
-quiz.question{q}.str='Qual o valor mÈdio da corrente no diodo zener Z1?';
+quiz.question{q}.str='Qual o valor m√©dio da corrente no diodo zener Z1?';
 quiz.question{q}.units={'A'};
 quiz.question{q}.options={'Iz'};
 quiz.question{q}.vartype={'mean'}; %
@@ -87,7 +88,7 @@ quiz.question{q}.expmath='\( \frac{V_{CC}-V_{BE}}{R_B} \)'; %TODO
 quiz.question{q}.expopts={'Corrente de Base','Corrente de Coletor','Corrente de Emissor','Corrente na Fonte'}; % Primeira correta %TODO
 
 q=q+1;
-quiz.question{q}.str='Qual o valor da potÍncia mÈdia no diodo zener Z1?';
+quiz.question{q}.str='Qual o valor da pot√™ncia m√©dia no diodo zener Z1?';
 quiz.question{q}.units={'W'};
 quiz.question{q}.options={'Pz'};
 quiz.question{q}.vartype={'mean'}; %
@@ -98,7 +99,7 @@ quiz.question{q}.expmath='\( \frac{V_{CC}-V_{BE}}{R_B} \)'; %TODO
 quiz.question{q}.expopts={'Corrente de Base','Corrente de Coletor','Corrente de Emissor','Corrente na Fonte'}; % Primeira correta %TODO
 
 % q=q+1;
-% quiz.question{q}.str='Qual o valor da potÍncia mÈdia na fonte Vi?';
+% quiz.question{q}.str='Qual o valor da pot√™ncia m√©dia na fonte Vi?';
 % quiz.question{q}.units={'W'};
 % quiz.question{q}.options={'PVi'};
 % quiz.question{q}.vartype={'mean'}; %
@@ -108,7 +109,7 @@ quiz.question{q}.expopts={'Corrente de Base','Corrente de Coletor','Corrente de 
 
 
 q=q+1;
-quiz.question{q}.str='Qual o valor da potÍncia mÈdia no LED?';
+quiz.question{q}.str='Qual o valor da pot√™ncia m√©dia no LED?';
 quiz.question{q}.units={'W'};
 quiz.question{q}.options={'Pled'};
 quiz.question{q}.vartype={'mean'}; %
@@ -120,7 +121,7 @@ quiz.question{q}.expopts={'Corrente de Base','Corrente de Coletor','Corrente de 
 
 % 
 % q=q+1;
-% quiz.question{q}.str='Qual a express„o da corrente mÈdia no resistor R3?';
+% quiz.question{q}.str='Qual a express√£o da corrente m√©dia no resistor R3?';
 % % quiz.question{q}.units={'A'};
 % % quiz.question{q}.options={'\(\sqrt[a]{b+c}\)','\( \iint_{a}^{b}{c} \)','\( \left| \begin{matrix} a_1 & a_2 \ a_3 & a_4 \end{matrix} \right| \)','\( \mu \)','\( \iiint_{a}^{b}{c} \)'};
 % quiz.question{q}.options={'Expr01','Expr02','Expr03','Expr04','Expr05'};

@@ -1,4 +1,5 @@
-clear all
+% clear all
+clear circuit quiz
 clc
 
 % Config simulation
@@ -19,15 +20,15 @@ R2 = combnres(1,[10],'E24',12); %
 % R3 = combres(1,[100],'E24'); %
 circuit.Xi=CombVec(Vi,Von,Vz,R1,R2); %%
 % circuit.multiplesims=[25 25]; % Number of simulations
-circuit.nsims = 16; % Numero de circuitos a serem simulados
+circuit.nsims = 32; % Numero de circuitos a serem simulados
 
 % Generate question
-quiz.enunciado = ['Para o circuito contendo diodos com tens„o de polarizaÁ„o direta Von'...
-    ' e um zener com tens„o de polarizaÁ„o reversa Vz apresentado na Figura 1, determine:' ]; % Enunciado da pergunta!
-quiz.rowfigparam=1; % Imprima os par‚metros ao lado da figura
+quiz.enunciado = ['Para o circuito contendo diodos com tens√£o de polariza√ß√£o direta Von'...
+    ' e um zener com tens√£o de polariza√ß√£o reversa Vz apresentado na Figura 1, determine:' ]; % Enunciado da pergunta!
+quiz.rowfigparam=1; % Imprima os par√¢metros ao lado da figura
 quiz.autoitem=1; % Auto add item letter: a), b)... 97 - 122;  
 % https://www.tutorialspoint.com/latex_equation_editor.htm
-quiz.exptable=0; % Cria tabela para responder com express„o matem·tica
+quiz.exptable=0; % Cria tabela para responder com express√£o matem√°tica
 
 q=0;
 q=q+1;
@@ -58,7 +59,7 @@ quiz.question{q}.opttol=[10]; % tolerance in percentage %
 quiz.question{q}.type='NUMERICAL';
 
 q=q+1;
-quiz.question{q}.str='Qual a tens„o sobre o resistor R2 (Vx)?';
+quiz.question{q}.str='Qual a tens√£o sobre o resistor R2 (Vx)?';
 quiz.question{q}.units={'V'};
 quiz.question{q}.options={'Vx'};
 quiz.question{q}.vartype={'mean'}; %
@@ -67,7 +68,7 @@ quiz.question{q}.opttol=[10]; % tolerance in percentage %
 quiz.question{q}.type='NUMERICAL';
 
 q=q+1;
-quiz.question{q}.str='Qual a potÍncia dissipada no diodo zener Z1?';
+quiz.question{q}.str='Qual a pot√™ncia dissipada no diodo zener Z1?';
 quiz.question{q}.units={'W'};
 quiz.question{q}.options={'pd'};
 quiz.question{q}.vartype={'mean'}; %

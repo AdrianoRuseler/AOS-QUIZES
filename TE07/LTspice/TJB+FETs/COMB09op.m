@@ -1,4 +1,5 @@
-clear all
+% clear all
+clear circuit quiz
 clc
 
 % Sets simulation dir
@@ -39,7 +40,7 @@ R3 = combnres(1,100,'E24',12); %
 % Rb = combres(1,[100],'E12'); %
 circuit.Xi=CombVec(Vs,R1,R2,R3,Is1,n1,BV1); %%
 % circuit.multiplesims=[50 50]; % Number of simulations
-circuit.nsims = 16; % Numero de circuitos a serem simulados
+circuit.nsims = 32; % Numero de circuitos a serem simulados
 
 circuit.parind=[1:4];
 
@@ -79,8 +80,8 @@ circuit.cmdupdate = 0; % Update the cmdtype from sim file
 circuit.LTspice.net.run = 0;
 
 % Generate question
-quiz.enunciado = 'Analise e simule no LTspice o ponto de operaÁ„o (.op) do circuito apresentado na Figura 1 e determine:';
-quiz.rowfigdirective=1; % Imprima os par‚metros ao lado da figura
+quiz.enunciado = 'Analise e simule no LTspice o ponto de opera√ß√£o (.op) do circuito apresentado na Figura 1 e determine:';
+quiz.rowfigdirective=1; % Imprima os par√¢metros ao lado da figura
 quiz.autoitem=1; % Auto add item letter: a), b)... 97 - 122; 
 
 % Text a ser colocado abaixo da figura
@@ -102,7 +103,7 @@ quiz.vartype={'str','str','str','str','str','str','str'};
 q=0;
 
 q=q+1;
-quiz.question{q}.str='Qual o valor da tens„o Vz sobre o diodo zener?';
+quiz.question{q}.str='Qual o valor da tens√£o Vz sobre o diodo zener?';
 quiz.question{q}.units={'V'};
 quiz.question{q}.options={'vz'};
 quiz.question{q}.vartype={'meas'}; % meas 
@@ -111,7 +112,7 @@ quiz.question{q}.opttol=[10]; % tolerance in percentage %
 quiz.question{q}.type='NUMERICAL';
 
 q=q+1;
-quiz.question{q}.str='Qual equaÁ„o calcula o valor da tens„o Vo?';
+quiz.question{q}.str='Qual equa√ß√£o calcula o valor da tens√£o Vo?';
 quiz.question{q}.units={'V'};
 quiz.question{q}.options=quiz.eqnum; % Only lowcase
 quiz.question{q}.vartype=quiz.vartype; % meas 
@@ -120,7 +121,7 @@ quiz.question{q}.opttol=[5]; % tolerance in percentage %
 quiz.question{q}.type='STRING'; 
 
 q=q+1;
-quiz.question{q}.str='Qual o valor da tens„o Vo?';
+quiz.question{q}.str='Qual o valor da tens√£o Vo?';
 quiz.question{q}.units={'V'};
 quiz.question{q}.options={'vo'};
 quiz.question{q}.vartype={'op'}; % meas 
@@ -129,7 +130,7 @@ quiz.question{q}.opttol=[10]; % tolerance in percentage %
 quiz.question{q}.type='NUMERICAL';
 
 q=q+1;
-quiz.question{q}.str='Qual equaÁ„o calcula o valor da tens„o Vx?';
+quiz.question{q}.str='Qual equa√ß√£o calcula o valor da tens√£o Vx?';
 quiz.question{q}.units={'V'};
 quiz.question{q}.options=quiz.eqnum; % Only lowcase
 quiz.question{q}.vartype=quiz.vartype; % meas 
@@ -138,7 +139,7 @@ quiz.question{q}.opttol=[5]; % tolerance in percentage %
 quiz.question{q}.type='STRING'; 
 
 q=q+1;
-quiz.question{q}.str='Qual o valor da tens„o Vx?';
+quiz.question{q}.str='Qual o valor da tens√£o Vx?';
 quiz.question{q}.units={'V'};
 quiz.question{q}.options={'vx'};
 quiz.question{q}.vartype={'op'}; % meas 
@@ -147,7 +148,7 @@ quiz.question{q}.opttol=[10]; % tolerance in percentage %
 quiz.question{q}.type='NUMERICAL';
 
 q=q+1;
-quiz.question{q}.str='Qual equaÁ„o calcula o valor da corrente em R1?';
+quiz.question{q}.str='Qual equa√ß√£o calcula o valor da corrente em R1?';
 quiz.question{q}.units={'V'};
 quiz.question{q}.options=quiz.eqnum; % Only lowcase
 quiz.question{q}.vartype=quiz.vartype; % meas 
@@ -167,7 +168,7 @@ quiz.question{q}.type='NUMERICAL';
 
 % 
 % q=q+1;
-% quiz.question{q}.str='Qual o valor da tens„o Dreno-Source Vds?';
+% quiz.question{q}.str='Qual o valor da tens√£o Dreno-Source Vds?';
 % quiz.question{q}.units={'V'};
 % quiz.question{q}.options={'j1:Vds'};
 % quiz.question{q}.vartype={'log'}; % meas 
@@ -176,7 +177,7 @@ quiz.question{q}.type='NUMERICAL';
 % quiz.question{q}.type='NUMERICAL';
 % 
 % q=q+1;
-% quiz.question{q}.str='Qual o valor da tens„o Vds de saturaÁ„o Vds<sub>sat</sub> = Vgs - Vto?';
+% quiz.question{q}.str='Qual o valor da tens√£o Vds de satura√ß√£o Vds<sub>sat</sub> = Vgs - Vto?';
 % quiz.question{q}.units={'V'};
 % quiz.question{q}.options={'j1:NJF'}; % Device:Var
 % quiz.question{q}.vartype={'feteval:Vgst'}; % From log file
@@ -186,7 +187,7 @@ quiz.question{q}.type='NUMERICAL';
 % 
 % 
 % q=q+1;
-% quiz.question{q}.str='Qual a regi„o de operaÁ„o do JFET?';
+% quiz.question{q}.str='Qual a regi√£o de opera√ß√£o do JFET?';
 % quiz.question{q}.units={'V'};
 % quiz.question{q}.options={'j1:NJF'}; % Device:Var
 % quiz.question{q}.vartype={'feteval:mop'}; % From log file
@@ -198,7 +199,7 @@ quiz.question{q}.type='NUMERICAL';
 
 % 
 % q=2;
-% quiz.question{q}.str='b) Qual o valor da corrente Dreno-Source de saturaÁ„o Idss?';
+% quiz.question{q}.str='b) Qual o valor da corrente Dreno-Source de satura√ß√£o Idss?';
 % quiz.question{q}.units={'A'};
 % quiz.question{q}.options={'j1:NJF'}; % Device:Var
 % quiz.question{q}.vartype={'feteval:Idss'}; % From log file
@@ -208,7 +209,7 @@ quiz.question{q}.type='NUMERICAL';
 % % 
 
 % q=4;
-% quiz.question{q}.str='d) Qual o valor da tens„o Dreno-Source Vds?';
+% quiz.question{q}.str='d) Qual o valor da tens√£o Dreno-Source Vds?';
 % quiz.question{q}.units={'V'};
 % quiz.question{q}.options={'j1:Vds'};
 % quiz.question{q}.vartype={'log'}; % meas 
@@ -228,7 +229,7 @@ quiz.question{q}.type='NUMERICAL';
 % 
 % 
 % q=q+1;
-% quiz.question{q}.str='Qual equaÁ„o calcula o valor da corrente de base Ib?';
+% quiz.question{q}.str='Qual equa√ß√£o calcula o valor da corrente de base Ib?';
 % quiz.question{q}.units={'A'};
 % quiz.question{q}.options=quiz.eqnum; % Only lowcase
 % quiz.question{q}.vartype=quiz.vartype; % meas 
@@ -247,7 +248,7 @@ quiz.question{q}.type='NUMERICAL';
 % % 
 % 
 % q=q+1;
-% quiz.question{q}.str='Qual equaÁ„o calcula o valor da tens„o coletor-emissor Vce?';
+% quiz.question{q}.str='Qual equa√ß√£o calcula o valor da tens√£o coletor-emissor Vce?';
 % quiz.question{q}.units={'V'};
 % quiz.question{q}.options=quiz.eqnum; % Only lowcase
 % quiz.question{q}.vartype=quiz.vartype; % meas 
@@ -256,7 +257,7 @@ quiz.question{q}.type='NUMERICAL';
 % quiz.question{q}.type='STRING'; 
 % 
 % q=q+1;
-% quiz.question{q}.str='Qual o valor da tens„o coletor-emissor Vce?';
+% quiz.question{q}.str='Qual o valor da tens√£o coletor-emissor Vce?';
 % quiz.question{q}.units={'V'};
 % quiz.question{q}.options={'q1:Vce'};
 % quiz.question{q}.vartype={'log'}; % meas 

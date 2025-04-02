@@ -1,4 +1,4 @@
-* C:\Users\ruseler\Documents\GitHub\AOS-QUIZES\TE05\LTspice\CA\TBJ04CA.asc
+* C:\Users\ruseler\Documents\GitHub\AOS-QUIZES\TE06\LTspice\CA\TBJ04CA.asc
 Rb N002 N003 {Rb}
 Vcc N001 0 {Vcc}
 Q1 N002 N003 0 0 TBJ
@@ -16,7 +16,7 @@ Vca1 CAout2 0 SINE(0 0.1m 10k)
 RA1 N005 N004 {Ra}
 .model NPN NPN
 .model PNP PNP
-.lib C:\Users\ruseler\AppData\Local\LTspice\lib\cmp\standard.bjt
+.lib C:\Users\ruseler\Documents\LTspiceXVII\lib\cmp\standard.bjt
 .tran 0 0.01 0
 .param Vcc=20 Rb=470k Ra=150 Cx=100e-6
 .model TBJ NPN(IS=15F BF=150 VAF=150)

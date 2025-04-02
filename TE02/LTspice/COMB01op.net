@@ -5,7 +5,7 @@ R2 B X {R2}
 D1 B C DZ1
 D2 0 C DZ2
 .model D D
-.lib C:\Users\ruseler\AppData\Local\LTspice\lib\cmp\standard.dio
+.lib C:\Users\ruseler\Documents\LTspiceXVII\lib\cmp\standard.dio
 .op
 .param Vcc=2.500e+01 R1=1.200e+02 R2=1.200e+02
 .model DZ1 D(Is=1.000e-14 n=1.200e+00 bv=3)

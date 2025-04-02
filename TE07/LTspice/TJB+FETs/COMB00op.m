@@ -1,4 +1,5 @@
-clear all
+% clear all
+clear circuit quiz
 clc
 
 % Sets simulation dir
@@ -34,7 +35,7 @@ Vto=-[1:5];
 % Rb = combres(1,[100],'E12'); %
 circuit.Xi=CombVec(Vcc,Rb,Rc,Rs,Beta,Vto,IS,BF); %%
 % circuit.multiplesims=[50 50]; % Number of simulations
-circuit.nsims = 16; % Numero de circuitos a serem simulados
+circuit.nsims = 32; % Numero de circuitos a serem simulados
 
 circuit.parind=[1:4];
 
@@ -65,8 +66,8 @@ circuit.cmdupdate = 0; % Update the cmdtype from sim file
 circuit.LTspice.net.run = 0;
 
 % Generate question
-quiz.enunciado = 'Simule no LTspice o ponto de operaÁ„o (.op) do circuito apresentado na Figura 1 e determine:';
-quiz.rowfigdirective=1; % Imprima os par‚metros ao lado da figura
+quiz.enunciado = 'Simule no LTspice o ponto de opera√ß√£o (.op) do circuito apresentado na Figura 1 e determine:';
+quiz.rowfigdirective=1; % Imprima os par√¢metros ao lado da figura
 quiz.autoitem=1; % Auto add item letter: a), b)... 97 - 122; 
 
 % Text a ser colocado abaixo da figura
@@ -84,7 +85,7 @@ quiz.feteval = 0; % Evaluate fet op
 
 q=0;
 q=q+1;
-quiz.question{q}.str='Qual o valor da tens„o Gate-Source Vgs?';
+quiz.question{q}.str='Qual o valor da tens√£o Gate-Source Vgs?';
 quiz.question{q}.units={'V'};
 quiz.question{q}.options={'j1:Vgs'};
 quiz.question{q}.vartype={'log'}; % meas 
@@ -103,7 +104,7 @@ quiz.question{q}.opttol=[10]; % tolerance in percentage %
 quiz.question{q}.type='NUMERICAL';
 
 q=q+1;
-quiz.question{q}.str='Qual o valor da tens„o Dreno-Source Vds?';
+quiz.question{q}.str='Qual o valor da tens√£o Dreno-Source Vds?';
 quiz.question{q}.units={'V'};
 quiz.question{q}.options={'j1:Vds'};
 quiz.question{q}.vartype={'log'}; % meas 
@@ -112,7 +113,7 @@ quiz.question{q}.opttol=[10]; % tolerance in percentage %
 quiz.question{q}.type='NUMERICAL';
 
 q=q+1;
-quiz.question{q}.str='Qual o valor da tens„o Vds de saturaÁ„o Vds<sub>sat</sub> = Vgs - Vto?';
+quiz.question{q}.str='Qual o valor da tens√£o Vds de satura√ß√£o Vds<sub>sat</sub> = Vgs - Vto?';
 quiz.question{q}.units={'V'};
 quiz.question{q}.options={'j1:NJF'}; % Device:Var
 quiz.question{q}.vartype={'feteval:Vgst'}; % From log file
@@ -122,7 +123,7 @@ quiz.question{q}.type='NUMERICAL';
 
 
 q=q+1;
-quiz.question{q}.str='Qual a regi„o de operaÁ„o do JFET?';
+quiz.question{q}.str='Qual a regi√£o de opera√ß√£o do JFET?';
 quiz.question{q}.units={'V'};
 quiz.question{q}.options={'j1:NJF'}; % Device:Var
 quiz.question{q}.vartype={'feteval:mop'}; % From log file
@@ -134,7 +135,7 @@ quiz.question{q}.type='FET';
 
 % 
 % q=2;
-% quiz.question{q}.str='b) Qual o valor da corrente Dreno-Source de saturaÁ„o Idss?';
+% quiz.question{q}.str='b) Qual o valor da corrente Dreno-Source de satura√ß√£o Idss?';
 % quiz.question{q}.units={'A'};
 % quiz.question{q}.options={'j1:NJF'}; % Device:Var
 % quiz.question{q}.vartype={'feteval:Idss'}; % From log file
@@ -144,7 +145,7 @@ quiz.question{q}.type='FET';
 % % 
 
 % q=4;
-% quiz.question{q}.str='d) Qual o valor da tens„o Dreno-Source Vds?';
+% quiz.question{q}.str='d) Qual o valor da tens√£o Dreno-Source Vds?';
 % quiz.question{q}.units={'V'};
 % quiz.question{q}.options={'j1:Vds'};
 % quiz.question{q}.vartype={'log'}; % meas 
@@ -172,7 +173,7 @@ quiz.question{q}.opttol=[10]; % tolerance in percentage %
 quiz.question{q}.type='NUMERICAL';
 
 q=q+1;
-quiz.question{q}.str='Qual o modo de operaÁ„o do TBJ?';
+quiz.question{q}.str='Qual o modo de opera√ß√£o do TBJ?';
 quiz.question{q}.units={'V'};
 quiz.question{q}.options={'q1:npn'}; % Device:Var
 quiz.question{q}.vartype={'mop'}; % From log file
@@ -193,7 +194,7 @@ quiz.question{q}.type='TBJ';
 % quiz.question{q}.type='NUMERICAL';
 % 
 % q=4;
-% quiz.question{q}.str='d) Qual a tens„o Base-Emissor Vbe?';
+% quiz.question{q}.str='d) Qual a tens√£o Base-Emissor Vbe?';
 % quiz.question{q}.units={'V'};
 % quiz.question{q}.options={'q1:Vbe'}; % Device:Var
 % quiz.question{q}.vartype={'log'}; % From log file
@@ -202,7 +203,7 @@ quiz.question{q}.type='TBJ';
 % quiz.question{q}.type='NUMERICAL';
 % 
 % q=5;
-% quiz.question{q}.str='e) Qual a tens„o Base-Coletor Vbc?';
+% quiz.question{q}.str='e) Qual a tens√£o Base-Coletor Vbc?';
 % quiz.question{q}.units={'V'};
 % quiz.question{q}.options={'q1:Vbc'}; % Device:Var
 % quiz.question{q}.vartype={'log'}; % From log file
@@ -211,7 +212,7 @@ quiz.question{q}.type='TBJ';
 % quiz.question{q}.type='NUMERICAL';
 % 
 % q=6;
-% quiz.question{q}.str='e) Qual a tens„o Coletor-Emissor Vce?';
+% quiz.question{q}.str='e) Qual a tens√£o Coletor-Emissor Vce?';
 % quiz.question{q}.units={'V'};
 % quiz.question{q}.options={'q1:Vce'}; % Device:Var
 % quiz.question{q}.vartype={'log'}; % From log file
@@ -221,7 +222,7 @@ quiz.question{q}.type='TBJ';
 % 
 
 % q=5;
-% quiz.question{q}.str='Qual o valor da tens„o Vds de saturaÁ„o Vds<sub>sat</sub> = Vgs - Vto?';
+% quiz.question{q}.str='Qual o valor da tens√£o Vds de satura√ß√£o Vds<sub>sat</sub> = Vgs - Vto?';
 % quiz.question{q}.units={'V'};
 % quiz.question{q}.options={'j1:NJF'}; % Device:Var
 % quiz.question{q}.vartype={'feteval:Vgst'}; % From log file
@@ -231,7 +232,7 @@ quiz.question{q}.type='TBJ';
 
 % 
 % q=7;
-% quiz.question{q}.str='g) Qual o valor da resistÍncia rd?';
+% quiz.question{q}.str='g) Qual o valor da resist√™ncia rd?';
 % quiz.question{q}.units={'&Omega;'};
 % quiz.question{q}.options={'j1:NJF'}; % Device:Var
 % quiz.question{q}.vartype={'feteval:rd'}; % From log file

@@ -1,4 +1,5 @@
-clear all
+% clear all
+clear circuit quiz
 clc
 
 % Sets simulation dir
@@ -24,7 +25,7 @@ Beta=50:25:150;
 Va=100:50:200;
 
 % circuit.multiplesims=[10]; % Number of simulations
-circuit.nsims = 16; % Numero de circuitos a serem simulados
+circuit.nsims = 32; % Numero de circuitos a serem simulados
 
 % Rb = combres(1,[100],'E12'); %
 X0=CombVec(Vcc,Rb,Rc,Is,Beta,Va); %%
@@ -35,12 +36,12 @@ Xi=X0(:,nq);
 % Xi=CombVec(Vcc,Rb,Rc,Beta,Vbe,Vcesat); 
 [tbjmode,logdata,logfiles]=gettbjnpn01mode(Xi);
 
-% Mostra estatÌtica de modos encontrados
+% Mostra estat√≠tica de modos encontrados
 Tmode = table(sum(tbjmode(:)==2),sum(tbjmode(:)==3));
-Tmode.Properties.VariableNames = ["SaturaÁ„o","Regi„o ativa"];
+Tmode.Properties.VariableNames = ["Satura√ß√£o","Regi√£o ativa"];
 disp(Tmode)
 
-indx=find(tbjmode==3); % 2 - SaturaÁ„o; 3 - Regi„o ativa;
+indx=find(tbjmode==3); % 2 - Satura√ß√£o; 3 - Regi√£o ativa;
 circuit.Xi=Xi(:,indx);
 circuit.indx=indx;
 circuit.logdata={logdata{indx}};
@@ -67,8 +68,8 @@ circuit.cmdupdate = 0; % Update the cmdtype from sim file
 circuit.LTspice.net.run = 0;
 
 % Generate question
-quiz.enunciado = 'Para a configuraÁ„o emissor comum de polarizaÁ„o fixa, simule no LTspice o ponto de operaÁ„o (.op) do circuito apresentado na Figura 1 e determine:';
-quiz.rowfigdirective=1; % Imprima os par‚metros ao lado da figura
+quiz.enunciado = 'Para a configura√ß√£o emissor comum de polariza√ß√£o fixa, simule no LTspice o ponto de opera√ß√£o (.op) do circuito apresentado na Figura 1 e determine:';
+quiz.rowfigdirective=1; % Imprima os par√¢metros ao lado da figura
 quiz.autoitem=1; % Auto add item letter: a), b)... 97 - 122; 65 - 90
 quiz.incfrom=25; % Increment from
 % Text a ser colocado abaixo da figura
@@ -116,7 +117,7 @@ quiz.question{q}.type='NUMERICAL';
 % quiz.question{q}.type='NUMERICAL';
 
 q=q+1;
-quiz.question{q}.str='Qual a tens„o Base-Emissor Vbe?';
+quiz.question{q}.str='Qual a tens√£o Base-Emissor Vbe?';
 quiz.question{q}.units={'V'};
 quiz.question{q}.options={'q1:Vbe'}; % Device:Var
 quiz.question{q}.vartype={'log'}; % From log file
@@ -125,7 +126,7 @@ quiz.question{q}.opttol=[10]; % tolerance in percentage %
 quiz.question{q}.type='NUMERICAL';
 
 q=q+1;
-quiz.question{q}.str='Qual a tens„o Base-Coletor Vbc?';
+quiz.question{q}.str='Qual a tens√£o Base-Coletor Vbc?';
 quiz.question{q}.units={'V'};
 quiz.question{q}.options={'q1:Vbc'}; % Device:Var
 quiz.question{q}.vartype={'log'}; % From log file
@@ -134,7 +135,7 @@ quiz.question{q}.opttol=[1]; % tolerance in percentage %
 quiz.question{q}.type='NUMERICAL';
 
 q=q+1;
-quiz.question{q}.str='Qual a tens„o Coletor-Emissor Vce?';
+quiz.question{q}.str='Qual a tens√£o Coletor-Emissor Vce?';
 quiz.question{q}.units={'V'};
 quiz.question{q}.options={'q1:Vce'}; % Device:Var
 quiz.question{q}.vartype={'log'}; % From log file
@@ -152,7 +153,7 @@ quiz.question{q}.type='NUMERICAL';
 % quiz.question{q}.type='NUMERICAL';
 % 
 % q=q+1;
-% quiz.question{q}.str='Qual o valor da resistÍncia re?';
+% quiz.question{q}.str='Qual o valor da resist√™ncia re?';
 % quiz.question{q}.units={'&Omega;'};
 % quiz.question{q}.options={'q1:npn'}; % Device:Var
 % quiz.question{q}.vartype={'re'}; % From log file
@@ -161,7 +162,7 @@ quiz.question{q}.type='NUMERICAL';
 % quiz.question{q}.type='NUMERICAL';
 % 
 % q=q+1;
-% quiz.question{q}.str='Qual o valor da resistÍncia ro?';
+% quiz.question{q}.str='Qual o valor da resist√™ncia ro?';
 % quiz.question{q}.units={'&Omega;'};
 % quiz.question{q}.options={'q1:npn'}; % Device:Var
 % quiz.question{q}.vartype={'ro'}; % From log file
@@ -170,7 +171,7 @@ quiz.question{q}.type='NUMERICAL';
 % quiz.question{q}.type='NUMERICAL';
 
 q=q+1;
-quiz.question{q}.str='Qual o modo de operaÁ„o do TBJ?';
+quiz.question{q}.str='Qual o modo de opera√ß√£o do TBJ?';
 quiz.question{q}.units={'V'};
 quiz.question{q}.options={'q1:npn'}; % Device:Var
 quiz.question{q}.vartype={'mop'}; % From log file

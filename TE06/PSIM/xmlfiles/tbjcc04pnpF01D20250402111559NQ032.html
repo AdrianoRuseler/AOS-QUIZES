@@ -1,0 +1,749 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<title>tbjcc04pnpF01D20250402111559NQ032</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+<body>
+ 
+<div class="container mt-3">
+   <div class="card">
+      <div class="card-header"><h4>
+tbjcc04pnpq001(Vcc=20V,Rb=6,8k&Omega;,Rc=330&Omega;,Re=330&Omega;,&beta;=90,Veb=500mVeVecsat=200mV)
+</h4></div>
+      <div class="card-body">
+<p>Para o circuito contendo um transistor TBJ do tipo PNP apresentado na Figura 1, determine:<br></p> <div class="row">  <div class="col-md-8"><p style="text-align: left;"><img src="data:image/png;base64,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" alt=""></p><p style="text-align: left;">Figura 1: Considere Vcc=20 V, Rb=6,8 k&Omega;, Rc=330 &Omega;, Re=330 &Omega;, &beta;=90, Veb=500 mV e Vecsat=200 mV;<br></p></div>  <div class="col-md-4"><p><code>Vcc=20<br>Rb=6.8k<br>Rc=330<br>Re=330<br>Beta=90<br>Veb=500m<br>Vecsat=200m</code></p></div> </div> <p>a) Qual o valor da corrente de base? {1:NUMERICAL:~%100%291.653:29.165} &micro;A<br></p><p>b) Qual o valor da corrente de coletor? {1:NUMERICAL:~%100%26.541:2.654} mA<br></p><p>c) Qual o valor da relação corrente de coletor por corrente na base, Ic/Ib? {1:NUMERICAL:~%100%90.001:9.000} A/A<br></p><p>d) Qual o valor da tensão entre emissor e coletor, Vec? {1:NUMERICAL:~%100%2.483:0.248} V<br></p><p>e) Qual o valor da tensão entre coletor e base, Vcb? {1:NUMERICAL:~%100%-1.983:-0.198} V<br></p><p>f) Qual o modo de operação do TBJ? {1:MULTICHOICE:~Corte~Saturação~%100%Ativo Direto~Ativo Reverso}<br></p>
+</div>
+      <div class="card-footer">
+
+Generalfeedback: 
+
+<br>
+Penalty: 
+0.25
+<br>
+Hidden: 
+0
+<br>
+</div>
+   </div>
+</div>
+ 
+<div class="container mt-3">
+   <div class="card">
+      <div class="card-header"><h4>
+tbjcc04pnpq002(Vcc=15V,Rb=1,2k&Omega;,Rc=180&Omega;,Re=560&Omega;,&beta;=95,Veb=800mVeVecsat=400mV)
+</h4></div>
+      <div class="card-body">
+<p>Para o circuito contendo um transistor TBJ do tipo PNP apresentado na Figura 1, determine:<br></p> <div class="row">  <div class="col-md-8"><p style="text-align: left;"><img src="data:image/png;base64,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" alt=""></p><p style="text-align: left;">Figura 1: Considere Vcc=15 V, Rb=1,2 k&Omega;, Rc=180 &Omega;, Re=560 &Omega;, &beta;=95, Veb=800 mV e Vecsat=400 mV;<br></p></div>  <div class="col-md-4"><p><code>Vcc=15<br>Rb=1.2k<br>Rc=180<br>Re=560<br>Beta=95<br>Veb=800m<br>Vecsat=400m</code></p></div> </div> <p>a) Qual o valor da corrente de base? {1:NUMERICAL:~%100%196.567:19.657} &micro;A<br></p><p>b) Qual o valor da corrente de coletor? {1:NUMERICAL:~%100%18.870:1.887} mA<br></p><p>c) Qual o valor da relação corrente de coletor por corrente na base, Ic/Ib? {1:NUMERICAL:~%100%95.000:9.500} A/A<br></p><p>d) Qual o valor da tensão entre emissor e coletor, Vec? {1:NUMERICAL:~%100%1.036:0.104} V<br></p><p>e) Qual o valor da tensão entre coletor e base, Vcb? {1:NUMERICAL:~%100%-235.880:-23.588} mV<br></p><p>f) Qual o modo de operação do TBJ? {1:MULTICHOICE:~Corte~Saturação~%100%Ativo Direto~Ativo Reverso}<br></p>
+</div>
+      <div class="card-footer">
+
+Generalfeedback: 
+
+<br>
+Penalty: 
+0.25
+<br>
+Hidden: 
+0
+<br>
+</div>
+   </div>
+</div>
+ 
+<div class="container mt-3">
+   <div class="card">
+      <div class="card-header"><h4>
+tbjcc04pnpq003(Vcc=30V,Rb=2,7k&Omega;,Rc=470&Omega;,Re=180&Omega;,&beta;=55,Veb=800mVeVecsat=200mV)
+</h4></div>
+      <div class="card-body">
+<p>Para o circuito contendo um transistor TBJ do tipo PNP apresentado na Figura 1, determine:<br></p> <div class="row">  <div class="col-md-8"><p style="text-align: left;"><img src="data:image/png;base64,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" alt=""></p><p style="text-align: left;">Figura 1: Considere Vcc=30 V, Rb=2,7 k&Omega;, Rc=470 &Omega;, Re=180 &Omega;, &beta;=55, Veb=800 mV e Vecsat=200 mV;<br></p></div>  <div class="col-md-4"><p><code>Vcc=30<br>Rb=2.7k<br>Rc=470<br>Re=180<br>Beta=55<br>Veb=800m<br>Vecsat=200m</code></p></div> </div> <p>a) Qual o valor da corrente de base? {1:NUMERICAL:~%100%746.801:74.680} &micro;A<br></p><p>b) Qual o valor da corrente de coletor? {1:NUMERICAL:~%100%41.821:4.182} mA<br></p><p>c) Qual o valor da relação corrente de coletor por corrente na base, Ic/Ib? {1:NUMERICAL:~%100%55.000:5.500} A/A<br></p><p>d) Qual o valor da tensão entre emissor e coletor, Vec? {1:NUMERICAL:~%100%2.816:0.282} V<br></p><p>e) Qual o valor da tensão entre coletor e base, Vcb? {1:NUMERICAL:~%100%-2.016:-0.202} V<br></p><p>f) Qual o modo de operação do TBJ? {1:MULTICHOICE:~Corte~Saturação~%100%Ativo Direto~Ativo Reverso}<br></p>
+</div>
+      <div class="card-footer">
+
+Generalfeedback: 
+
+<br>
+Penalty: 
+0.25
+<br>
+Hidden: 
+0
+<br>
+</div>
+   </div>
+</div>
+ 
+<div class="container mt-3">
+   <div class="card">
+      <div class="card-header"><h4>
+tbjcc04pnpq004(Vcc=15V,Rb=2,7k&Omega;,Rc=100&Omega;,Re=680&Omega;,&beta;=55,Veb=600mVeVecsat=300mV)
+</h4></div>
+      <div class="card-body">
+<p>Para o circuito contendo um transistor TBJ do tipo PNP apresentado na Figura 1, determine:<br></p> <div class="row">  <div class="col-md-8"><p style="text-align: left;"><img src="data:image/png;base64,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" alt=""></p><p style="text-align: left;">Figura 1: Considere Vcc=15 V, Rb=2,7 k&Omega;, Rc=100 &Omega;, Re=680 &Omega;, &beta;=55, Veb=600 mV e Vecsat=300 mV;<br></p></div>  <div class="col-md-4"><p><code>Vcc=15<br>Rb=2.7k<br>Rc=100<br>Re=680<br>Beta=55<br>Veb=600m<br>Vecsat=300m</code></p></div> </div> <p>a) Qual o valor da corrente de base? {1:NUMERICAL:~%100%310.478:31.048} &micro;A<br></p><p>b) Qual o valor da corrente de coletor? {1:NUMERICAL:~%100%17.387:1.739} mA<br></p><p>c) Qual o valor da relação corrente de coletor por corrente na base, Ic/Ib? {1:NUMERICAL:~%100%55.000:5.500} A/A<br></p><p>d) Qual o valor da tensão entre emissor e coletor, Vec? {1:NUMERICAL:~%100%1.438:0.144} V<br></p><p>e) Qual o valor da tensão entre coletor e base, Vcb? {1:NUMERICAL:~%100%-838.291:-83.829} mV<br></p><p>f) Qual o modo de operação do TBJ? {1:MULTICHOICE:~Corte~Saturação~%100%Ativo Direto~Ativo Reverso}<br></p>
+</div>
+      <div class="card-footer">
+
+Generalfeedback: 
+
+<br>
+Penalty: 
+0.25
+<br>
+Hidden: 
+0
+<br>
+</div>
+   </div>
+</div>
+ 
+<div class="container mt-3">
+   <div class="card">
+      <div class="card-header"><h4>
+tbjcc04pnpq005(Vcc=30V,Rb=1,5k&Omega;,Rc=820&Omega;,Re=150&Omega;,&beta;=100,Veb=750mVeVecsat=200mV)
+</h4></div>
+      <div class="card-body">
+<p>Para o circuito contendo um transistor TBJ do tipo PNP apresentado na Figura 1, determine:<br></p> <div class="row">  <div class="col-md-8"><p style="text-align: left;"><img src="data:image/png;base64,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" alt=""></p><p style="text-align: left;">Figura 1: Considere Vcc=30 V, Rb=1,5 k&Omega;, Rc=820 &Omega;, Re=150 &Omega;, &beta;=100, Veb=750 mV e Vecsat=200 mV;<br></p></div>  <div class="col-md-4"><p><code>Vcc=30<br>Rb=1.5k<br>Rc=820<br>Re=150<br>Beta=100<br>Veb=750m<br>Vecsat=200m</code></p></div> </div> <p>a) Qual o valor da corrente de base? {1:NUMERICAL:~%100%294.058:29.406} &micro;A<br></p><p>b) Qual o valor da corrente de coletor? {1:NUMERICAL:~%100%29.700:2.970} mA<br></p><p>c) Qual o valor da relação corrente de coletor por corrente na base, Ic/Ib? {1:NUMERICAL:~%100%100.000:10.000} A/A<br></p><p>d) Qual o valor da tensão entre emissor e coletor, Vec? {1:NUMERICAL:~%100%1.191:0.119} V<br></p><p>e) Qual o valor da tensão entre coletor e base, Vcb? {1:NUMERICAL:~%100%-441.086:-44.109} mV<br></p><p>f) Qual o modo de operação do TBJ? {1:MULTICHOICE:~Corte~Saturação~%100%Ativo Direto~Ativo Reverso}<br></p>
+</div>
+      <div class="card-footer">
+
+Generalfeedback: 
+
+<br>
+Penalty: 
+0.25
+<br>
+Hidden: 
+0
+<br>
+</div>
+   </div>
+</div>
+ 
+<div class="container mt-3">
+   <div class="card">
+      <div class="card-header"><h4>
+tbjcc04pnpq006(Vcc=25V,Rb=4,7k&Omega;,Rc=180&Omega;,Re=100&Omega;,&beta;=70,Veb=800mVeVecsat=300mV)
+</h4></div>
+      <div class="card-body">
+<p>Para o circuito contendo um transistor TBJ do tipo PNP apresentado na Figura 1, determine:<br></p> <div class="row">  <div class="col-md-8"><p style="text-align: left;"><img src="data:image/png;base64,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" alt=""></p><p style="text-align: left;">Figura 1: Considere Vcc=25 V, Rb=4,7 k&Omega;, Rc=180 &Omega;, Re=100 &Omega;, &beta;=70, Veb=800 mV e Vecsat=300 mV;<br></p></div>  <div class="col-md-4"><p><code>Vcc=25<br>Rb=4.7k<br>Rc=180<br>Re=100<br>Beta=70<br>Veb=800m<br>Vecsat=300m</code></p></div> </div> <p>a) Qual o valor da corrente de base? {1:NUMERICAL:~%100%984.539:98.454} &micro;A<br></p><p>b) Qual o valor da corrente de coletor? {1:NUMERICAL:~%100%69.902:6.990} mA<br></p><p>c) Qual o valor da relação corrente de coletor por corrente na base, Ic/Ib? {1:NUMERICAL:~%100%70.000:7.000} A/A<br></p><p>d) Qual o valor da tensão entre emissor e coletor, Vec? {1:NUMERICAL:~%100%5.427:0.543} V<br></p><p>e) Qual o valor da tensão entre coletor e base, Vcb? {1:NUMERICAL:~%100%-4.627:-0.463} V<br></p><p>f) Qual o modo de operação do TBJ? {1:MULTICHOICE:~Corte~Saturação~%100%Ativo Direto~Ativo Reverso}<br></p>
+</div>
+      <div class="card-footer">
+
+Generalfeedback: 
+
+<br>
+Penalty: 
+0.25
+<br>
+Hidden: 
+0
+<br>
+</div>
+   </div>
+</div>
+ 
+<div class="container mt-3">
+   <div class="card">
+      <div class="card-header"><h4>
+tbjcc04pnpq007(Vcc=30V,Rb=1,5k&Omega;,Rc=820&Omega;,Re=680&Omega;,&beta;=70,Veb=700mVeVecsat=200mV)
+</h4></div>
+      <div class="card-body">
+<p>Para o circuito contendo um transistor TBJ do tipo PNP apresentado na Figura 1, determine:<br></p> <div class="row">  <div class="col-md-8"><p style="text-align: left;"><img src="data:image/png;base64,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" alt=""></p><p style="text-align: left;">Figura 1: Considere Vcc=30 V, Rb=1,5 k&Omega;, Rc=820 &Omega;, Re=680 &Omega;, &beta;=70, Veb=700 mV e Vecsat=200 mV;<br></p></div>  <div class="col-md-4"><p><code>Vcc=30<br>Rb=1.5k<br>Rc=820<br>Re=680<br>Beta=70<br>Veb=700m<br>Vecsat=200m</code></p></div> </div> <p>a) Qual o valor da corrente de base? {1:NUMERICAL:~%100%271.296:27.130} &micro;A<br></p><p>b) Qual o valor da corrente de coletor? {1:NUMERICAL:~%100%19.262:1.926} mA<br></p><p>c) Qual o valor da relação corrente de coletor por corrente na base, Ic/Ib? {1:NUMERICAL:~%100%70.000:7.000} A/A<br></p><p>d) Qual o valor da tensão entre emissor e coletor, Vec? {1:NUMERICAL:~%100%1.107:0.111} V<br></p><p>e) Qual o valor da tensão entre coletor e base, Vcb? {1:NUMERICAL:~%100%-406.944:-40.694} mV<br></p><p>f) Qual o modo de operação do TBJ? {1:MULTICHOICE:~Corte~Saturação~%100%Ativo Direto~Ativo Reverso}<br></p>
+</div>
+      <div class="card-footer">
+
+Generalfeedback: 
+
+<br>
+Penalty: 
+0.25
+<br>
+Hidden: 
+0
+<br>
+</div>
+   </div>
+</div>
+ 
+<div class="container mt-3">
+   <div class="card">
+      <div class="card-header"><h4>
+tbjcc04pnpq008(Vcc=20V,Rb=1,5k&Omega;,Rc=820&Omega;,Re=330&Omega;,&beta;=95,Veb=700mVeVecsat=200mV)
+</h4></div>
+      <div class="card-body">
+<p>Para o circuito contendo um transistor TBJ do tipo PNP apresentado na Figura 1, determine:<br></p> <div class="row">  <div class="col-md-8"><p style="text-align: left;"><img src="data:image/png;base64,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" alt=""></p><p style="text-align: left;">Figura 1: Considere Vcc=20 V, Rb=1,5 k&Omega;, Rc=820 &Omega;, Re=330 &Omega;, &beta;=95, Veb=700 mV e Vecsat=200 mV;<br></p></div>  <div class="col-md-4"><p><code>Vcc=20<br>Rb=1.5k<br>Rc=820<br>Re=330<br>Beta=95<br>Veb=700m<br>Vecsat=200m</code></p></div> </div> <p>a) Qual o valor da corrente de base? {1:NUMERICAL:~%100%172.475:17.247} &micro;A<br></p><p>b) Qual o valor da corrente de coletor? {1:NUMERICAL:~%100%16.558:1.656} mA<br></p><p>c) Qual o valor da relação corrente de coletor por corrente na base, Ic/Ib? {1:NUMERICAL:~%100%95.000:9.500} A/A<br></p><p>d) Qual o valor da tensão entre emissor e coletor, Vec? {1:NUMERICAL:~%100%958.712:95.871} mV<br></p><p>e) Qual o valor da tensão entre coletor e base, Vcb? {1:NUMERICAL:~%100%-258.712:-25.871} mV<br></p><p>f) Qual o modo de operação do TBJ? {1:MULTICHOICE:~Corte~Saturação~%100%Ativo Direto~Ativo Reverso}<br></p>
+</div>
+      <div class="card-footer">
+
+Generalfeedback: 
+
+<br>
+Penalty: 
+0.25
+<br>
+Hidden: 
+0
+<br>
+</div>
+   </div>
+</div>
+ 
+<div class="container mt-3">
+   <div class="card">
+      <div class="card-header"><h4>
+tbjcc04pnpq009(Vcc=20V,Rb=6,8k&Omega;,Rc=150&Omega;,Re=390&Omega;,&beta;=95,Veb=700mVeVecsat=200mV)
+</h4></div>
+      <div class="card-body">
+<p>Para o circuito contendo um transistor TBJ do tipo PNP apresentado na Figura 1, determine:<br></p> <div class="row">  <div class="col-md-8"><p style="text-align: left;"><img src="data:image/png;base64,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" alt=""></p><p style="text-align: left;">Figura 1: Considere Vcc=20 V, Rb=6,8 k&Omega;, Rc=150 &Omega;, Re=390 &Omega;, &beta;=95, Veb=700 mV e Vecsat=200 mV;<br></p></div>  <div class="col-md-4"><p><code>Vcc=20<br>Rb=6.8k<br>Rc=150<br>Re=390<br>Beta=95<br>Veb=700m<br>Vecsat=200m</code></p></div> </div> <p>a) Qual o valor da corrente de base? {1:NUMERICAL:~%100%329.126:32.913} &micro;A<br></p><p>b) Qual o valor da corrente de coletor? {1:NUMERICAL:~%100%31.596:3.160} mA<br></p><p>c) Qual o valor da relação corrente de coletor por corrente na base, Ic/Ib? {1:NUMERICAL:~%100%95.000:9.500} A/A<br></p><p>d) Qual o valor da tensão entre emissor e coletor, Vec? {1:NUMERICAL:~%100%2.938:0.294} V<br></p><p>e) Qual o valor da tensão entre coletor e base, Vcb? {1:NUMERICAL:~%100%-2.238:-0.224} V<br></p><p>f) Qual o modo de operação do TBJ? {1:MULTICHOICE:~Corte~Saturação~%100%Ativo Direto~Ativo Reverso}<br></p>
+</div>
+      <div class="card-footer">
+
+Generalfeedback: 
+
+<br>
+Penalty: 
+0.25
+<br>
+Hidden: 
+0
+<br>
+</div>
+   </div>
+</div>
+ 
+<div class="container mt-3">
+   <div class="card">
+      <div class="card-header"><h4>
+tbjcc04pnpq010(Vcc=20V,Rb=3,3k&Omega;,Rc=220&Omega;,Re=220&Omega;,&beta;=70,Veb=700mVeVecsat=500mV)
+</h4></div>
+      <div class="card-body">
+<p>Para o circuito contendo um transistor TBJ do tipo PNP apresentado na Figura 1, determine:<br></p> <div class="row">  <div class="col-md-8"><p style="text-align: left;"><img src="data:image/png;base64,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" alt=""></p><p style="text-align: left;">Figura 1: Considere Vcc=20 V, Rb=3,3 k&Omega;, Rc=220 &Omega;, Re=220 &Omega;, &beta;=70, Veb=700 mV e Vecsat=500 mV;<br></p></div>  <div class="col-md-4"><p><code>Vcc=20<br>Rb=3.3k<br>Rc=220<br>Re=220<br>Beta=70<br>Veb=700m<br>Vecsat=500m</code></p></div> </div> <p>a) Qual o valor da corrente de base? {1:NUMERICAL:~%100%558.773:55.877} &micro;A<br></p><p>b) Qual o valor da corrente de coletor? {1:NUMERICAL:~%100%39.673:3.967} mA<br></p><p>c) Qual o valor da relação corrente de coletor por corrente na base, Ic/Ib? {1:NUMERICAL:~%100%70.000:7.000} A/A<br></p><p>d) Qual o valor da tensão entre emissor e coletor, Vec? {1:NUMERICAL:~%100%2.544:0.254} V<br></p><p>e) Qual o valor da tensão entre coletor e base, Vcb? {1:NUMERICAL:~%100%-1.844:-0.184} V<br></p><p>f) Qual o modo de operação do TBJ? {1:MULTICHOICE:~Corte~Saturação~%100%Ativo Direto~Ativo Reverso}<br></p>
+</div>
+      <div class="card-footer">
+
+Generalfeedback: 
+
+<br>
+Penalty: 
+0.25
+<br>
+Hidden: 
+0
+<br>
+</div>
+   </div>
+</div>
+ 
+<div class="container mt-3">
+   <div class="card">
+      <div class="card-header"><h4>
+tbjcc04pnpq011(Vcc=20V,Rb=1,8k&Omega;,Rc=820&Omega;,Re=820&Omega;,&beta;=95,Veb=550mVeVecsat=300mV)
+</h4></div>
+      <div class="card-body">
+<p>Para o circuito contendo um transistor TBJ do tipo PNP apresentado na Figura 1, determine:<br></p> <div class="row">  <div class="col-md-8"><p style="text-align: left;"><img src="data:image/png;base64,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" alt=""></p><p style="text-align: left;">Figura 1: Considere Vcc=20 V, Rb=1,8 k&Omega;, Rc=820 &Omega;, Re=820 &Omega;, &beta;=95, Veb=550 mV e Vecsat=300 mV;<br></p></div>  <div class="col-md-4"><p><code>Vcc=20<br>Rb=1.8k<br>Rc=820<br>Re=820<br>Beta=95<br>Veb=550m<br>Vecsat=300m</code></p></div> </div> <p>a) Qual o valor da corrente de base? {1:NUMERICAL:~%100%122.142:12.214} &micro;A<br></p><p>b) Qual o valor da corrente de coletor? {1:NUMERICAL:~%100%11.726:1.173} mA<br></p><p>c) Qual o valor da relação corrente de coletor por corrente na base, Ic/Ib? {1:NUMERICAL:~%100%95.002:9.500} A/A<br></p><p>d) Qual o valor da tensão entre emissor e coletor, Vec? {1:NUMERICAL:~%100%769.855:76.986} mV<br></p><p>e) Qual o valor da tensão entre coletor e base, Vcb? {1:NUMERICAL:~%100%-219.855:-21.986} mV<br></p><p>f) Qual o modo de operação do TBJ? {1:MULTICHOICE:~Corte~Saturação~%100%Ativo Direto~Ativo Reverso}<br></p>
+</div>
+      <div class="card-footer">
+
+Generalfeedback: 
+
+<br>
+Penalty: 
+0.25
+<br>
+Hidden: 
+0
+<br>
+</div>
+   </div>
+</div>
+ 
+<div class="container mt-3">
+   <div class="card">
+      <div class="card-header"><h4>
+tbjcc04pnpq012(Vcc=30V,Rb=3,9k&Omega;,Rc=390&Omega;,Re=560&Omega;,&beta;=70,Veb=700mVeVecsat=400mV)
+</h4></div>
+      <div class="card-body">
+<p>Para o circuito contendo um transistor TBJ do tipo PNP apresentado na Figura 1, determine:<br></p> <div class="row">  <div class="col-md-8"><p style="text-align: left;"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOMAAADfCAIAAACLVPPNAAAAB3RJTUUH6QQCDg87nhtWQAAACP1JREFUeJzt3b9r21obwPGnl3fzkE2DdlM8FDJo8dB/IATeQMAdAu+oLYOHbAkUfLcOHt7NYyFDDYUUgv+BDF40BDKE4l2DNw/e73ByFdWJZdk6ks4jfT/cITFur+N8e45+WEcfongpgPP+qvsFALlQKnSgVOhAqdDhP3W/gO18r+5XgD2VuXfucKlS7k8Oy0oeWZj9oQOlQgdKhQ6UCh0oFTpQKnSgVOhAqdCBUqEDpUIHSoUdgZR76ptSoQOlQgdKhQ6UCh0oFSUKfGt/FaWiLIEvUWwtVkpFWUymUWznb6NUlMhWpkKp0IJSoQOlQgdKhQ6UCjvMnr7FA6gb3F6ZAqqYPX0Tq8W9foNSYVlJvTL7oxTpXq1gTIV9ZWwAUCpsKmkjVSgVViSzfBmNGpSKQsobRDdQKg5UWaMGpWJvFTdqUCr2VuoR/m0oFQequFdKRSEbR/jZ94fTkkA5ngodytskoFTYV0avlAr7GFPhOrZT4bS99/3Xt5fd4Tz5NpxFX4PsP0GpKOTwQbQ/Xvy8WImIRBN/9HD163Mn6+l8khoHMldNRXHxuT44C+fPCxERebwOfC/wveBrtPEkSsXe7DVqRHeTfq8rsr69HPUW8TKKlzM5mTz+8SRmf+zNzkGo+bDrD82X/fEi7Ig8Ps/nk9cHeys5PkqeTqk4UNFeX7ZTo4k/6p3+W+T2XStmfxRitgHM9sBB1/cF4WIw7V4vRaTb609GD2sRWT2ce8z+sK/Qef/OxU3onZz3Fj8v/j97DrqeiEg4i47/eNaHKC735iyH8z1x9rUhE+eooAPn/aEDYypcx3l/OI3P/MN1XEcF13FtKlzH9f7Q4e2Kk8z+cFe6zgpGWc77w4IKxlRKhQ6UCh0oFTpQKnSgVOhAqdCBUqEDpUIHSoUOlAod3C01EC73wyt3SwXSKBU6UCp0oFToQKnQgVKhA6VCB0qFDpQKHSgVOlAqdKBU6ECp0IFSoQOlQgdKhQ6UCh1cXOsvWe6wlnU64SaHSt22VnwFa8jDfU6Umj12Frp/HJqi/lLN/bfzSJZCJtYWqnmPKiO7bbeLNfeTRdvUWerBoyOxthBHqbCbC+NCbaUW3NxkWG2b+veo0jbiq/g+MjhMNcdk3Cp148Yx1Om+yn5N9cz+Vn48NgBqV+Vo4taYCi2qPwuTMaauHs69yx+r9ENHP/4bnN8elf2i4KT05zGiuOpts4xSjz7fhPPpfarL1f10Ht5crLb/GYvYSHVKMtHXtf+QuZ16fDWW6f3632/X91MZXx2br28vfS/wvcC/flnm9O0j21nZxGSXq2KBX+d7nr1HdXQ6kOG3yHyz/DaUwelKRCSadKeDxTKKl4vx08nX6L1H0DTVz/hpO/aoVl9uQv9u+TXwJLqbhDfxkYjI+vdTf3DVkZXI6suvSETWt5uPoHHqPby98yhVcBZO7h7l6MdoEp559v7HBTcAmPorZgbU5L/q7T5K5V2Nn/53/U1k/D14eajz8dN8dL+++NwRebwORr3Fz7ePHLLjldEuXW7yrY0bKm6p8CGKd77K1cN5dyjjP+Jb3152h3MRkXAW/+29+0gOhw2NDKgiIr4nu393drjwhucptVz7vgsuvGtOaFmp9Z+jSjZYd74XXJ1So9rf/PpLldRlJ+lvE1zx54LaLw1yolRj48q+t4+jdmYCdHTfv3q1//NFhvxba3ZxdQr2Zg6pVvyRS0rFgSqOlVJxOBNrNb1SKgqpbEuAUmFBBbFSqlYqTtZbRKnYzYXDhZQKHSgVOlAqdKDURmnwUh2U2hzmkxJNjZVSm6PGDzpVgFIbpamZCqVCC0qFDpQKHSgVdkRicd2Sd7hbatk/uXZVfjbUBS5eR4Wc0tf0Nniv36BU9VrSq7uzP/aysWZC8zCmNkHjB1ShVO3a0KhBqSq1cAUkSlWmPYPoBkpVo7WNGpSqQMsbNShVgZYcMc1GqWq0vFeO/CuTrK6T66T/6+3svMD3AnOfsPXtpcJbijKmqrSxKnLWENtPbiUSTfzRw9Wvz6W/ulIwpuqWHmJ3Cc7C+fPCfP387Tw1ympAqU2Qr9fobtLvdUVEZD6Rm2UUL8ZPJ5PHal5jUcz+TZC1DTAfdv2h+bI/XoQdkbWIhGfHInJ0OuhPf6/kWMFWK6Xqlns7NZr4o96pgiK3YfZXKdn3z30X0yBcDKbd5Ib2k7tHEVndT+efPurIlzFVmcOPp3YubkLv5Ly3+C7SD2XkBXORcBYd236J5aj/bpRbVXi3RRVcP+Zf8u+LMVUB1xutBKUq0PLzqAalqtHyXilVmey7ITcYpaq0x3n/pqBU3dqzSUCpTdCGXim1CZrdqEGpurWhUYNSVWLfH65rzyC6gVLVaG2jBqUq0PJGDUpV4O2Kky2sllLVSNfZwlGWz/yr1KpGDUqFDpQKHSgVOlAqdKBU6ECpBby7kh7KQanF9MeLeBnFyyiehZPRw7ru19NclGpLaiW917H2mgULbKFUW5KV9KJJdzpYLKN4uRg/nbBJYAlnU4t5ZyW930/9wVVHViKrL7/o1BbG1GJetlNnofQHmlfScx+lWpFaSa/z8dN8em92rR6vg9JW1I/EK+cvdhSzvyXJSno/L8LF4LLrDUVEwlls1thHUaz1p5Zr70/Jr4fZv345biYBSs2Up6GCzzHrShPrTpRakW0tmkxb+MnofVHqVnlGu/zPyUCmeVBqRZjiC6LU9yUDYUZhez0HBTlaauB7gUjgN+rgtsVhtZHvTzYXS03/Amr5ZWwMhO8WdsBz7L28mt+fWmg4R1XslxFIrsPR1czR+YfVPU6WtiNWDaUWO/OR59NMVe7r5P4nsf2n3kjTqTNVpXFx9k+f4K3mZG96qHt3yt4YCw9+jhXVvz8ucHRMjeIle80Z2hNowsUxtUYZ/zySIbPgc3AYSoUOlPoiz/l3W8/BASgVOlDqqzwDoa3nYF+UCh0oFTpQKnSo/8h/9pUb27At2Db1l0pzyIPZHzpQKnSof/ZPy/70HdsJbeZWqbSIbZj9oQOlQge3Zn9jY2uVTQKIm6WSJt5i9ocOlAodKBU6UCp0+AeC6W9bh/3hPgAAAABJRU5ErkJggg==" alt=""></p><p style="text-align: left;">Figura 1: Considere Vcc=30 V, Rb=3,9 k&Omega;, Rc=390 &Omega;, Re=560 &Omega;, &beta;=70, Veb=700 mV e Vecsat=400 mV;<br></p></div>  <div class="col-md-4"><p><code>Vcc=30<br>Rb=3.9k<br>Rc=390<br>Re=560<br>Beta=70<br>Veb=700m<br>Vecsat=400m</code></p></div> </div> <p>a) Qual o valor da corrente de base? {1:NUMERICAL:~%100%410.652:41.065} &micro;A<br></p><p>b) Qual o valor da corrente de coletor? {1:NUMERICAL:~%100%29.156:2.916} mA<br></p><p>c) Qual o valor da relação corrente de coletor por corrente na base, Ic/Ib? {1:NUMERICAL:~%100%70.000:7.000} A/A<br></p><p>d) Qual o valor da tensão entre emissor e coletor, Vec? {1:NUMERICAL:~%100%2.302:0.230} V<br></p><p>e) Qual o valor da tensão entre coletor e base, Vcb? {1:NUMERICAL:~%100%-1.602:-0.160} V<br></p><p>f) Qual o modo de operação do TBJ? {1:MULTICHOICE:~Corte~Saturação~%100%Ativo Direto~Ativo Reverso}<br></p>
+</div>
+      <div class="card-footer">
+
+Generalfeedback: 
+
+<br>
+Penalty: 
+0.25
+<br>
+Hidden: 
+0
+<br>
+</div>
+   </div>
+</div>
+ 
+<div class="container mt-3">
+   <div class="card">
+      <div class="card-header"><h4>
+tbjcc04pnpq013(Vcc=20V,Rb=1,2k&Omega;,Rc=680&Omega;,Re=390&Omega;,&beta;=95,Veb=750mVeVecsat=300mV)
+</h4></div>
+      <div class="card-body">
+<p>Para o circuito contendo um transistor TBJ do tipo PNP apresentado na Figura 1, determine:<br></p> <div class="row">  <div class="col-md-8"><p style="text-align: left;"><img src="data:image/png;base64,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" alt=""></p><p style="text-align: left;">Figura 1: Considere Vcc=20 V, Rb=1,2 k&Omega;, Rc=680 &Omega;, Re=390 &Omega;, &beta;=95, Veb=750 mV e Vecsat=300 mV;<br></p></div>  <div class="col-md-4"><p><code>Vcc=20<br>Rb=1.2k<br>Rc=680<br>Re=390<br>Beta=95<br>Veb=750m<br>Vecsat=300m</code></p></div> </div> <p>a) Qual o valor da corrente de base? {1:NUMERICAL:~%100%185.237:18.524} &micro;A<br></p><p>b) Qual o valor da corrente de coletor? {1:NUMERICAL:~%100%17.783:1.778} mA<br></p><p>c) Qual o valor da relação corrente de coletor por corrente na base, Ic/Ib? {1:NUMERICAL:~%100%95.000:9.500} A/A<br></p><p>d) Qual o valor da tensão entre emissor e coletor, Vec? {1:NUMERICAL:~%100%972.285:97.228} mV<br></p><p>e) Qual o valor da tensão entre coletor e base, Vcb? {1:NUMERICAL:~%100%-222.285:-22.228} mV<br></p><p>f) Qual o modo de operação do TBJ? {1:MULTICHOICE:~Corte~Saturação~%100%Ativo Direto~Ativo Reverso}<br></p>
+</div>
+      <div class="card-footer">
+
+Generalfeedback: 
+
+<br>
+Penalty: 
+0.25
+<br>
+Hidden: 
+0
+<br>
+</div>
+   </div>
+</div>
+ 
+<div class="container mt-3">
+   <div class="card">
+      <div class="card-header"><h4>
+tbjcc04pnpq014(Vcc=30V,Rb=1,5k&Omega;,Rc=270&Omega;,Re=150&Omega;,&beta;=70,Veb=650mVeVecsat=400mV)
+</h4></div>
+      <div class="card-body">
+<p>Para o circuito contendo um transistor TBJ do tipo PNP apresentado na Figura 1, determine:<br></p> <div class="row">  <div class="col-md-8"><p style="text-align: left;"><img src="data:image/png;base64,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" alt=""></p><p style="text-align: left;">Figura 1: Considere Vcc=30 V, Rb=1,5 k&Omega;, Rc=270 &Omega;, Re=150 &Omega;, &beta;=70, Veb=650 mV e Vecsat=400 mV;<br></p></div>  <div class="col-md-4"><p><code>Vcc=30<br>Rb=1.5k<br>Rc=270<br>Re=150<br>Beta=70<br>Veb=650m<br>Vecsat=400m</code></p></div> </div> <p>a) Qual o valor da corrente de base? {1:NUMERICAL:~%100%937.100:93.710} &micro;A<br></p><p>b) Qual o valor da corrente de coletor? {1:NUMERICAL:~%100%66.534:6.653} mA<br></p><p>c) Qual o valor da relação corrente de coletor por corrente na base, Ic/Ib? {1:NUMERICAL:~%100%70.000:7.000} A/A<br></p><p>d) Qual o valor da tensão entre emissor e coletor, Vec? {1:NUMERICAL:~%100%2.056:0.206} V<br></p><p>e) Qual o valor da tensão entre coletor e base, Vcb? {1:NUMERICAL:~%100%-1.406:-0.141} V<br></p><p>f) Qual o modo de operação do TBJ? {1:MULTICHOICE:~Corte~Saturação~%100%Ativo Direto~Ativo Reverso}<br></p>
+</div>
+      <div class="card-footer">
+
+Generalfeedback: 
+
+<br>
+Penalty: 
+0.25
+<br>
+Hidden: 
+0
+<br>
+</div>
+   </div>
+</div>
+ 
+<div class="container mt-3">
+   <div class="card">
+      <div class="card-header"><h4>
+tbjcc04pnpq015(Vcc=25V,Rb=3,3k&Omega;,Rc=220&Omega;,Re=150&Omega;,&beta;=85,Veb=500mVeVecsat=400mV)
+</h4></div>
+      <div class="card-body">
+<p>Para o circuito contendo um transistor TBJ do tipo PNP apresentado na Figura 1, determine:<br></p> <div class="row">  <div class="col-md-8"><p style="text-align: left;"><img src="data:image/png;base64,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" alt=""></p><p style="text-align: left;">Figura 1: Considere Vcc=25 V, Rb=3,3 k&Omega;, Rc=220 &Omega;, Re=150 &Omega;, &beta;=85, Veb=500 mV e Vecsat=400 mV;<br></p></div>  <div class="col-md-4"><p><code>Vcc=25<br>Rb=3.3k<br>Rc=220<br>Re=150<br>Beta=85<br>Veb=500m<br>Vecsat=400m</code></p></div> </div> <p>a) Qual o valor da corrente de base? {1:NUMERICAL:~%100%697.608:69.761} &micro;A<br></p><p>b) Qual o valor da corrente de coletor? {1:NUMERICAL:~%100%59.994:5.999} mA<br></p><p>c) Qual o valor da relação corrente de coletor por corrente na base, Ic/Ib? {1:NUMERICAL:~%100%85.000:8.500} A/A<br></p><p>d) Qual o valor da tensão entre emissor e coletor, Vec? {1:NUMERICAL:~%100%2.802:0.280} V<br></p><p>e) Qual o valor da tensão entre coletor e base, Vcb? {1:NUMERICAL:~%100%-2.302:-0.230} V<br></p><p>f) Qual o modo de operação do TBJ? {1:MULTICHOICE:~Corte~Saturação~%100%Ativo Direto~Ativo Reverso}<br></p>
+</div>
+      <div class="card-footer">
+
+Generalfeedback: 
+
+<br>
+Penalty: 
+0.25
+<br>
+Hidden: 
+0
+<br>
+</div>
+   </div>
+</div>
+ 
+<div class="container mt-3">
+   <div class="card">
+      <div class="card-header"><h4>
+tbjcc04pnpq016(Vcc=25V,Rb=1,5k&Omega;,Rc=330&Omega;,Re=100&Omega;,&beta;=95,Veb=550mVeVecsat=200mV)
+</h4></div>
+      <div class="card-body">
+<p>Para o circuito contendo um transistor TBJ do tipo PNP apresentado na Figura 1, determine:<br></p> <div class="row">  <div class="col-md-8"><p style="text-align: left;"><img src="data:image/png;base64,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" alt=""></p><p style="text-align: left;">Figura 1: Considere Vcc=25 V, Rb=1,5 k&Omega;, Rc=330 &Omega;, Re=100 &Omega;, &beta;=95, Veb=550 mV e Vecsat=200 mV;<br></p></div>  <div class="col-md-4"><p><code>Vcc=25<br>Rb=1.5k<br>Rc=330<br>Re=100<br>Beta=95<br>Veb=550m<br>Vecsat=200m</code></p></div> </div> <p>a) Qual o valor da corrente de base? {1:NUMERICAL:~%100%571.528:57.153} &micro;A<br></p><p>b) Qual o valor da corrente de coletor? {1:NUMERICAL:~%100%54.867:5.487} mA<br></p><p>c) Qual o valor da relação corrente de coletor por corrente na base, Ic/Ib? {1:NUMERICAL:~%100%95.000:9.500} A/A<br></p><p>d) Qual o valor da tensão entre emissor e coletor, Vec? {1:NUMERICAL:~%100%1.407:0.141} V<br></p><p>e) Qual o valor da tensão entre coletor e base, Vcb? {1:NUMERICAL:~%100%-857.292:-85.729} mV<br></p><p>f) Qual o modo de operação do TBJ? {1:MULTICHOICE:~Corte~Saturação~%100%Ativo Direto~Ativo Reverso}<br></p>
+</div>
+      <div class="card-footer">
+
+Generalfeedback: 
+
+<br>
+Penalty: 
+0.25
+<br>
+Hidden: 
+0
+<br>
+</div>
+   </div>
+</div>
+ 
+<div class="container mt-3">
+   <div class="card">
+      <div class="card-header"><h4>
+tbjcc04pnpq017(Vcc=30V,Rb=2,7k&Omega;,Rc=100&Omega;,Re=180&Omega;,&beta;=70,Veb=650mVeVecsat=500mV)
+</h4></div>
+      <div class="card-body">
+<p>Para o circuito contendo um transistor TBJ do tipo PNP apresentado na Figura 1, determine:<br></p> <div class="row">  <div class="col-md-8"><p style="text-align: left;"><img src="data:image/png;base64,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" alt=""></p><p style="text-align: left;">Figura 1: Considere Vcc=30 V, Rb=2,7 k&Omega;, Rc=100 &Omega;, Re=180 &Omega;, &beta;=70, Veb=650 mV e Vecsat=500 mV;<br></p></div>  <div class="col-md-4"><p><code>Vcc=30<br>Rb=2.7k<br>Rc=100<br>Re=180<br>Beta=70<br>Veb=650m<br>Vecsat=500m</code></p></div> </div> <p>a) Qual o valor da corrente de base? {1:NUMERICAL:~%100%1.300:0.130} mA<br></p><p>b) Qual o valor da corrente de coletor? {1:NUMERICAL:~%100%92.287:9.229} mA<br></p><p>c) Qual o valor da relação corrente de coletor por corrente na base, Ic/Ib? {1:NUMERICAL:~%100%70.000:7.000} A/A<br></p><p>d) Qual o valor da tensão entre emissor e coletor, Vec? {1:NUMERICAL:~%100%4.160:0.416} V<br></p><p>e) Qual o valor da tensão entre coletor e base, Vcb? {1:NUMERICAL:~%100%-3.510:-0.351} V<br></p><p>f) Qual o modo de operação do TBJ? {1:MULTICHOICE:~Corte~Saturação~%100%Ativo Direto~Ativo Reverso}<br></p>
+</div>
+      <div class="card-footer">
+
+Generalfeedback: 
+
+<br>
+Penalty: 
+0.25
+<br>
+Hidden: 
+0
+<br>
+</div>
+   </div>
+</div>
+ 
+<div class="container mt-3">
+   <div class="card">
+      <div class="card-header"><h4>
+tbjcc04pnpq018(Vcc=30V,Rb=1k&Omega;,Rc=820&Omega;,Re=680&Omega;,&beta;=60,Veb=500mVeVecsat=400mV)
+</h4></div>
+      <div class="card-body">
+<p>Para o circuito contendo um transistor TBJ do tipo PNP apresentado na Figura 1, determine:<br></p> <div class="row">  <div class="col-md-8"><p style="text-align: left;"><img src="data:image/png;base64,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" alt=""></p><p style="text-align: left;">Figura 1: Considere Vcc=30 V, Rb=1 k&Omega;, Rc=820 &Omega;, Re=680 &Omega;, &beta;=60, Veb=500 mV e Vecsat=400 mV;<br></p></div>  <div class="col-md-4"><p><code>Vcc=30<br>Rb=1k<br>Rc=820<br>Re=680<br>Beta=60<br>Veb=500m<br>Vecsat=400m</code></p></div> </div> <p>a) Qual o valor da corrente de base? {1:NUMERICAL:~%100%318.917:31.892} &micro;A<br></p><p>b) Qual o valor da corrente de coletor? {1:NUMERICAL:~%100%19.454:1.945} mA<br></p><p>c) Qual o valor da relação corrente de coletor por corrente na base, Ic/Ib? {1:NUMERICAL:~%100%60.000:6.000} A/A<br></p><p>d) Qual o valor da tensão entre emissor e coletor, Vec? {1:NUMERICAL:~%100%818.917:81.892} mV<br></p><p>e) Qual o valor da tensão entre coletor e base, Vcb? {1:NUMERICAL:~%100%-318.917:-31.892} mV<br></p><p>f) Qual o modo de operação do TBJ? {1:MULTICHOICE:~Corte~Saturação~%100%Ativo Direto~Ativo Reverso}<br></p>
+</div>
+      <div class="card-footer">
+
+Generalfeedback: 
+
+<br>
+Penalty: 
+0.25
+<br>
+Hidden: 
+0
+<br>
+</div>
+   </div>
+</div>
+ 
+<div class="container mt-3">
+   <div class="card">
+      <div class="card-header"><h4>
+tbjcc04pnpq019(Vcc=15V,Rb=1k&Omega;,Rc=180&Omega;,Re=120&Omega;,&beta;=65,Veb=500mVeVecsat=400mV)
+</h4></div>
+      <div class="card-body">
+<p>Para o circuito contendo um transistor TBJ do tipo PNP apresentado na Figura 1, determine:<br></p> <div class="row">  <div class="col-md-8"><p style="text-align: left;"><img src="data:image/png;base64,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" alt=""></p><p style="text-align: left;">Figura 1: Considere Vcc=15 V, Rb=1 k&Omega;, Rc=180 &Omega;, Re=120 &Omega;, &beta;=65, Veb=500 mV e Vecsat=400 mV;<br></p></div>  <div class="col-md-4"><p><code>Vcc=15<br>Rb=1k<br>Rc=180<br>Re=120<br>Beta=65<br>Veb=500m<br>Vecsat=400m</code></p></div> </div> <p>a) Qual o valor da corrente de base? {1:NUMERICAL:~%100%697.114:69.711} &micro;A<br></p><p>b) Qual o valor da corrente de coletor? {1:NUMERICAL:~%100%46.010:4.601} mA<br></p><p>c) Qual o valor da relação corrente de coletor por corrente na base, Ic/Ib? {1:NUMERICAL:~%100%65.000:6.500} A/A<br></p><p>d) Qual o valor da tensão entre emissor e coletor, Vec? {1:NUMERICAL:~%100%1.197:0.120} V<br></p><p>e) Qual o valor da tensão entre coletor e base, Vcb? {1:NUMERICAL:~%100%-697.114:-69.711} mV<br></p><p>f) Qual o modo de operação do TBJ? {1:MULTICHOICE:~Corte~Saturação~%100%Ativo Direto~Ativo Reverso}<br></p>
+</div>
+      <div class="card-footer">
+
+Generalfeedback: 
+
+<br>
+Penalty: 
+0.25
+<br>
+Hidden: 
+0
+<br>
+</div>
+   </div>
+</div>
+ 
+<div class="container mt-3">
+   <div class="card">
+      <div class="card-header"><h4>
+tbjcc04pnpq020(Vcc=30V,Rb=1,8k&Omega;,Rc=270&Omega;,Re=150&Omega;,&beta;=65,Veb=650mVeVecsat=200mV)
+</h4></div>
+      <div class="card-body">
+<p>Para o circuito contendo um transistor TBJ do tipo PNP apresentado na Figura 1, determine:<br></p> <div class="row">  <div class="col-md-8"><p style="text-align: left;"><img src="data:image/png;base64,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" alt=""></p><p style="text-align: left;">Figura 1: Considere Vcc=30 V, Rb=1,8 k&Omega;, Rc=270 &Omega;, Re=150 &Omega;, &beta;=65, Veb=650 mV e Vecsat=200 mV;<br></p></div>  <div class="col-md-4"><p><code>Vcc=30<br>Rb=1.8k<br>Rc=270<br>Re=150<br>Beta=65<br>Veb=650m<br>Vecsat=200m</code></p></div> </div> <p>a) Qual o valor da corrente de base? {1:NUMERICAL:~%100%994.238:99.424} &micro;A<br></p><p>b) Qual o valor da corrente de coletor? {1:NUMERICAL:~%100%65.620:6.562} mA<br></p><p>c) Qual o valor da relação corrente de coletor por corrente na base, Ic/Ib? {1:NUMERICAL:~%100%65.000:6.500} A/A<br></p><p>d) Qual o valor da tensão entre emissor e coletor, Vec? {1:NUMERICAL:~%100%2.440:0.244} V<br></p><p>e) Qual o valor da tensão entre coletor e base, Vcb? {1:NUMERICAL:~%100%-1.790:-0.179} V<br></p><p>f) Qual o modo de operação do TBJ? {1:MULTICHOICE:~Corte~Saturação~%100%Ativo Direto~Ativo Reverso}<br></p>
+</div>
+      <div class="card-footer">
+
+Generalfeedback: 
+
+<br>
+Penalty: 
+0.25
+<br>
+Hidden: 
+0
+<br>
+</div>
+   </div>
+</div>
+ 
+<div class="container mt-3">
+   <div class="card">
+      <div class="card-header"><h4>
+tbjcc04pnpq021(Vcc=15V,Rb=2,2k&Omega;,Rc=180&Omega;,Re=470&Omega;,&beta;=70,Veb=600mVeVecsat=500mV)
+</h4></div>
+      <div class="card-body">
+<p>Para o circuito contendo um transistor TBJ do tipo PNP apresentado na Figura 1, determine:<br></p> <div class="row">  <div class="col-md-8"><p style="text-align: left;"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOMAAADfCAIAAACLVPPNAAAAB3RJTUUH6QQCDg87nhtWQAAACP1JREFUeJzt3b9r21obwPGnl3fzkE2DdlM8FDJo8dB/IATeQMAdAu+oLYOHbAkUfLcOHt7NYyFDDYUUgv+BDF40BDKE4l2DNw/e73ByFdWJZdk6ks4jfT/cITFur+N8e45+WEcfongpgPP+qvsFALlQKnSgVOhAqdDhP3W/gO18r+5XgD2VuXfucKlS7k8Oy0oeWZj9oQOlQgdKhQ6UCh0oFTpQKnSgVOhAqdCBUqEDpUIHSoUdgZR76ptSoQOlQgdKhQ6UCh0oFSUKfGt/FaWiLIEvUWwtVkpFWUymUWznb6NUlMhWpkKp0IJSoQOlQgdKhQ6UCjvMnr7FA6gb3F6ZAqqYPX0Tq8W9foNSYVlJvTL7oxTpXq1gTIV9ZWwAUCpsKmkjVSgVViSzfBmNGpSKQsobRDdQKg5UWaMGpWJvFTdqUCr2VuoR/m0oFQequFdKRSEbR/jZ94fTkkA5ngodytskoFTYV0avlAr7GFPhOrZT4bS99/3Xt5fd4Tz5NpxFX4PsP0GpKOTwQbQ/Xvy8WImIRBN/9HD163Mn6+l8khoHMldNRXHxuT44C+fPCxERebwOfC/wveBrtPEkSsXe7DVqRHeTfq8rsr69HPUW8TKKlzM5mTz+8SRmf+zNzkGo+bDrD82X/fEi7Ig8Ps/nk9cHeys5PkqeTqk4UNFeX7ZTo4k/6p3+W+T2XStmfxRitgHM9sBB1/cF4WIw7V4vRaTb609GD2sRWT2ce8z+sK/Qef/OxU3onZz3Fj8v/j97DrqeiEg4i47/eNaHKC735iyH8z1x9rUhE+eooAPn/aEDYypcx3l/OI3P/MN1XEcF13FtKlzH9f7Q4e2Kk8z+cFe6zgpGWc77w4IKxlRKhQ6UCh0oFTpQKnSgVOhAqdCBUqEDpUIHSoUOlAod3C01EC73wyt3SwXSKBU6UCp0oFToQKnQgVKhA6VCB0qFDpQKHSgVOlAqdKBU6ECp0IFSoQOlQgdKhQ6UCh1cXOsvWe6wlnU64SaHSt22VnwFa8jDfU6Umj12Frp/HJqi/lLN/bfzSJZCJtYWqnmPKiO7bbeLNfeTRdvUWerBoyOxthBHqbCbC+NCbaUW3NxkWG2b+veo0jbiq/g+MjhMNcdk3Cp148Yx1Om+yn5N9cz+Vn48NgBqV+Vo4taYCi2qPwuTMaauHs69yx+r9ENHP/4bnN8elf2i4KT05zGiuOpts4xSjz7fhPPpfarL1f10Ht5crLb/GYvYSHVKMtHXtf+QuZ16fDWW6f3632/X91MZXx2br28vfS/wvcC/flnm9O0j21nZxGSXq2KBX+d7nr1HdXQ6kOG3yHyz/DaUwelKRCSadKeDxTKKl4vx08nX6L1H0DTVz/hpO/aoVl9uQv9u+TXwJLqbhDfxkYjI+vdTf3DVkZXI6suvSETWt5uPoHHqPby98yhVcBZO7h7l6MdoEp559v7HBTcAmPorZgbU5L/q7T5K5V2Nn/53/U1k/D14eajz8dN8dL+++NwRebwORr3Fz7ePHLLjldEuXW7yrY0bKm6p8CGKd77K1cN5dyjjP+Jb3152h3MRkXAW/+29+0gOhw2NDKgiIr4nu393drjwhucptVz7vgsuvGtOaFmp9Z+jSjZYd74XXJ1So9rf/PpLldRlJ+lvE1zx54LaLw1yolRj48q+t4+jdmYCdHTfv3q1//NFhvxba3ZxdQr2Zg6pVvyRS0rFgSqOlVJxOBNrNb1SKgqpbEuAUmFBBbFSqlYqTtZbRKnYzYXDhZQKHSgVOlAqdKDURmnwUh2U2hzmkxJNjZVSm6PGDzpVgFIbpamZCqVCC0qFDpQKHSgVdkRicd2Sd7hbatk/uXZVfjbUBS5eR4Wc0tf0Nniv36BU9VrSq7uzP/aysWZC8zCmNkHjB1ShVO3a0KhBqSq1cAUkSlWmPYPoBkpVo7WNGpSqQMsbNShVgZYcMc1GqWq0vFeO/CuTrK6T66T/6+3svMD3AnOfsPXtpcJbijKmqrSxKnLWENtPbiUSTfzRw9Wvz6W/ulIwpuqWHmJ3Cc7C+fPCfP387Tw1ympAqU2Qr9fobtLvdUVEZD6Rm2UUL8ZPJ5PHal5jUcz+TZC1DTAfdv2h+bI/XoQdkbWIhGfHInJ0OuhPf6/kWMFWK6Xqlns7NZr4o96pgiK3YfZXKdn3z30X0yBcDKbd5Ib2k7tHEVndT+efPurIlzFVmcOPp3YubkLv5Ly3+C7SD2XkBXORcBYd236J5aj/bpRbVXi3RRVcP+Zf8u+LMVUB1xutBKUq0PLzqAalqtHyXilVmey7ITcYpaq0x3n/pqBU3dqzSUCpTdCGXim1CZrdqEGpurWhUYNSVWLfH65rzyC6gVLVaG2jBqUq0PJGDUpV4O2Kky2sllLVSNfZwlGWz/yr1KpGDUqFDpQKHSgVOlAqdKBU6ECpBby7kh7KQanF9MeLeBnFyyiehZPRw7ru19NclGpLaiW917H2mgULbKFUW5KV9KJJdzpYLKN4uRg/nbBJYAlnU4t5ZyW930/9wVVHViKrL7/o1BbG1GJetlNnofQHmlfScx+lWpFaSa/z8dN8em92rR6vg9JW1I/EK+cvdhSzvyXJSno/L8LF4LLrDUVEwlls1thHUaz1p5Zr70/Jr4fZv345biYBSs2Up6GCzzHrShPrTpRakW0tmkxb+MnofVHqVnlGu/zPyUCmeVBqRZjiC6LU9yUDYUZhez0HBTlaauB7gUjgN+rgtsVhtZHvTzYXS03/Amr5ZWwMhO8WdsBz7L28mt+fWmg4R1XslxFIrsPR1czR+YfVPU6WtiNWDaUWO/OR59NMVe7r5P4nsf2n3kjTqTNVpXFx9k+f4K3mZG96qHt3yt4YCw9+jhXVvz8ucHRMjeIle80Z2hNowsUxtUYZ/zySIbPgc3AYSoUOlPoiz/l3W8/BASgVOlDqqzwDoa3nYF+UCh0oFTpQKnSo/8h/9pUb27At2Db1l0pzyIPZHzpQKnSof/ZPy/70HdsJbeZWqbSIbZj9oQOlQge3Zn9jY2uVTQKIm6WSJt5i9ocOlAodKBU6UCp0+AeC6W9bh/3hPgAAAABJRU5ErkJggg==" alt=""></p><p style="text-align: left;">Figura 1: Considere Vcc=15 V, Rb=2,2 k&Omega;, Rc=180 &Omega;, Re=470 &Omega;, &beta;=70, Veb=600 mV e Vecsat=500 mV;<br></p></div>  <div class="col-md-4"><p><code>Vcc=15<br>Rb=2.2k<br>Rc=180<br>Re=470<br>Beta=70<br>Veb=600m<br>Vecsat=500m</code></p></div> </div> <p>a) Qual o valor da corrente de base? {1:NUMERICAL:~%100%297.828:29.783} &micro;A<br></p><p>b) Qual o valor da corrente de coletor? {1:NUMERICAL:~%100%21.146:2.115} mA<br></p><p>c) Qual o valor da relação corrente de coletor por corrente na base, Ic/Ib? {1:NUMERICAL:~%100%70.000:7.000} A/A<br></p><p>d) Qual o valor da tensão entre emissor e coletor, Vec? {1:NUMERICAL:~%100%1.255:0.126} V<br></p><p>e) Qual o valor da tensão entre coletor e base, Vcb? {1:NUMERICAL:~%100%-655.222:-65.522} mV<br></p><p>f) Qual o modo de operação do TBJ? {1:MULTICHOICE:~Corte~Saturação~%100%Ativo Direto~Ativo Reverso}<br></p>
+</div>
+      <div class="card-footer">
+
+Generalfeedback: 
+
+<br>
+Penalty: 
+0.25
+<br>
+Hidden: 
+0
+<br>
+</div>
+   </div>
+</div>
+ 
+<div class="container mt-3">
+   <div class="card">
+      <div class="card-header"><h4>
+tbjcc04pnpq022(Vcc=25V,Rb=6,8k&Omega;,Rc=390&Omega;,Re=100&Omega;,&beta;=85,Veb=700mVeVecsat=200mV)
+</h4></div>
+      <div class="card-body">
+<p>Para o circuito contendo um transistor TBJ do tipo PNP apresentado na Figura 1, determine:<br></p> <div class="row">  <div class="col-md-8"><p style="text-align: left;"><img src="data:image/png;base64,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" alt=""></p><p style="text-align: left;">Figura 1: Considere Vcc=25 V, Rb=6,8 k&Omega;, Rc=390 &Omega;, Re=100 &Omega;, &beta;=85, Veb=700 mV e Vecsat=200 mV;<br></p></div>  <div class="col-md-4"><p><code>Vcc=25<br>Rb=6.8k<br>Rc=390<br>Re=100<br>Beta=85<br>Veb=700m<br>Vecsat=200m</code></p></div> </div> <p>a) Qual o valor da corrente de base? {1:NUMERICAL:~%100%496.524:49.652} &micro;A<br></p><p>b) Qual o valor da corrente de coletor? {1:NUMERICAL:~%100%42.701:4.270} mA<br></p><p>c) Qual o valor da relação corrente de coletor por corrente na base, Ic/Ib? {1:NUMERICAL:~%100%85.001:8.500} A/A<br></p><p>d) Qual o valor da tensão entre emissor e coletor, Vec? {1:NUMERICAL:~%100%4.076:0.408} V<br></p><p>e) Qual o valor da tensão entre coletor e base, Vcb? {1:NUMERICAL:~%100%-3.376:-0.338} V<br></p><p>f) Qual o modo de operação do TBJ? {1:MULTICHOICE:~Corte~Saturação~%100%Ativo Direto~Ativo Reverso}<br></p>
+</div>
+      <div class="card-footer">
+
+Generalfeedback: 
+
+<br>
+Penalty: 
+0.25
+<br>
+Hidden: 
+0
+<br>
+</div>
+   </div>
+</div>
+ 
+<div class="container mt-3">
+   <div class="card">
+      <div class="card-header"><h4>
+tbjcc04pnpq023(Vcc=30V,Rb=3,3k&Omega;,Rc=820&Omega;,Re=100&Omega;,&beta;=100,Veb=650mVeVecsat=500mV)
+</h4></div>
+      <div class="card-body">
+<p>Para o circuito contendo um transistor TBJ do tipo PNP apresentado na Figura 1, determine:<br></p> <div class="row">  <div class="col-md-8"><p style="text-align: left;"><img src="data:image/png;base64,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" alt=""></p><p style="text-align: left;">Figura 1: Considere Vcc=30 V, Rb=3,3 k&Omega;, Rc=820 &Omega;, Re=100 &Omega;, &beta;=100, Veb=650 mV e Vecsat=500 mV;<br></p></div>  <div class="col-md-4"><p><code>Vcc=30<br>Rb=3.3k<br>Rc=820<br>Re=100<br>Beta=100<br>Veb=650m<br>Vecsat=500m</code></p></div> </div> <p>a) Qual o valor da corrente de base? {1:NUMERICAL:~%100%305.031:30.503} &micro;A<br></p><p>b) Qual o valor da corrente de coletor? {1:NUMERICAL:~%100%30.808:3.081} mA<br></p><p>c) Qual o valor da relação corrente de coletor por corrente na base, Ic/Ib? {1:NUMERICAL:~%100%100.000:10.000} A/A<br></p><p>d) Qual o valor da tensão entre emissor e coletor, Vec? {1:NUMERICAL:~%100%1.657:0.166} V<br></p><p>e) Qual o valor da tensão entre coletor e base, Vcb? {1:NUMERICAL:~%100%-1.007:-0.101} V<br></p><p>f) Qual o modo de operação do TBJ? {1:MULTICHOICE:~Corte~Saturação~%100%Ativo Direto~Ativo Reverso}<br></p>
+</div>
+      <div class="card-footer">
+
+Generalfeedback: 
+
+<br>
+Penalty: 
+0.25
+<br>
+Hidden: 
+0
+<br>
+</div>
+   </div>
+</div>
+ 
+<div class="container mt-3">
+   <div class="card">
+      <div class="card-header"><h4>
+tbjcc04pnpq024(Vcc=20V,Rb=1k&Omega;,Rc=330&Omega;,Re=680&Omega;,&beta;=95,Veb=800mVeVecsat=400mV)
+</h4></div>
+      <div class="card-body">
+<p>Para o circuito contendo um transistor TBJ do tipo PNP apresentado na Figura 1, determine:<br></p> <div class="row">  <div class="col-md-8"><p style="text-align: left;"><img src="data:image/png;base64,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" alt=""></p><p style="text-align: left;">Figura 1: Considere Vcc=20 V, Rb=1 k&Omega;, Rc=330 &Omega;, Re=680 &Omega;, &beta;=95, Veb=800 mV e Vecsat=400 mV;<br></p></div>  <div class="col-md-4"><p><code>Vcc=20<br>Rb=1k<br>Rc=330<br>Re=680<br>Beta=95<br>Veb=800m<br>Vecsat=400m</code></p></div> </div> <p>a) Qual o valor da corrente de base? {1:NUMERICAL:~%100%195.998:19.600} &micro;A<br></p><p>b) Qual o valor da corrente de coletor? {1:NUMERICAL:~%100%18.816:1.882} mA<br></p><p>c) Qual o valor da relação corrente de coletor por corrente na base, Ic/Ib? {1:NUMERICAL:~%100%95.000:9.500} A/A<br></p><p>d) Qual o valor da tensão entre emissor e coletor, Vec? {1:NUMERICAL:~%100%995.998:99.600} mV<br></p><p>e) Qual o valor da tensão entre coletor e base, Vcb? {1:NUMERICAL:~%100%-195.998:-19.600} mV<br></p><p>f) Qual o modo de operação do TBJ? {1:MULTICHOICE:~Corte~Saturação~%100%Ativo Direto~Ativo Reverso}<br></p>
+</div>
+      <div class="card-footer">
+
+Generalfeedback: 
+
+<br>
+Penalty: 
+0.25
+<br>
+Hidden: 
+0
+<br>
+</div>
+   </div>
+</div>
+ 
+<div class="container mt-3">
+   <div class="card">
+      <div class="card-header"><h4>
+tbjcc04pnpq025(Vcc=30V,Rb=3,3k&Omega;,Rc=390&Omega;,Re=150&Omega;,&beta;=75,Veb=550mVeVecsat=500mV)
+</h4></div>
+      <div class="card-body">
+<p>Para o circuito contendo um transistor TBJ do tipo PNP apresentado na Figura 1, determine:<br></p> <div class="row">  <div class="col-md-8"><p style="text-align: left;"><img src="data:image/png;base64,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" alt=""></p><p style="text-align: left;">Figura 1: Considere Vcc=30 V, Rb=3,3 k&Omega;, Rc=390 &Omega;, Re=150 &Omega;, &beta;=75, Veb=550 mV e Vecsat=500 mV;<br></p></div>  <div class="col-md-4"><p><code>Vcc=30<br>Rb=3.3k<br>Rc=390<br>Re=150<br>Beta=75<br>Veb=550m<br>Vecsat=500m</code></p></div> </div> <p>a) Qual o valor da corrente de base? {1:NUMERICAL:~%100%664.186:66.419} &micro;A<br></p><p>b) Qual o valor da corrente de coletor? {1:NUMERICAL:~%100%50.478:5.048} mA<br></p><p>c) Qual o valor da relação corrente de coletor por corrente na base, Ic/Ib? {1:NUMERICAL:~%100%75.001:7.500} A/A<br></p><p>d) Qual o valor da tensão entre emissor e coletor, Vec? {1:NUMERICAL:~%100%2.742:0.274} V<br></p><p>e) Qual o valor da tensão entre coletor e base, Vcb? {1:NUMERICAL:~%100%-2.192:-0.219} V<br></p><p>f) Qual o modo de operação do TBJ? {1:MULTICHOICE:~Corte~Saturação~%100%Ativo Direto~Ativo Reverso}<br></p>
+</div>
+      <div class="card-footer">
+
+Generalfeedback: 
+
+<br>
+Penalty: 
+0.25
+<br>
+Hidden: 
+0
+<br>
+</div>
+   </div>
+</div>
+ 
+<div class="container mt-3">
+   <div class="card">
+      <div class="card-header"><h4>
+tbjcc04pnpq026(Vcc=15V,Rb=1,8k&Omega;,Rc=120&Omega;,Re=680&Omega;,&beta;=70,Veb=700mVeVecsat=300mV)
+</h4></div>
+      <div class="card-body">
+<p>Para o circuito contendo um transistor TBJ do tipo PNP apresentado na Figura 1, determine:<br></p> <div class="row">  <div class="col-md-8"><p style="text-align: left;"><img src="data:image/png;base64,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" alt=""></p><p style="text-align: left;">Figura 1: Considere Vcc=15 V, Rb=1,8 k&Omega;, Rc=120 &Omega;, Re=680 &Omega;, &beta;=70, Veb=700 mV e Vecsat=300 mV;<br></p></div>  <div class="col-md-4"><p><code>Vcc=15<br>Rb=1.8k<br>Rc=120<br>Re=680<br>Beta=70<br>Veb=700m<br>Vecsat=300m</code></p></div> </div> <p>a) Qual o valor da corrente de base? {1:NUMERICAL:~%100%244.027:24.403} &micro;A<br></p><p>b) Qual o valor da corrente de coletor? {1:NUMERICAL:~%100%17.326:1.733} mA<br></p><p>c) Qual o valor da relação corrente de coletor por corrente na base, Ic/Ib? {1:NUMERICAL:~%100%70.000:7.000} A/A<br></p><p>d) Qual o valor da tensão entre emissor e coletor, Vec? {1:NUMERICAL:~%100%1.139:0.114} V<br></p><p>e) Qual o valor da tensão entre coletor e base, Vcb? {1:NUMERICAL:~%100%-439.249:-43.925} mV<br></p><p>f) Qual o modo de operação do TBJ? {1:MULTICHOICE:~Corte~Saturação~%100%Ativo Direto~Ativo Reverso}<br></p>
+</div>
+      <div class="card-footer">
+
+Generalfeedback: 
+
+<br>
+Penalty: 
+0.25
+<br>
+Hidden: 
+0
+<br>
+</div>
+   </div>
+</div>
+ 
+<div class="container mt-3">
+   <div class="card">
+      <div class="card-header"><h4>
+tbjcc04pnpq027(Vcc=15V,Rb=3,9k&Omega;,Rc=100&Omega;,Re=100&Omega;,&beta;=50,Veb=800mVeVecsat=400mV)
+</h4></div>
+      <div class="card-body">
+<p>Para o circuito contendo um transistor TBJ do tipo PNP apresentado na Figura 1, determine:<br></p> <div class="row">  <div class="col-md-8"><p style="text-align: left;"><img src="data:image/png;base64,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" alt=""></p><p style="text-align: left;">Figura 1: Considere Vcc=15 V, Rb=3,9 k&Omega;, Rc=100 &Omega;, Re=100 &Omega;, &beta;=50, Veb=800 mV e Vecsat=400 mV;<br></p></div>  <div class="col-md-4"><p><code>Vcc=15<br>Rb=3.9k<br>Rc=100<br>Re=100<br>Beta=50<br>Veb=800m<br>Vecsat=400m</code></p></div> </div> <p>a) Qual o valor da corrente de base? {1:NUMERICAL:~%100%1.007:0.101} mA<br></p><p>b) Qual o valor da corrente de coletor? {1:NUMERICAL:~%100%51.362:5.136} mA<br></p><p>c) Qual o valor da relação corrente de coletor por corrente na base, Ic/Ib? {1:NUMERICAL:~%100%50.000:5.000} A/A<br></p><p>d) Qual o valor da tensão entre emissor e coletor, Vec? {1:NUMERICAL:~%100%4.728:0.473} V<br></p><p>e) Qual o valor da tensão entre coletor e base, Vcb? {1:NUMERICAL:~%100%-3.928:-0.393} V<br></p><p>f) Qual o modo de operação do TBJ? {1:MULTICHOICE:~Corte~Saturação~%100%Ativo Direto~Ativo Reverso}<br></p>
+</div>
+      <div class="card-footer">
+
+Generalfeedback: 
+
+<br>
+Penalty: 
+0.25
+<br>
+Hidden: 
+0
+<br>
+</div>
+   </div>
+</div>
+ 
+<div class="container mt-3">
+   <div class="card">
+      <div class="card-header"><h4>
+tbjcc04pnpq028(Vcc=30V,Rb=3,9k&Omega;,Rc=680&Omega;,Re=150&Omega;,&beta;=80,Veb=650mVeVecsat=400mV)
+</h4></div>
+      <div class="card-body">
+<p>Para o circuito contendo um transistor TBJ do tipo PNP apresentado na Figura 1, determine:<br></p> <div class="row">  <div class="col-md-8"><p style="text-align: left;"><img src="data:image/png;base64,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" alt=""></p><p style="text-align: left;">Figura 1: Considere Vcc=30 V, Rb=3,9 k&Omega;, Rc=680 &Omega;, Re=150 &Omega;, &beta;=80, Veb=650 mV e Vecsat=400 mV;<br></p></div>  <div class="col-md-4"><p><code>Vcc=30<br>Rb=3.9k<br>Rc=680<br>Re=150<br>Beta=80<br>Veb=650m<br>Vecsat=400m</code></p></div> </div> <p>a) Qual o valor da corrente de base? {1:NUMERICAL:~%100%412.622:41.262} &micro;A<br></p><p>b) Qual o valor da corrente de coletor? {1:NUMERICAL:~%100%33.423:3.342} mA<br></p><p>c) Qual o valor da relação corrente de coletor por corrente na base, Ic/Ib? {1:NUMERICAL:~%100%80.001:8.000} A/A<br></p><p>d) Qual o valor da tensão entre emissor e coletor, Vec? {1:NUMERICAL:~%100%2.259:0.226} V<br></p><p>e) Qual o valor da tensão entre coletor e base, Vcb? {1:NUMERICAL:~%100%-1.609:-0.161} V<br></p><p>f) Qual o modo de operação do TBJ? {1:MULTICHOICE:~Corte~Saturação~%100%Ativo Direto~Ativo Reverso}<br></p>
+</div>
+      <div class="card-footer">
+
+Generalfeedback: 
+
+<br>
+Penalty: 
+0.25
+<br>
+Hidden: 
+0
+<br>
+</div>
+   </div>
+</div>
+ 
+<div class="container mt-3">
+   <div class="card">
+      <div class="card-header"><h4>
+tbjcc04pnpq029(Vcc=25V,Rb=1,2k&Omega;,Rc=270&Omega;,Re=680&Omega;,&beta;=85,Veb=600mVeVecsat=300mV)
+</h4></div>
+      <div class="card-body">
+<p>Para o circuito contendo um transistor TBJ do tipo PNP apresentado na Figura 1, determine:<br></p> <div class="row">  <div class="col-md-8"><p style="text-align: left;"><img src="data:image/png;base64,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" alt=""></p><p style="text-align: left;">Figura 1: Considere Vcc=25 V, Rb=1,2 k&Omega;, Rc=270 &Omega;, Re=680 &Omega;, &beta;=85, Veb=600 mV e Vecsat=300 mV;<br></p></div>  <div class="col-md-4"><p><code>Vcc=25<br>Rb=1.2k<br>Rc=270<br>Re=680<br>Beta=85<br>Veb=600m<br>Vecsat=300m</code></p></div> </div> <p>a) Qual o valor da corrente de base? {1:NUMERICAL:~%100%294.330:29.433} &micro;A<br></p><p>b) Qual o valor da corrente de coletor? {1:NUMERICAL:~%100%25.313:2.531} mA<br></p><p>c) Qual o valor da relação corrente de coletor por corrente na base, Ic/Ib? {1:NUMERICAL:~%100%85.000:8.500} A/A<br></p><p>d) Qual o valor da tensão entre emissor e coletor, Vec? {1:NUMERICAL:~%100%953.196:95.320} mV<br></p><p>e) Qual o valor da tensão entre coletor e base, Vcb? {1:NUMERICAL:~%100%-353.196:-35.320} mV<br></p><p>f) Qual o modo de operação do TBJ? {1:MULTICHOICE:~Corte~Saturação~%100%Ativo Direto~Ativo Reverso}<br></p>
+</div>
+      <div class="card-footer">
+
+Generalfeedback: 
+
+<br>
+Penalty: 
+0.25
+<br>
+Hidden: 
+0
+<br>
+</div>
+   </div>
+</div>
+ 
+<div class="container mt-3">
+   <div class="card">
+      <div class="card-header"><h4>
+tbjcc04pnpq030(Vcc=30V,Rb=2,2k&Omega;,Rc=680&Omega;,Re=390&Omega;,&beta;=80,Veb=800mVeVecsat=200mV)
+</h4></div>
+      <div class="card-body">
+<p>Para o circuito contendo um transistor TBJ do tipo PNP apresentado na Figura 1, determine:<br></p> <div class="row">  <div class="col-md-8"><p style="text-align: left;"><img src="data:image/png;base64,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" alt=""></p><p style="text-align: left;">Figura 1: Considere Vcc=30 V, Rb=2,2 k&Omega;, Rc=680 &Omega;, Re=390 &Omega;, &beta;=80, Veb=800 mV e Vecsat=200 mV;<br></p></div>  <div class="col-md-4"><p><code>Vcc=30<br>Rb=2.2k<br>Rc=680<br>Re=390<br>Beta=80<br>Veb=800m<br>Vecsat=200m</code></p></div> </div> <p>a) Qual o valor da corrente de base? {1:NUMERICAL:~%100%328.567:32.857} &micro;A<br></p><p>b) Qual o valor da corrente de coletor? {1:NUMERICAL:~%100%26.614:2.661} mA<br></p><p>c) Qual o valor da relação corrente de coletor por corrente na base, Ic/Ib? {1:NUMERICAL:~%100%80.001:8.000} A/A<br></p><p>d) Qual o valor da tensão entre emissor e coletor, Vec? {1:NUMERICAL:~%100%1.523:0.152} V<br></p><p>e) Qual o valor da tensão entre coletor e base, Vcb? {1:NUMERICAL:~%100%-722.847:-72.285} mV<br></p><p>f) Qual o modo de operação do TBJ? {1:MULTICHOICE:~Corte~Saturação~%100%Ativo Direto~Ativo Reverso}<br></p>
+</div>
+      <div class="card-footer">
+
+Generalfeedback: 
+
+<br>
+Penalty: 
+0.25
+<br>
+Hidden: 
+0
+<br>
+</div>
+   </div>
+</div>
+ 
+<div class="container mt-3">
+   <div class="card">
+      <div class="card-header"><h4>
+tbjcc04pnpq031(Vcc=30V,Rb=1,5k&Omega;,Rc=390&Omega;,Re=180&Omega;,&beta;=80,Veb=600mVeVecsat=500mV)
+</h4></div>
+      <div class="card-body">
+<p>Para o circuito contendo um transistor TBJ do tipo PNP apresentado na Figura 1, determine:<br></p> <div class="row">  <div class="col-md-8"><p style="text-align: left;"><img src="data:image/png;base64,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" alt=""></p><p style="text-align: left;">Figura 1: Considere Vcc=30 V, Rb=1,5 k&Omega;, Rc=390 &Omega;, Re=180 &Omega;, &beta;=80, Veb=600 mV e Vecsat=500 mV;<br></p></div>  <div class="col-md-4"><p><code>Vcc=30<br>Rb=1.5k<br>Rc=390<br>Re=180<br>Beta=80<br>Veb=600m<br>Vecsat=500m</code></p></div> </div> <p>a) Qual o valor da corrente de base? {1:NUMERICAL:~%100%616.738:61.674} &micro;A<br></p><p>b) Qual o valor da corrente de coletor? {1:NUMERICAL:~%100%49.956:4.996} mA<br></p><p>c) Qual o valor da relação corrente de coletor por corrente na base, Ic/Ib? {1:NUMERICAL:~%100%80.001:8.000} A/A<br></p><p>d) Qual o valor da tensão entre emissor e coletor, Vec? {1:NUMERICAL:~%100%1.525:0.153} V<br></p><p>e) Qual o valor da tensão entre coletor e base, Vcb? {1:NUMERICAL:~%100%-925.106:-92.511} mV<br></p><p>f) Qual o modo de operação do TBJ? {1:MULTICHOICE:~Corte~Saturação~%100%Ativo Direto~Ativo Reverso}<br></p>
+</div>
+      <div class="card-footer">
+
+Generalfeedback: 
+
+<br>
+Penalty: 
+0.25
+<br>
+Hidden: 
+0
+<br>
+</div>
+   </div>
+</div>
+ 
+<div class="container mt-3">
+   <div class="card">
+      <div class="card-header"><h4>
+tbjcc04pnpq032(Vcc=25V,Rb=1,8k&Omega;,Rc=820&Omega;,Re=390&Omega;,&beta;=50,Veb=650mVeVecsat=500mV)
+</h4></div>
+      <div class="card-body">
+<p>Para o circuito contendo um transistor TBJ do tipo PNP apresentado na Figura 1, determine:<br></p> <div class="row">  <div class="col-md-8"><p style="text-align: left;"><img src="data:image/png;base64,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" alt=""></p><p style="text-align: left;">Figura 1: Considere Vcc=25 V, Rb=1,8 k&Omega;, Rc=820 &Omega;, Re=390 &Omega;, &beta;=50, Veb=650 mV e Vecsat=500 mV;<br></p></div>  <div class="col-md-4"><p><code>Vcc=25<br>Rb=1.8k<br>Rc=820<br>Re=390<br>Beta=50<br>Veb=650m<br>Vecsat=500m</code></p></div> </div> <p>a) Qual o valor da corrente de base? {1:NUMERICAL:~%100%383.402:38.340} &micro;A<br></p><p>b) Qual o valor da corrente de coletor? {1:NUMERICAL:~%100%19.554:1.955} mA<br></p><p>c) Qual o valor da relação corrente de coletor por corrente na base, Ic/Ib? {1:NUMERICAL:~%100%50.000:5.000} A/A<br></p><p>d) Qual o valor da tensão entre emissor e coletor, Vec? {1:NUMERICAL:~%100%1.340:0.134} V<br></p><p>e) Qual o valor da tensão entre coletor e base, Vcb? {1:NUMERICAL:~%100%-690.124:-69.012} mV<br></p><p>f) Qual o modo de operação do TBJ? {1:MULTICHOICE:~Corte~Saturação~%100%Ativo Direto~Ativo Reverso}<br></p>
+</div>
+      <div class="card-footer">
+
+Generalfeedback: 
+
+<br>
+Penalty: 
+0.25
+<br>
+Hidden: 
+0
+<br>
+</div>
+   </div>
+</div>
+</body>
+</html>
+ 

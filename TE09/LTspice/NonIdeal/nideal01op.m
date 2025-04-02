@@ -1,4 +1,5 @@
-clear all
+% clear all
+clear circuit quiz
 clc
 
 % Sets simulation dir
@@ -42,7 +43,7 @@ circuit.Xi=CombVec(Vs,Vi,R1,R2,RL,Vos); %%
 circuit.timeout = 5; % Simulation timeout in seconds
 
 % circuit.multiplesims=[50 50]; % Number of simulations
-circuit.nsims = 16; % Numero de circuitos a serem simulados
+circuit.nsims = 32; % Numero de circuitos a serem simulados
 
 
 circuit.cmdtype = '.op'; % Operation Point Simulation
@@ -50,13 +51,13 @@ circuit.cmdupdate = 0; %
 circuit.LTspice.net.run =1;
 
 % % Generate question
-quiz.enunciado = 'Para o circuito amplificador n„o-ideal com tens„o de offset apresentado na Figura 1, determine:';
-quiz.rowfigdirective=1; % Imprima os par‚metros ao lado da figura
+quiz.enunciado = 'Para o circuito amplificador n√£o-ideal com tens√£o de offset apresentado na Figura 1, determine:';
+quiz.rowfigdirective=1; % Imprima os par√¢metros ao lado da figura
 quiz.autoitem=1; % Auto add item letter: a), b)... 97 - 122;
 
 q=0;
 q=q+1;
-quiz.question{q}.str='Qual o valor da tens„o na entrada inversora V-?';
+quiz.question{q}.str='Qual o valor da tens√£o na entrada inversora V-?';
 quiz.question{q}.units={'V'};
 quiz.question{q}.options={'vneg'}; % Only lowcase
 quiz.question{q}.vartype={'op'}; % meas 
@@ -65,7 +66,7 @@ quiz.question{q}.opttol=[5]; % tolerance in percentage %
 quiz.question{q}.type='NUMERICAL';
 
 q=q+1;
-quiz.question{q}.str='Qual o valor da tens„o de saÌda Vo?';
+quiz.question{q}.str='Qual o valor da tens√£o de sa√≠da Vo?';
 quiz.question{q}.units={'V'};
 quiz.question{q}.options={'vo'}; % Only lowcase
 quiz.question{q}.vartype={'op'}; % meas 
@@ -74,7 +75,7 @@ quiz.question{q}.opttol=[5]; % tolerance in percentage %
 quiz.question{q}.type='NUMERICAL';
 
 q=q+1;
-quiz.question{q}.str='Qual o valor do ganho de tens„o Vo/Vi?';
+quiz.question{q}.str='Qual o valor do ganho de tens√£o Vo/Vi?';
 quiz.question{q}.units={'V/V'};
 quiz.question{q}.options={'g'}; % Only lowcase
 quiz.question{q}.vartype={'meas'}; % meas 
@@ -93,7 +94,7 @@ quiz.question{q}.type='NUMERICAL';
 % quiz.question{q}.type='NUMERICAL';
 
 q=q+1;
-quiz.question{q}.str='Qual o valor da relaÁ„o -R2/R1?';
+quiz.question{q}.str='Qual o valor da rela√ß√£o -R2/R1?';
 quiz.question{q}.units={'&Omega;/&Omega;'};
 quiz.question{q}.options={1}; % Only lowcase
 quiz.question{q}.vartype={'func'}; % meas 

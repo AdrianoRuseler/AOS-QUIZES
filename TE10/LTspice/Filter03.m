@@ -1,4 +1,5 @@
-clear all
+% clear all
+clear circuit quiz
 clc
 
 % Sets simulation dir
@@ -30,7 +31,7 @@ C2 = combnres(1,1e-10,'E24',6);
 circuit.Xi=CombVec(Vs,R1,R2,C1,C2,RL); %%
 circuit.timeout = 5; % Simulation timeout in seconds
 % circuit.multiplesims=[50 50]; % Number of simulations
-circuit.nsims = 16; % Numero de circuitos a serem simulados
+circuit.nsims = 32; % Numero de circuitos a serem simulados
 
 circuit.cmdtype = '.ac'; % AC analysis
 circuit.cmdupdate = 0; % 
@@ -41,7 +42,7 @@ quiz.enunciado = 'Para o filtro passa-faixa apresentado na Figura 1, determine:'
 % Text a ser colocado abaixo da figura
 quiz.extratext{1} = 'Forma padronizada: \(H(s) = H_o\dfrac{\dfrac{s}{ \omega_L }}{1+\dfrac{s}{ \omega_L }}\dfrac{1}{1+\dfrac{s}{ \omega_H }}\)';
 
-quiz.rowfigdirective=1; % Imprima os parâmetros ao lado da figura
+quiz.rowfigdirective=1; % Imprima os parÃ¢metros ao lado da figura
 quiz.autoitem=1; % Auto add item letter: a), b)... 97 - 122;
 
 q=0;
@@ -73,7 +74,7 @@ quiz.question{q}.opttol=[5]; % tolerance in percentage %
 quiz.question{q}.type='NUMERICAL';
 
 q=q+1;
-quiz.question{q}.str='Qual o valor da frequência de corte das baixas?';
+quiz.question{q}.str='Qual o valor da frequÃªncia de corte das baixas?';
 quiz.question{q}.units={'Hz'};
 quiz.question{q}.options={4}; % Only lowcase
 quiz.question{q}.vartype={'func'}; % meas 
@@ -91,7 +92,7 @@ quiz.question{q}.opttol=[5]; % tolerance in percentage %
 quiz.question{q}.type='NUMERICAL';
 
 q=q+1;
-quiz.question{q}.str='Qual o valor da frequência de corte das altas?';
+quiz.question{q}.str='Qual o valor da frequÃªncia de corte das altas?';
 quiz.question{q}.units={'Hz'};
 quiz.question{q}.options={6}; % Only lowcase
 quiz.question{q}.vartype={'func'}; % meas 

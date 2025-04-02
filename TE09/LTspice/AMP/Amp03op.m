@@ -1,4 +1,5 @@
-clear all
+% clear all
+clear circuit quiz
 clc
 
 % Sets simulation dir
@@ -27,14 +28,14 @@ RL = combnres(1,1000,'E24',5);
 circuit.Xi=CombVec(Vs,V1,V2,R1,R2,RL); %%
 circuit.timeout = 5; % Simulation timeout in seconds
 % circuit.multiplesims=[50 50 50]; % Number of simulations
-circuit.nsims = 16; % Numero de circuitos a serem simulados
+circuit.nsims = 32; % Numero de circuitos a serem simulados
 
 circuit.cmdtype = '.op'; % Operation Point Simulation
 circuit.cmdupdate = 0; % 
 
 % % Generate question
 quiz.enunciado = 'Para o circuito amplificador apresentado na Figura 1, determine:';
-quiz.rowfigdirective=1; % Imprima os par‚metros ao lado da figura
+quiz.rowfigdirective=1; % Imprima os par√¢metros ao lado da figura
 quiz.autoitem=1; % Auto add item letter: a), b)... 97 - 122;
 
 % Text a ser colocado abaixo da figura
@@ -48,7 +49,7 @@ quiz.vartype={'str','str','str','str','str','str','str'};
 q=0;
 
 q=q+1;
-quiz.question{q}.str='Qual equaÁ„o calcula o valor de Vo?';
+quiz.question{q}.str='Qual equa√ß√£o calcula o valor de Vo?';
 quiz.question{q}.units={'V/V'};
 quiz.question{q}.options=quiz.eqnum; % Only lowcase
 quiz.question{q}.vartype=quiz.vartype; % meas 
@@ -66,7 +67,7 @@ quiz.question{q}.opttol=[5]; % tolerance in percentage %
 quiz.question{q}.type='NUMERICAL';
 
 % q=q+1;
-% quiz.question{q}.str='b) Qual o valor do ganho de tens„o Vo/Vi?';
+% quiz.question{q}.str='b) Qual o valor do ganho de tens√£o Vo/Vi?';
 % quiz.question{q}.units={'V/V'};
 % quiz.question{q}.options={'g'}; % Only lowcase
 % quiz.question{q}.vartype={'meas'}; % meas 
@@ -84,7 +85,7 @@ quiz.question{q}.type='NUMERICAL';
 % quiz.question{q}.type='NUMERICAL';
 
 q=q+1;
-quiz.question{q}.str='Qual equaÁ„o calcula o valor da corrente em R2?';
+quiz.question{q}.str='Qual equa√ß√£o calcula o valor da corrente em R2?';
 quiz.question{q}.units={'V/V'};
 quiz.question{q}.options=quiz.eqnum; % Only lowcase
 quiz.question{q}.vartype=quiz.vartype; % meas 
@@ -103,7 +104,7 @@ quiz.question{q}.opttol=[5]; % tolerance in percentage %
 quiz.question{q}.type='NUMERICAL';
 
 q=q+1;
-quiz.question{q}.str='Qual equaÁ„o calcula o valor da corrente em R3?';
+quiz.question{q}.str='Qual equa√ß√£o calcula o valor da corrente em R3?';
 quiz.question{q}.units={'V/V'};
 quiz.question{q}.options=quiz.eqnum; % Only lowcase
 quiz.question{q}.vartype=quiz.vartype; % meas 
@@ -131,7 +132,7 @@ quiz.question{q}.type='NUMERICAL';
 
 
 % q=q+1;
-% quiz.question{q}.str='f) Qual o valor da tens„o na entrada inversora do AmpOp?';
+% quiz.question{q}.str='f) Qual o valor da tens√£o na entrada inversora do AmpOp?';
 % quiz.question{q}.units={'V'};
 % quiz.question{q}.options={'vneg'}; % Only lowcase
 % quiz.question{q}.vartype={'op'}; % meas 

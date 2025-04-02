@@ -10,7 +10,7 @@ Q1 out b1 0 0 TBJ
 Q2 c1 b2 0 0 TBJ
 .model NPN NPN
 .model PNP PNP
-.lib C:\Users\ruseler\AppData\Local\LTspice\lib\cmp\standard.bjt
+.lib C:\Users\ruseler\Documents\LTspiceXVII\lib\cmp\standard.bjt
 .tran 1 startup
 .meas tran Tf1 find time when V(out)=Vcc/2 fall 3
 .meas tran Tr1 find time when V(out)=Vcc/2 rise 3

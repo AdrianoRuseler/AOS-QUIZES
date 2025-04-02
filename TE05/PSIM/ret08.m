@@ -1,10 +1,11 @@
-clear all
+% clear all
+clear circuit quiz
 clc
 
 % Config simulation
 circuit.parname={'Vi','fi','a','Von','ron','R0'}; % Variables names utilizados no enunciado
 circuit.parunit={' V',' Hz','','V','&Omega;','&Omega;'}; % Variables unit
-circuit.parnamesim={'Vi','fi','a','Von','ron','R0'}; % Variables names utilizados na similação
+circuit.parnamesim={'Vi','fi','a','Von','ron','R0'}; % Variables names utilizados na similaÃ§Ã£o
 
 % Simulation setup 
 circuit.name = 'ret08'; % File name
@@ -28,13 +29,13 @@ circuit.cycles = 10; % Total number of cycles
 circuit.printcycle = 8; % Cycle to start print
 
 % Generate question
-quiz.enunciado = 'Para o circuito retificador de onda completa com transformador de ponto médio apresentado na Figura 1, determine:'; % Enunciado da pergunta!
-quiz.rowfigparam=1; % Imprima os parâmetros ao lado da figura
+quiz.enunciado = 'Para o circuito retificador de onda completa com transformador de ponto mÃ©dio apresentado na Figura 1, determine:'; % Enunciado da pergunta!
+quiz.rowfigparam=1; % Imprima os parÃ¢metros ao lado da figura
 quiz.autoitem=1; % Auto add item letter: a), b)... 97 - 122;  
 
 q=0;
 % q=q+1;
-% quiz.question{q}.str='Qual o valor eficaz da tensão no secundário 01 do transformador?';
+% quiz.question{q}.str='Qual o valor eficaz da tensÃ£o no secundÃ¡rio 01 do transformador?';
 % quiz.question{q}.units={'V'};
 % quiz.question{q}.vartype={'mean'}; %
 % quiz.question{q}.options={'Vs1rms'};
@@ -43,7 +44,7 @@ q=0;
 % quiz.question{q}.type='NUMERICAL';
 
 % q=q+1;
-% quiz.question{q}.str='Qual o valor eficaz da tensão no secundário 02 do transformador?';
+% quiz.question{q}.str='Qual o valor eficaz da tensÃ£o no secundÃ¡rio 02 do transformador?';
 % quiz.question{q}.units={'V'};
 % quiz.question{q}.vartype={'mean'}; %
 % quiz.question{q}.options={'Vs2rms'};
@@ -52,7 +53,7 @@ q=0;
 % quiz.question{q}.type='NUMERICAL';
 
 q=q+1;
-quiz.question{q}.str='Qual o valor médio da tensão na carga?';
+quiz.question{q}.str='Qual o valor mÃ©dio da tensÃ£o na carga?';
 quiz.question{q}.units={'V'};
 quiz.question{q}.vartype={'mean'}; %
 quiz.question{q}.options={'V0'};
@@ -61,7 +62,7 @@ quiz.question{q}.opttol=[10]; % tolerance in percentage %
 quiz.question{q}.type='NUMERICAL';
 
 % q=q+1;
-% quiz.question{q}.str='Qual o valor médio da corrente na carga?';
+% quiz.question{q}.str='Qual o valor mÃ©dio da corrente na carga?';
 % quiz.question{q}.units={'A'};
 % quiz.question{q}.vartype={'mean'}; %
 % quiz.question{q}.options={'I0'};
@@ -70,7 +71,7 @@ quiz.question{q}.type='NUMERICAL';
 % quiz.question{q}.type='NUMERICAL';
 
 % q=q+1;
-% quiz.question{q}.str='Qual a potência dissipada nos diodos?';
+% quiz.question{q}.str='Qual a potÃªncia dissipada nos diodos?';
 % quiz.question{q}.units={'W'}; % 
 % quiz.question{q}.vartype={'mean'}; %
 % quiz.question{q}.options={'pd'}; % Variables from PSIM simulation
@@ -80,7 +81,7 @@ quiz.question{q}.type='NUMERICAL';
 
 
 q=q+1;
-quiz.question{q}.str='Qual a potência ativa no secundário 01?';
+quiz.question{q}.str='Qual a potÃªncia ativa no secundÃ¡rio 01?';
 quiz.question{q}.units={'W'}; % 
 quiz.question{q}.vartype={'mean'}; % 
 quiz.question{q}.options={'ps1'}; % Variables from PSIM simulation
@@ -89,7 +90,7 @@ quiz.question{q}.opttol=[10]; % tolerance in percentage %
 quiz.question{q}.type='NUMERICAL';
 
 q=q+1;
-quiz.question{q}.str='Qual a potência aparente no secundário 01?';
+quiz.question{q}.str='Qual a potÃªncia aparente no secundÃ¡rio 01?';
 quiz.question{q}.units={'VA'}; % 
 quiz.question{q}.vartype={'mean'}; % 
 quiz.question{q}.options={'Ss1'}; % Variables from PSIM simulation
@@ -98,7 +99,7 @@ quiz.question{q}.opttol=[10]; % tolerance in percentage %
 quiz.question{q}.type='NUMERICAL';
 
 q=q+1;
-quiz.question{q}.str='Qual o fator de potência no secundário 01?';
+quiz.question{q}.str='Qual o fator de potÃªncia no secundÃ¡rio 01?';
 quiz.question{q}.units={'W/VA'}; % 
 quiz.question{q}.vartype={'mean'}; % Not implemented
 quiz.question{q}.options={'fps1'}; % Variables from PSIM simulation
@@ -108,7 +109,7 @@ quiz.question{q}.type='NUMERICAL';
 
 
 % q=q+1;
-% quiz.question{q}.str='Qual a potência ativa no secundário 02?';
+% quiz.question{q}.str='Qual a potÃªncia ativa no secundÃ¡rio 02?';
 % quiz.question{q}.units={'W'}; % 
 % quiz.question{q}.vartype={'mean'}; % 
 % quiz.question{q}.options={'ps2'}; % Variables from PSIM simulation
@@ -117,7 +118,7 @@ quiz.question{q}.type='NUMERICAL';
 % quiz.question{q}.type='NUMERICAL';
 
 % q=q+1;
-% quiz.question{q}.str='Qual a potência aparente no secundário 02?';
+% quiz.question{q}.str='Qual a potÃªncia aparente no secundÃ¡rio 02?';
 % quiz.question{q}.units={'VA'}; % 
 % quiz.question{q}.vartype={'mean'}; % 
 % quiz.question{q}.options={'Ss2'}; % Variables from PSIM simulation
@@ -126,7 +127,7 @@ quiz.question{q}.type='NUMERICAL';
 % quiz.question{q}.type='NUMERICAL';
 
 % q=q+1;
-% quiz.question{q}.str='Qual o fator de potência no secundário 02?';
+% quiz.question{q}.str='Qual o fator de potÃªncia no secundÃ¡rio 02?';
 % quiz.question{q}.units={'W/VA'}; % 
 % quiz.question{q}.vartype={'mean'}; % Not implemented
 % quiz.question{q}.options={'fps1'}; % Variables from PSIM simulation
@@ -135,7 +136,7 @@ quiz.question{q}.type='NUMERICAL';
 % quiz.question{q}.type='NUMERICAL';
 
 q=q+1;
-quiz.question{q}.str='Qual a potência ativa na carga?';
+quiz.question{q}.str='Qual a potÃªncia ativa na carga?';
 quiz.question{q}.units={'W'}; % 
 quiz.question{q}.vartype={'mean'}; % Not implemented
 quiz.question{q}.options={'p0'}; % Variables from PSIM simulation
@@ -144,7 +145,7 @@ quiz.question{q}.opttol=[10]; % tolerance in percentage %
 quiz.question{q}.type='NUMERICAL';
 % 
 q=q+1;
-quiz.question{q}.str='Qual a potência aparente na fonte?';
+quiz.question{q}.str='Qual a potÃªncia aparente na fonte?';
 quiz.question{q}.units={'VA'}; % 
 quiz.question{q}.vartype={'mean'}; % 
 quiz.question{q}.options={'Si'}; % Variables from PSIM simulation
@@ -153,7 +154,7 @@ quiz.question{q}.opttol=[10]; % tolerance in percentage %
 quiz.question{q}.type='NUMERICAL';
 % 
 q=q+1;
-quiz.question{q}.str='Qual o fator de potência na fonte de entrada?';
+quiz.question{q}.str='Qual o fator de potÃªncia na fonte de entrada?';
 quiz.question{q}.units={'W/VA'}; % 
 quiz.question{q}.vartype={'mean'}; % 
 quiz.question{q}.options={'VAPF_PF'}; % Variables from PSIM simulation
@@ -162,7 +163,7 @@ quiz.question{q}.opttol=[10]; % tolerance in percentage %
 quiz.question{q}.type='NUMERICAL';
 
 % q=q+1;
-% quiz.question{q}.str='Qual a taxa de distorção harmônica da corrente?';
+% quiz.question{q}.str='Qual a taxa de distorÃ§Ã£o harmÃ´nica da corrente?';
 % quiz.question{q}.units={'A/A'}; % 
 % quiz.question{q}.vartype={'mean'}; % 
 % quiz.question{q}.options={'thdi'}; % Variables from PSIM simulation

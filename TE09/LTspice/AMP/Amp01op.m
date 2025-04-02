@@ -1,4 +1,5 @@
-clear all
+% clear all
+clear circuit quiz
 clc
 
 % Sets simulation dir
@@ -25,7 +26,7 @@ RL = combnres(1,1000,'E24',5);
 circuit.Xi=CombVec(Vs,Vi,R1,R2,RL); %%
 circuit.timeout = 5; % Simulation timeout in seconds
 % circuit.multiplesims=[50 50 50]; % Number of simulations
-circuit.nsims = 16; % Numero de circuitos a serem simulados
+circuit.nsims = 32; % Numero de circuitos a serem simulados
 
 
 circuit.cmdtype = '.op'; % Operation Point Simulation
@@ -36,21 +37,21 @@ circuit.cmdupdate = 0; %
 % quiz.tbjeval = 0; % Evaluate tbj op
 % % Generate question
 quiz.enunciado = 'Para o circuito amplificador apresentado na Figura 1, determine:';
-quiz.rowfigdirective=1; % Imprima os par‚metros ao lado da figura
+quiz.rowfigdirective=1; % Imprima os par√¢metros ao lado da figura
 quiz.autoitem=1; % Auto add item letter: a), b)... 97 - 122;
 
 % Text a ser colocado abaixo da figura
 % quiz.extratext{1} = [' .model LedRed D (IS=93.2P RS=42M N=3.73 BV=4 IBV=10U  <br>' ...
 %                     ' +CJO=2.97P VJ=.75 M=.333 TT=4.32U Iave=40m Vpk=4 type=LED)']; % modelo do diodo
 
-% Tabela de equaÁıes
+% Tabela de equa√ß√µes
 quiz.eqlist={'\( -\dfrac{R_2}{R_1}V_i\)','\( -\dfrac{R_1}{R_2}V_i\)','\( -\dfrac{R_2}{R_1}\)','\( \dfrac{1}{R_1}V_i\)','\( \dfrac{1}{R_2}V_o\)','\( -\dfrac{R_1}{R_2}\)','\( \dfrac{R_2}{R_1}\)'};
 quiz.eqnum={'A','B','C','D','E','F','G'};
 quiz.vartype={'str','str','str','str','str','str','str'};
 
 q=0;
 q=q+1;
-quiz.question{q}.str='Qual equaÁ„o calcula o valor de Vo?';
+quiz.question{q}.str='Qual equa√ß√£o calcula o valor de Vo?';
 quiz.question{q}.units={'V/V'};
 quiz.question{q}.options=quiz.eqnum; % Only lowcase
 quiz.question{q}.vartype=quiz.vartype; % meas 
@@ -69,7 +70,7 @@ quiz.question{q}.type='NUMERICAL';
 
 
 q=q+1;
-quiz.question{q}.str='Qual equaÁ„o calcula a relaÁ„o Vo/Vi?';
+quiz.question{q}.str='Qual equa√ß√£o calcula a rela√ß√£o Vo/Vi?';
 quiz.question{q}.units={'V/V'};
 quiz.question{q}.options=quiz.eqnum; % Only lowcase
 quiz.question{q}.vartype=quiz.vartype; % meas 
@@ -78,7 +79,7 @@ quiz.question{q}.opttol=[5]; % tolerance in percentage %
 quiz.question{q}.type='STRING'; 
 
 q=q+1;
-quiz.question{q}.str='Qual o valor do ganho de tens„o Vo/Vi?';
+quiz.question{q}.str='Qual o valor do ganho de tens√£o Vo/Vi?';
 quiz.question{q}.units={'V/V'};
 quiz.question{q}.options={'g'}; % Only lowcase
 quiz.question{q}.vartype={'meas'}; % meas 
@@ -96,7 +97,7 @@ quiz.question{q}.type='NUMERICAL';
 % quiz.question{q}.type='NUMERICAL';
 
 q=q+1;
-quiz.question{q}.str='Qual equaÁ„o calcula o valor da corrente em R2?';
+quiz.question{q}.str='Qual equa√ß√£o calcula o valor da corrente em R2?';
 quiz.question{q}.units={'V/V'};
 quiz.question{q}.options=quiz.eqnum; % Only lowcase
 quiz.question{q}.vartype=quiz.vartype; % meas 

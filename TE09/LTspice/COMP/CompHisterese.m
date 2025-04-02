@@ -1,4 +1,5 @@
-clear all
+% clear all
+clear circuit quiz
 clc
 
 % Sets simulation dir
@@ -26,10 +27,10 @@ RL = combnres(1,10000,'E24',12);
 Xi=CombVec(Vs,Vi,fi,R1,R2,RL); %%
 circuit.timeout = 5; % Simulation timeout in seconds
 % circuit.multiplesims=[50 50]; % Number of simulations
-circuit.nsims = 16; % Numero de circuitos a serem simulados
+circuit.nsims = 32; % Numero de circuitos a serem simulados
 
 [mode]=getch01mode(Xi);
-% Mostra estatÌtica de modos encontrados
+% Mostra estat√≠tica de modos encontrados
 Tmode = table(sum(mode(:)==0),sum(mode(:)==1),sum(mode(:)==2));
 Tmode.Properties.VariableNames = ["Ind","OK","Not"];
 disp(Tmode)
@@ -47,7 +48,7 @@ circuit.cmdupdate = 0; %
 
 % % Generate question
 quiz.enunciado = 'Para o circuito comparador de histerese apresentado na Figura 1, determine:';
-quiz.rowfigdirective=1; % Imprima os par‚metros ao lado da figura
+quiz.rowfigdirective=1; % Imprima os par√¢metros ao lado da figura
 quiz.autoitem=1; % Auto add item letter: a), b)... 97 - 122; 
 
 % Text a ser colocado abaixo da figura
@@ -55,7 +56,7 @@ quiz.autoitem=1; % Auto add item letter: a), b)... 97 - 122;
 %                     ' +CJO=2.97P VJ=.75 M=.333 TT=4.32U Iave=40m Vpk=4 type=LED)']; % modelo do diodo
 q=0;
 q=q+1;
-quiz.question{q}.str='Qual o valor de comparaÁ„o V+ para Vo positivo?';
+quiz.question{q}.str='Qual o valor de compara√ß√£o V+ para Vo positivo?';
 quiz.question{q}.units={'V'};
 quiz.question{q}.options={'vx'}; % Only lowcase
 quiz.question{q}.vartype={'meas'}; % meas 
@@ -65,7 +66,7 @@ quiz.question{q}.type='NUMERICAL';
 
 
 q=q+1;
-quiz.question{q}.str='Qual o valor de comparaÁ„o V+ para Vo negativo?';
+quiz.question{q}.str='Qual o valor de compara√ß√£o V+ para Vo negativo?';
 quiz.question{q}.units={'V'};
 quiz.question{q}.options={'vy'}; % Only lowcase
 quiz.question{q}.vartype={'meas'}; % meas 

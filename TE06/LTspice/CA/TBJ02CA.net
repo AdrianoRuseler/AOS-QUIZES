@@ -1,0 +1,43 @@
+* C:\Users\ruseler\Documents\GitHub\AOS-QUIZES\TE06\LTspice\CA\TBJ02CA.asc
+R1 cc B {R1}
+RC cc C {RC}
+Vcc cc 0 {Vcc}
+Q1 C B N001 0 TBJ
+Ci B CAin {Cx}
+Co CAout C {Cx}
+Vca CAin 0 SINE(0 0.01m 10k)
+RL CAout 0 10Meg
+RE N001 0 {RE}
+CE N001 0 {Cx}
+R2 B 0 {R2}
+R3 N002 N004 {R1}
+RC1 N002 N003 {RC}
+Vcc1 N002 0 {Vcc}
+Q2 N003 N004 N005 0 TBJ
+Ci1 N004 0 {Cx}
+Co1 CAout2 N003 {Cx}
+Vca1 CAout2 0 SINE(0 1.1m 10k)
+RE1 N005 0 {RE}
+CE1 N005 0 {Cx}
+R4 N004 0 {R2}
+.model NPN NPN
+.model PNP PNP
+.lib C:\Users\ruseler\Documents\LTspiceXVII\lib\cmp\standard.bjt
+.tran 0 0.01 0
+.meas Vipp PP V(CAin)
+.meas Iipp PP I(Ci)
+.meas Zi param Vipp/Iipp
+.meas Vopp PP V(CAout)
+.meas Av param -Vopp/Vipp
+.meas Vopp2 PP V(CAout2)
+.meas Iopp2 PP I(Co1)
+.meas Zo param Vopp2/Iopp2
+.param Vcc=25 R1=39k R2=10k Rc=270 Re=270 Cx=100u
+.model TBJ NPN(IS=10f BF=50 VAF=75)
+.meas re param Rpiq1tbj/BetaDCq1tbj
+.meas zocalc param Roq1tbj*Rc/(Roq1tbj+Rc)
+.meas avcalc param -zocalc/re
+.meas rth param R1*R2/(R1+R2)
+.meas zicalc param rth*BetaDCq1tbj*re/(rth+BetaDCq1tbj*re)
+.backanno
+.end

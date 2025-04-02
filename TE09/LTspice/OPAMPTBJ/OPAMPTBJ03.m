@@ -1,4 +1,5 @@
-clear all
+% clear all
+clear circuit quiz
 clc
 
 % Sets simulation dir
@@ -30,7 +31,7 @@ nf=1:0.1:1.5;
 Xi=CombVec(Vs,Vi,R2,RL,Is,Beta);
 
 % circuit.multiplesims=[50 50]; % Number of simulations
-circuit.nsims = 16; % Numero de circuitos a serem simulados
+circuit.nsims = 32; % Numero de circuitos a serem simulados
 
 Xi(7,:)=round(-Xi(2,:)/0.7,1); % vi/nf = 0.7
 
@@ -54,8 +55,8 @@ quiz.tbjtype='q1:npn';
 quiz.tbjeval = 1; % Evaluate tbj op
 
 % Generate question
-quiz.enunciado = 'Simule o ponto de operaÁ„o do circuito apresentado na Figura 1 e determine:';
-quiz.rowfigdirective=1; % Imprima os par‚metros ao lado da figura
+quiz.enunciado = 'Simule o ponto de opera√ß√£o do circuito apresentado na Figura 1 e determine:';
+quiz.rowfigdirective=1; % Imprima os par√¢metros ao lado da figura
 quiz.autoitem=1; % Auto add item letter: a), b)... 97 - 122;
 
 q=0;
@@ -78,7 +79,7 @@ quiz.question{q}.type='NUMERICAL';
 % quiz.question{q}.type='NUMERICAL';
 
 q=q+1;
-quiz.question{q}.str='Qual o valor da tens„o Base-Emissor Vbe?';
+quiz.question{q}.str='Qual o valor da tens√£o Base-Emissor Vbe?';
 quiz.question{q}.units={'V'};
 quiz.question{q}.options={'q1:Vbe'}; % Device:Var
 quiz.question{q}.vartype={'log'}; % From log file
@@ -87,7 +88,7 @@ quiz.question{q}.opttol=[10]; % tolerance in percentage %
 quiz.question{q}.type='NUMERICAL';
 
 q=q+1;
-quiz.question{q}.str='Qual o modo de operaÁ„o do TBJ?';
+quiz.question{q}.str='Qual o modo de opera√ß√£o do TBJ?';
 quiz.question{q}.units={'V'};
 quiz.question{q}.options={'q1:npn'}; % Device:Var
 quiz.question{q}.vartype={'mop'}; % From log file
@@ -96,7 +97,7 @@ quiz.question{q}.opttol=[10]; % tolerance in percentage %
 quiz.question{q}.type='TBJ';
 
 q=q+1;
-quiz.question{q}.str='Qual o valor da tens„o de saÌda Vo?';
+quiz.question{q}.str='Qual o valor da tens√£o de sa√≠da Vo?';
 quiz.question{q}.units={'V'};
 quiz.question{q}.options={'vo'}; % Only lowcase
 quiz.question{q}.vartype={'op'}; % meas 
@@ -105,7 +106,7 @@ quiz.question{q}.opttol=[5]; % tolerance in percentage %
 quiz.question{q}.type='NUMERICAL';
 
 q=q+1;
-quiz.question{q}.str='Qual o valor da express„o \( R_2I_se^{\dfrac{-V_i}{nV_T}} \) ?';
+quiz.question{q}.str='Qual o valor da express√£o \( R_2I_se^{\dfrac{-V_i}{nV_T}} \) ?';
 quiz.question{q}.units={'V'};
 quiz.question{q}.options={1}; % Only lowcase
 quiz.question{q}.vartype={'func'}; % meas 

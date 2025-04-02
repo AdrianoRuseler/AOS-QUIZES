@@ -1,4 +1,5 @@
-clear all
+% clear all
+clear circuit quiz
 clc
 
 % Sets simulation dir
@@ -24,7 +25,7 @@ Is=[10e-15 15e-15 20e-15];
 Beta=50:25:150;
 Va=50:25:150;
 % circuit.multiplesims=[10]; % Number of simulations
-circuit.nsims = 16; % Numero de circuitos a serem simulados
+circuit.nsims = 32; % Numero de circuitos a serem simulados
 
 % Rb = combres(1,[100],'E12'); %
 X0=CombVec(Vcc,R1,R2,Rc,Re,Cx,Is,Beta,Va); %%
@@ -34,12 +35,12 @@ Xi=X0(:,nq);
 
 % Xi=CombVec(Vcc,Rb,Rc,Beta,Vbe,Vcesat); %%
 [tbjmode,logdata,paramstr,modelstr]=gettbjnpn02mode(Xi);
-% Mostra estatÌtica de modos encontrados
+% Mostra estat√≠tica de modos encontrados
 Tmode = table(sum(tbjmode(:)==2),sum(tbjmode(:)==3));
-Tmode.Properties.VariableNames = ["SaturaÁ„o","Regi„o ativa"];
+Tmode.Properties.VariableNames = ["Satura√ß√£o","Regi√£o ativa"];
 disp(Tmode)
 
-indx=find(tbjmode==3); % 2 - SaturaÁ„o; 3 - Regi„o ativa;
+indx=find(tbjmode==3); % 2 - Satura√ß√£o; 3 - Regi√£o ativa;
 circuit.Xi=Xi(:,indx);
 circuit.logdata={logdata{indx}};
 circuit.logdataparamstr={paramstr{indx}};
@@ -69,8 +70,8 @@ quiz.tbjtype = 'q1:npn';
 quiz.tbjeval = 0; % Evaluate tbj op
 
 % Generate question
-quiz.enunciado = 'Para o circuito com configuraÁ„o emissor comum de polarizaÁ„o por divisor resistivo apresentado na Figura 1, determine:';
-quiz.rowfigdirective=1; % Imprima os par‚metros ao lado da figura
+quiz.enunciado = 'Para o circuito com configura√ß√£o emissor comum de polariza√ß√£o por divisor resistivo apresentado na Figura 1, determine:';
+quiz.rowfigdirective=1; % Imprima os par√¢metros ao lado da figura
 quiz.autoitem=1; % Auto add item letter: a), b)... 97 - 122; 
 quiz.incfrom=0; % Increment from
 
@@ -97,7 +98,7 @@ quiz.question{q}.opttol=[10]; % tolerance in percentage %
 quiz.question{q}.type='NUMERICAL';
 
 q=q+1;
-quiz.question{q}.str='Qual o valor da resistÍncia R&pi; do TBJ?';
+quiz.question{q}.str='Qual o valor da resist√™ncia R&pi; do TBJ?';
 quiz.question{q}.units={'&Omega;'};
 quiz.question{q}.options={'q1:Rpi'}; % Device:Var
 quiz.question{q}.vartype={'oplog'}; % From log file
@@ -106,7 +107,7 @@ quiz.question{q}.opttol=[10]; % tolerance in percentage %
 quiz.question{q}.type='NUMERICAL';
 
 q=q+1;
-quiz.question{q}.str='Qual o valor da resistÍncia ro do TBJ?';
+quiz.question{q}.str='Qual o valor da resist√™ncia ro do TBJ?';
 quiz.question{q}.units={'&Omega;'};
 quiz.question{q}.options={'q1:Ro'}; % Device:Var
 quiz.question{q}.vartype={'oplog'}; % From log file
@@ -115,7 +116,7 @@ quiz.question{q}.opttol=[10]; % tolerance in percentage %
 quiz.question{q}.type='NUMERICAL';
 
 q=q+1;
-quiz.question{q}.str='Qual o valor da resistÍncia re do TBJ?';
+quiz.question{q}.str='Qual o valor da resist√™ncia re do TBJ?';
 quiz.question{q}.units={'&Omega;'};
 quiz.question{q}.options={'re'};
 quiz.question{q}.vartype={'meas'}; % meas 
@@ -124,7 +125,7 @@ quiz.question{q}.opttol=[5]; % tolerance in percentage %
 quiz.question{q}.type='NUMERICAL';
 
 % q=q+1;
-% quiz.question{q}.str='Qual o valor da imped‚ncia de entrada Zi?';
+% quiz.question{q}.str='Qual o valor da imped√¢ncia de entrada Zi?';
 % quiz.question{q}.units={'&Omega;'};
 % quiz.question{q}.options={'zi'};
 % quiz.question{q}.vartype={'meas'}; % meas 
@@ -133,7 +134,7 @@ quiz.question{q}.type='NUMERICAL';
 % quiz.question{q}.type='NUMERICAL';
 
 q=q+1;
-quiz.question{q}.str='Qual o valor da imped‚ncia de entrada Zi do circuito?';
+quiz.question{q}.str='Qual o valor da imped√¢ncia de entrada Zi do circuito?';
 quiz.question{q}.units={'&Omega;'};
 quiz.question{q}.options={'zicalc'};
 quiz.question{q}.vartype={'meas'}; % meas 
@@ -143,7 +144,7 @@ quiz.question{q}.type='NUMERICAL';
 
 
 % q=q+1;
-% quiz.question{q}.str='Qual o valor da imped‚ncia de saÌda Zo do circuito?';
+% quiz.question{q}.str='Qual o valor da imped√¢ncia de sa√≠da Zo do circuito?';
 % quiz.question{q}.units={'&Omega;'};
 % quiz.question{q}.options={'zo'};
 % quiz.question{q}.vartype={'meas'}; % meas 
@@ -152,7 +153,7 @@ quiz.question{q}.type='NUMERICAL';
 % quiz.question{q}.type='NUMERICAL';
 
 q=q+1;
-quiz.question{q}.str='Qual o valor da imped‚ncia de saÌda Zo do circuito?';
+quiz.question{q}.str='Qual o valor da imped√¢ncia de sa√≠da Zo do circuito?';
 quiz.question{q}.units={'&Omega;'};
 quiz.question{q}.options={'zocalc'};
 quiz.question{q}.vartype={'meas'}; % meas 
@@ -161,7 +162,7 @@ quiz.question{q}.opttol=[5]; % tolerance in percentage %
 quiz.question{q}.type='NUMERICAL';
 
 % q=q+1;
-% quiz.question{q}.str='Qual o valor do ganho de tens„o vo/vi?';
+% quiz.question{q}.str='Qual o valor do ganho de tens√£o vo/vi?';
 % quiz.question{q}.units={'V/V'};
 % quiz.question{q}.options={'av'};
 % quiz.question{q}.vartype={'meas'}; % meas 
@@ -170,7 +171,7 @@ quiz.question{q}.type='NUMERICAL';
 % quiz.question{q}.type='NUMERICAL';
 
 q=q+1;
-quiz.question{q}.str='Qual o valor do ganho de tens„o vo/vi do circuito?';
+quiz.question{q}.str='Qual o valor do ganho de tens√£o vo/vi do circuito?';
 quiz.question{q}.units={'V/V'};
 quiz.question{q}.options={'avcalc'};
 quiz.question{q}.vartype={'meas'}; % meas 

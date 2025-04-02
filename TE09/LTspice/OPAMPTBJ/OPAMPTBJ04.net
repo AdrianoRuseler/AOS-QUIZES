@@ -8,7 +8,7 @@ R2 neg o {R2}
 Q1 neg 0 i 0 TBJ
 .model NPN NPN
 .model PNP PNP
-.lib C:\Users\ruseler\AppData\Local\LTspice\lib\cmp\standard.bjt
+.lib C:\Users\ruseler\Documents\LTspiceXVII\lib\cmp\standard.bjt
 .param Vi=0.65 Vs=15 R2=1k RL=10k
 .op
 .model TBJ PNP(IS=10F VAF=150 NF=1.2)

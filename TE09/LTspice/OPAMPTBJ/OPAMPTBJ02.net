@@ -8,7 +8,7 @@ R1 i neg {R1}
 Q1 neg 0 o 0 PNP
 .model NPN NPN
 .model PNP PNP
-.lib C:\Users\ruseler\AppData\Local\LTspice\lib\cmp\standard.bjt
+.lib C:\Users\ruseler\Documents\LTspiceXVII\lib\cmp\standard.bjt
 .op
 .param Vs=2.500e+01 Vi=-1.000e+00 R1=1.200e+03 RL=1.500e+04
 .model TBJ PNP(IS=1.700e-14 BF=1.400e+02 NF=1.100e+00)

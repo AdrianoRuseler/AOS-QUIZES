@@ -1,4 +1,5 @@
-clear all
+% clear all
+clear circuit quiz
 clc
 
 % Sets simulation dir
@@ -32,7 +33,7 @@ Beta=150:50:250;
 nf=1:0.2:2;
 
 % circuit.multiplesims=[50 50]; % Number of simulations
-circuit.nsims = 16; % Numero de circuitos a serem simulados
+circuit.nsims = 32; % Numero de circuitos a serem simulados
 
 % Rb = combres(1,[100],'E12'); %
 X0=CombVec(Vs,Vi,R1,R2,R3,R4,RL,Is,Beta,nf); %%
@@ -43,7 +44,7 @@ nq=randperm(y); % escolha as questoes
 Xi=X0(:,nq);
 
 [mode]=getopamptbj5mode(Xi);
-% Mostra estatÌtica de modos encontrados
+% Mostra estat√≠tica de modos encontrados
 Tmode = table(sum(mode(:)==-1),sum(mode(:)==0),sum(mode(:)==1),sum(mode(:)==2));
 Tmode.Properties.VariableNames = ["Erro","???","OK","Good"];
 disp(Tmode)
@@ -73,13 +74,13 @@ quiz.tbjtype='q1:npn';
 quiz.tbjeval = 0; % Evaluate tbj op
 
 % Generate question
-quiz.enunciado = 'Simule o ponto de operaÁ„o do circuito apresentado na Figura 1 e determine:';
-quiz.rowfigdirective=1; % Imprima os par‚metros ao lado da figura
+quiz.enunciado = 'Simule o ponto de opera√ß√£o do circuito apresentado na Figura 1 e determine:';
+quiz.rowfigdirective=1; % Imprima os par√¢metros ao lado da figura
 quiz.autoitem=1; % Auto add item letter: a), b)... 97 - 122;
 
 q=0;
 q=q+1;
-quiz.question{q}.str='Qual o valor da tens„o em Vx?';
+quiz.question{q}.str='Qual o valor da tens√£o em Vx?';
 quiz.question{q}.units={'V'};
 quiz.question{q}.options={'vx'}; % Only lowcase
 quiz.question{q}.vartype={'op'}; % meas 
@@ -88,7 +89,7 @@ quiz.question{q}.opttol=[5]; % tolerance in percentage %
 quiz.question{q}.type='NUMERICAL';
 
 q=q+1;
-quiz.question{q}.str='Qual o valor da tens„o em Vy?';
+quiz.question{q}.str='Qual o valor da tens√£o em Vy?';
 quiz.question{q}.units={'V'};
 quiz.question{q}.options={'vy'}; % Only lowcase
 quiz.question{q}.vartype={'op'}; % meas 
@@ -97,7 +98,7 @@ quiz.question{q}.opttol=[5]; % tolerance in percentage %
 quiz.question{q}.type='NUMERICAL';
 
 q=q+1;
-quiz.question{q}.str='Qual o valor da tens„o de saÌda Vo?';
+quiz.question{q}.str='Qual o valor da tens√£o de sa√≠da Vo?';
 quiz.question{q}.units={'V'};
 quiz.question{q}.options={'vo'}; % Only lowcase
 quiz.question{q}.vartype={'op'}; % meas 
@@ -106,7 +107,7 @@ quiz.question{q}.opttol=[5]; % tolerance in percentage %
 quiz.question{q}.type='NUMERICAL';
 
 q=q+1;
-quiz.question{q}.str='Qual o valor da express„o \( R_4I_s{\left ( \dfrac{V_i}{R_1I_s} \right )}^{ \dfrac{R_3}{R_2}} \) ?';
+quiz.question{q}.str='Qual o valor da express√£o \( R_4I_s{\left ( \dfrac{V_i}{R_1I_s} \right )}^{ \dfrac{R_3}{R_2}} \) ?';
 quiz.question{q}.units={'V'};
 quiz.question{q}.options={1}; % Only lowcase
 quiz.question{q}.vartype={'func'}; % meas 

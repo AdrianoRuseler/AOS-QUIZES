@@ -11,7 +11,7 @@ D1 Vo N002 Dx
 R2 Vx Vy {R2}
 R3 Vy Vnn {R3}
 .model D D
-.lib C:\Users\ruseler\AppData\Local\LTspice\lib\cmp\standard.dio
+.lib C:\Users\ruseler\Documents\LTspiceXVII\lib\cmp\standard.dio
 .param Vi=15 Vs=15 fi=1k R1=1k R2=1k R3=1k RL=100k
 .tran 0.01
 .model Dx D(Vfwd=.7)

@@ -1,4 +1,5 @@
-clear all
+% clear all
+clear circuit quiz
 clc
 
 % Sets simulation dir
@@ -15,7 +16,7 @@ circuit.parunit={'V','&Omega;','&Omega;'}; % Variables unit
 Vcc=10:5:20; 
 % Vz=[2.7 3.3 3.9 4.7 5.6 6.8 8.2 3.0 3.6 4.3 5.1 6.2 7.5 9.1];
 % Rb = combnres(1,10000,'E24',12); % Ativo Direto
-Rb = combnres(1,100,'E24',12); % SaturaÁ„o
+Rb = combnres(1,100,'E24',12); % Satura√ß√£o
 % Rc = combres(1,10,'E12'); %
 Re = combnres(1,10,'E24',12); %
 
@@ -26,7 +27,7 @@ Va=100:50:200;
 % Rb = combres(1,[100],'E12'); %
 % circuit.Xi=CombVec(Vcc,Rb,Re,Is,Beta,Va); %%
 % circuit.multiplesims=[10]; % Number of simulations
-circuit.nsims = 16; % Numero de circuitos a serem simulados
+circuit.nsims = 32; % Numero de circuitos a serem simulados
 
 
 X0=CombVec(Vcc,Rb,Re,Is,Beta,Va); %%
@@ -36,12 +37,12 @@ Xi=X0(:,nq);
 
 [tbjmode,logdata,logfiles]=gettbjnpn03mode(Xi);
 
-% Mostra estatÌtica de modos encontrados
+% Mostra estat√≠tica de modos encontrados
 Tmode = table(sum(tbjmode(:)==2),sum(tbjmode(:)==3));
-Tmode.Properties.VariableNames = ["SaturaÁ„o","Regi„o ativa"];
+Tmode.Properties.VariableNames = ["Satura√ß√£o","Regi√£o ativa"];
 disp(Tmode)
 
-indx=find(tbjmode==3); % 2 - SaturaÁ„o; 3 - Regi„o ativa;
+indx=find(tbjmode==3); % 2 - Satura√ß√£o; 3 - Regi√£o ativa;
 if isempty(indx)
     return
 end
@@ -66,8 +67,8 @@ circuit.cmdtype = '.op'; % Operation Point Simulation
 circuit.cmdupdate = 0; % Update the cmdtype from sim file
 circuit.LTspice.net.run =0;
 % Generate question
-quiz.enunciado = 'Para a configuraÁ„o seguidor de emissor, simule o ponto de operaÁ„o do circuito apresentado na Figura 1 e determine:';
-quiz.rowfigdirective=1; % Imprima os par‚metros ao lado da figura
+quiz.enunciado = 'Para a configura√ß√£o seguidor de emissor, simule o ponto de opera√ß√£o do circuito apresentado na Figura 1 e determine:';
+quiz.rowfigdirective=1; % Imprima os par√¢metros ao lado da figura
 quiz.autoitem=1; % Auto add item letter: a), b)... 97 - 122; 65 - 90
 quiz.incfrom=0; % Increment from
 % Text a ser colocado abaixo da figura
@@ -106,7 +107,7 @@ quiz.question{q}.opttol=[10]; % tolerance in percentage %
 quiz.question{q}.type='NUMERICAL';
 
 q=q+1;
-quiz.question{q}.str='Qual a tens„o Base-Emissor Vbe?';
+quiz.question{q}.str='Qual a tens√£o Base-Emissor Vbe?';
 quiz.question{q}.units={'V'};
 quiz.question{q}.options={'q1:Vbe'}; % Device:Var
 quiz.question{q}.vartype={'log'}; % From log file
@@ -115,7 +116,7 @@ quiz.question{q}.opttol=[10]; % tolerance in percentage %
 quiz.question{q}.type='NUMERICAL';
 
 q=q+1;
-quiz.question{q}.str='Qual a tens„o Base-Coletor Vbc?';
+quiz.question{q}.str='Qual a tens√£o Base-Coletor Vbc?';
 quiz.question{q}.units={'V'};
 quiz.question{q}.options={'q1:Vbc'}; % Device:Var
 quiz.question{q}.vartype={'log'}; % From log file
@@ -124,7 +125,7 @@ quiz.question{q}.opttol=[1]; % tolerance in percentage %
 quiz.question{q}.type='NUMERICAL';
 
 q=q+1;
-quiz.question{q}.str='Qual a tens„o Coletor-Emissor Vce?';
+quiz.question{q}.str='Qual a tens√£o Coletor-Emissor Vce?';
 quiz.question{q}.units={'V'};
 quiz.question{q}.options={'q1:Vce'}; % Device:Var
 quiz.question{q}.vartype={'log'}; % From log file
@@ -133,7 +134,7 @@ quiz.question{q}.opttol=[1]; % tolerance in percentage %
 quiz.question{q}.type='NUMERICAL';
 
 % q=7;
-% quiz.question{q}.str='Qual o valor da resistÍncia re?';
+% quiz.question{q}.str='Qual o valor da resist√™ncia re?';
 % quiz.question{q}.units={'&Omega;'};
 % quiz.question{q}.options={'q1:npn'}; % Device:Var
 % quiz.question{q}.vartype={'re'}; % From log file
@@ -142,7 +143,7 @@ quiz.question{q}.type='NUMERICAL';
 % quiz.question{q}.type='NUMERICAL';
 % 
 % q=8;
-% quiz.question{q}.str='Qual o valor da resistÍncia ro?';
+% quiz.question{q}.str='Qual o valor da resist√™ncia ro?';
 % quiz.question{q}.units={'&Omega;'};
 % quiz.question{q}.options={'q1:npn'}; % Device:Var
 % quiz.question{q}.vartype={'ro'}; % From log file
@@ -151,7 +152,7 @@ quiz.question{q}.type='NUMERICAL';
 % quiz.question{q}.type='NUMERICAL';
 
 q=q+1;
-quiz.question{q}.str='Qual o modo de operaÁ„o do TBJ?';
+quiz.question{q}.str='Qual o modo de opera√ß√£o do TBJ?';
 quiz.question{q}.units={'V'};
 quiz.question{q}.options={'q1:npn'}; % Device:Var
 quiz.question{q}.vartype={'mop'}; % From log file

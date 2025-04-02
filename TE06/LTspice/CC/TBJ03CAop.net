@@ -1,11 +1,11 @@
-* C:\Users\ruseler\Documents\GitHub\AOS-QUIZES\TE05\LTspice\TBJ03CAop.asc
+* C:\Users\ruseler\Documents\GitHub\AOS-QUIZES\TE06\LTspice\CC\TBJ03CAop.asc
 Rb C B {RB}
 Vcc C 0 {Vcc}
 Q1 C B P001 0 TBJ
 RE P001 0 {RE}
 .model NPN NPN
 .model PNP PNP
-.lib C:\Users\ruseler\AppData\Local\LTspice\lib\cmp\standard.bjt
+.lib C:\Users\ruseler\Documents\LTspiceXVII\lib\cmp\standard.bjt
 .param Vcc=30 RB=820k RE=220
 .op
 .model TBJ NPN(IS=10F BF=350 VAF=100)

@@ -9,10 +9,10 @@ R1 cc G {R1}
 R2 G 0 {R2}
 .model NPN NPN
 .model PNP PNP
-.lib C:\Users\ruseler\AppData\Local\LTspice\lib\cmp\standard.bjt
+.lib C:\Users\ruseler\Documents\LTspiceXVII\lib\cmp\standard.bjt
 .model NJF NJF
 .model PJF PJF
-.lib C:\Users\ruseler\AppData\Local\LTspice\lib\cmp\standard.jft
+.lib C:\Users\ruseler\Documents\LTspiceXVII\lib\cmp\standard.jft
 .op
 .model JFET njf(Beta=1m Vto=-6)
 .param Vcc=30 R1=33k R2=18k Rb=820k Rc=680 Rs=330

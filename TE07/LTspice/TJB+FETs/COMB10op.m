@@ -1,4 +1,5 @@
-clear all
+% clear all
+clear circuit quiz
 clc
 
 % Sets simulation dir
@@ -39,7 +40,7 @@ R3 = combnres(1,100,'E24',12); %
 % Rb = combres(1,[100],'E12'); %
 circuit.Xi=CombVec(Vs,R1,R2,R3,Is1,n1,BV1); %%
 % circuit.multiplesims=[50 50]; % Number of simulations
-circuit.nsims = 16; % Numero de circuitos a serem simulados
+circuit.nsims = 32; % Numero de circuitos a serem simulados
 
 circuit.parind=[1:4];
 
@@ -79,8 +80,8 @@ circuit.cmdupdate = 0; % Update the cmdtype from sim file
 circuit.LTspice.net.run = 0;
 
 % Generate question
-quiz.enunciado = 'Analise e simule no LTspice o ponto de operaÁ„o (.op) do circuito apresentado na Figura 1 e determine:';
-quiz.rowfigdirective=1; % Imprima os par‚metros ao lado da figura
+quiz.enunciado = 'Analise e simule no LTspice o ponto de opera√ß√£o (.op) do circuito apresentado na Figura 1 e determine:';
+quiz.rowfigdirective=1; % Imprima os par√¢metros ao lado da figura
 quiz.autoitem=1; % Auto add item letter: a), b)... 97 - 122; 
 
 % Text a ser colocado abaixo da figura
@@ -102,7 +103,7 @@ quiz.vartype={'str','str','str','str','str','str','str'};
 q=0;
 
 q=q+1;
-quiz.question{q}.str='Qual o valor da tens„o Vz sobre o diodo zener?';
+quiz.question{q}.str='Qual o valor da tens√£o Vz sobre o diodo zener?';
 quiz.question{q}.units={'V'};
 quiz.question{q}.options={'vz'};
 quiz.question{q}.vartype={'meas'}; % meas 
@@ -111,7 +112,7 @@ quiz.question{q}.opttol=[10]; % tolerance in percentage %
 quiz.question{q}.type='NUMERICAL';
 
 q=q+1;
-quiz.question{q}.str='Qual equaÁ„o calcula o valor da tens„o Vo?';
+quiz.question{q}.str='Qual equa√ß√£o calcula o valor da tens√£o Vo?';
 quiz.question{q}.units={'V'};
 quiz.question{q}.options=quiz.eqnum; % Only lowcase
 quiz.question{q}.vartype=quiz.vartype; % meas 
@@ -120,7 +121,7 @@ quiz.question{q}.opttol=[5]; % tolerance in percentage %
 quiz.question{q}.type='STRING'; 
 
 q=q+1;
-quiz.question{q}.str='Qual o valor da tens„o Vo?';
+quiz.question{q}.str='Qual o valor da tens√£o Vo?';
 quiz.question{q}.units={'V'};
 quiz.question{q}.options={'vo'};
 quiz.question{q}.vartype={'op'}; % meas 
@@ -129,7 +130,7 @@ quiz.question{q}.opttol=[10]; % tolerance in percentage %
 quiz.question{q}.type='NUMERICAL';
 
 q=q+1;
-quiz.question{q}.str='Qual equaÁ„o calcula o valor da tens„o Vx?';
+quiz.question{q}.str='Qual equa√ß√£o calcula o valor da tens√£o Vx?';
 quiz.question{q}.units={'V'};
 quiz.question{q}.options=quiz.eqnum; % Only lowcase
 quiz.question{q}.vartype=quiz.vartype; % meas 
@@ -138,7 +139,7 @@ quiz.question{q}.opttol=[5]; % tolerance in percentage %
 quiz.question{q}.type='STRING'; 
 
 q=q+1;
-quiz.question{q}.str='Qual o valor da tens„o Vx?';
+quiz.question{q}.str='Qual o valor da tens√£o Vx?';
 quiz.question{q}.units={'V'};
 quiz.question{q}.options={'vx'};
 quiz.question{q}.vartype={'op'}; % meas 
@@ -147,7 +148,7 @@ quiz.question{q}.opttol=[10]; % tolerance in percentage %
 quiz.question{q}.type='NUMERICAL';
 
 q=q+1;
-quiz.question{q}.str='Qual equaÁ„o calcula o valor da corrente no diodo zener?';
+quiz.question{q}.str='Qual equa√ß√£o calcula o valor da corrente no diodo zener?';
 quiz.question{q}.units={'V'};
 quiz.question{q}.options=quiz.eqnum; % Only lowcase
 quiz.question{q}.vartype=quiz.vartype; % meas 

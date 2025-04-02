@@ -1,4 +1,5 @@
-clear all
+% clear all
+clear circuit quiz
 clc
 
 % Sets simulation dir
@@ -31,7 +32,7 @@ Ron = combres(1,0.01,'E12'); %
 
 circuit.timeout = 50; % Simulation timeout in seconds
 % circuit.multiplesims=[50 50]; % Number of simulations
-circuit.nsims = 16; % Numero de circuitos a serem simulados
+circuit.nsims = 32; % Numero de circuitos a serem simulados
 
 [~,y]=size(X0);
 nq=randperm(y,circuit.nsims); % escolha as questoes
@@ -53,13 +54,13 @@ circuit.cmdupdate = 0; %
 
 % % Generate question
 quiz.enunciado = 'Para o circuito comparador de janela apresentado na Figura 1, determine:';
-quiz.rowfigdirective=1; % Imprima os par‚metros ao lado da figura
+quiz.rowfigdirective=1; % Imprima os par√¢metros ao lado da figura
 quiz.autoitem=1; % Auto add item letter: a), b)... 97 - 122; 
 
 
 q=0;
 q=q+1;
-quiz.question{q}.str='Qual o valor de comparaÁ„o Vx?';
+quiz.question{q}.str='Qual o valor de compara√ß√£o Vx?';
 quiz.question{q}.units={'V'};
 quiz.question{q}.options={'vx'}; % Only lowcase
 quiz.question{q}.vartype={'meas'}; % meas 
@@ -69,7 +70,7 @@ quiz.question{q}.type='NUMERICAL';
 
 
 q=q+1;
-quiz.question{q}.str='Qual o valor de comparaÁ„o Vy?';
+quiz.question{q}.str='Qual o valor de compara√ß√£o Vy?';
 quiz.question{q}.units={'V'};
 quiz.question{q}.options={'vy'}; % Only lowcase
 quiz.question{q}.vartype={'meas'}; % meas 

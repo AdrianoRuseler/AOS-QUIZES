@@ -1,4 +1,4 @@
-* C:\Users\ruseler\Documents\GitHub\AOS-QUIZES\TE07\LTspice\FET03op.asc
+* C:\Users\ruseler\Documents\GitHub\AOS-QUIZES\TE07\LTspice\FETs\FET03op.asc
 J1 d g s JFET
 Vdd N001 0 {Vdd}
 Rd N001 d {Rd}
@@ -7,7 +7,7 @@ R1 N001 g {R1}
 R2 g 0 {R2}
 .model NJF NJF
 .model PJF PJF
-.lib C:\Users\ruseler\AppData\Local\LTspice\lib\cmp\standard.jft
+.lib C:\Users\ruseler\Documents\LTspiceXVII\lib\cmp\standard.jft
 .op
 .model JFET njf(Beta=3m Vto=-5)
 .param Vdd=25 Rs=120 Rd=560 R1=4.7Meg R2=680k

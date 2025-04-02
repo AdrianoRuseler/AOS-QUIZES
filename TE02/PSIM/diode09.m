@@ -1,4 +1,5 @@
-clear all
+% clear all
+clear circuit quiz
 clc
 
 % Config simulation
@@ -21,20 +22,20 @@ R3 = combnres(1,[10],'E24',6); %
 
 circuit.Xi=CombVec(Vi,Von,Vz1,Vz2,R1,R2,R3); %%
 % circuit.multiplesims=[25 25]; % Number of simulations
-circuit.nsims = 16; % Numero de circuitos a serem simulados
+circuit.nsims = 32; % Numero de circuitos a serem simulados
 
-quiz.enunciado = ['Para o circuito contendo diodos zener com tens„o de polarizaÁ„o direta Von'...
-    ' e tens„o de polarizaÁ„o reversa Vz1 e Vz2 apresentado na Figura 1, determine:' ]; % Enunciado da pergunta!
-% quiz.extratext{1} = 'Segue uma ajuda para utilizar o <a href="https://youtu.be/YEEPUlJbcmg" target="_blank"> arquivo par‚metros </a>:';
-% quiz.extratext{1} = 'Segue uma ajuda para utilizar o arquivo par‚metros:';
-% quiz.printparfile = 1; % Imprimir arquivo de par‚metros
+quiz.enunciado = ['Para o circuito contendo diodos zener com tens√£o de polariza√ß√£o direta Von'...
+    ' e tens√£o de polariza√ß√£o reversa Vz1 e Vz2 apresentado na Figura 1, determine:' ]; % Enunciado da pergunta!
+% quiz.extratext{1} = 'Segue uma ajuda para utilizar o <a href="https://youtu.be/YEEPUlJbcmg" target="_blank"> arquivo par√¢metros </a>:';
+% quiz.extratext{1} = 'Segue uma ajuda para utilizar o arquivo par√¢metros:';
+% quiz.printparfile = 1; % Imprimir arquivo de par√¢metros
 
-quiz.rowfigparam=1; % Imprima os par‚metros ao lado da figura
+quiz.rowfigparam=1; % Imprima os par√¢metros ao lado da figura
 quiz.autoitem=1; % Auto add item letter: a), b)... 97 - 122;  
 
 q=0;
 q=q+1;
-quiz.question{q}.str='Qual o valor da tens„o mÈdia Vx?';
+quiz.question{q}.str='Qual o valor da tens√£o m√©dia Vx?';
 quiz.question{q}.units={'V'};
 quiz.question{q}.options={'Vx'};
 quiz.question{q}.vartype={'mean'}; %
@@ -43,7 +44,7 @@ quiz.question{q}.opttol=[10]; % tolerance in percentage %
 quiz.question{q}.type='NUMERICAL';
 
 q=q+1;
-quiz.question{q}.str='Qual o valor da tens„o mÈdia Vy?';
+quiz.question{q}.str='Qual o valor da tens√£o m√©dia Vy?';
 quiz.question{q}.units={'V'};
 quiz.question{q}.options={'Vy'};
 quiz.question{q}.vartype={'mean'}; %
@@ -52,7 +53,7 @@ quiz.question{q}.opttol=[10]; % tolerance in percentage %
 quiz.question{q}.type='NUMERICAL';
 
 q=q+1;
-quiz.question{q}.str='Qual o valor da corrente mÈdia no diodo zener Z1?';
+quiz.question{q}.str='Qual o valor da corrente m√©dia no diodo zener Z1?';
 quiz.question{q}.units={'A'};
 quiz.question{q}.options={'IZ1'};
 quiz.question{q}.vartype={'mean'}; %
@@ -61,7 +62,7 @@ quiz.question{q}.opttol=[10]; % tolerance in percentage %
 quiz.question{q}.type='NUMERICAL';
 
 q=q+1;
-quiz.question{q}.str='Qual o valor da corrente mÈdia no diodo zener Z2?';
+quiz.question{q}.str='Qual o valor da corrente m√©dia no diodo zener Z2?';
 quiz.question{q}.units={'A'};
 quiz.question{q}.options={'IZ2'};
 quiz.question{q}.vartype={'mean'}; %
@@ -70,7 +71,7 @@ quiz.question{q}.opttol=[10]; % tolerance in percentage %
 quiz.question{q}.type='NUMERICAL';
 % 
 q=q+1;
-quiz.question{q}.str='Qual o valor da corrente mÈdia no resistor R2?';
+quiz.question{q}.str='Qual o valor da corrente m√©dia no resistor R2?';
 quiz.question{q}.units={'A'};
 quiz.question{q}.options={'IR2'};
 quiz.question{q}.vartype={'mean'}; %
@@ -78,7 +79,7 @@ quiz.question{q}.optscore=[100]; % Score per option
 quiz.question{q}.opttol=[10]; % tolerance in percentage %
 quiz.question{q}.type='NUMERICAL';
 % 
-% quiz.question{6}.str='f) Qual o valor da corrente mÈdia no resistor R3?';
+% quiz.question{6}.str='f) Qual o valor da corrente m√©dia no resistor R3?';
 % quiz.question{6}.units={'A'};
 % quiz.question{6}.options={'IR3'};
 % quiz.question{6}.vartype={'mean'}; %

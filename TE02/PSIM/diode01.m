@@ -1,4 +1,5 @@
-clear all
+% clear all
+clear circuit quiz
 clc
 
 % Config simulation
@@ -56,7 +57,7 @@ X0=CombVec(Vi,Von1,Von2,Von3,R1); %%
 
 % [mode]=getdiode01mode(X0);
 % circuit.multiplesims=[25 25]; % Number of simulations
-circuit.nsims = 16; % Numero de circuitos a serem simulados
+circuit.nsims = 32; % Numero de circuitos a serem simulados
 % circuit.PSIMCMD.script.run=0;
 
 [~,y]=size(X0);
@@ -64,7 +65,7 @@ nq=randperm(y,3*circuit.nsims); % escolha as questoes
 Xi=X0(:,nq);
 
 [mode]=getdiode01mode(Xi);
-% Mostra estatítica de modos encontrados
+% Mostra estatÃ­tica de modos encontrados
 Tmode = table(sum(mode(:)==0),sum(mode(:)==1),sum(mode(:)==2),sum(mode(:)==3));
 Tmode.Properties.VariableNames = ["All OFF","D1 OFF","D2 OFF","All ON"];
 disp(Tmode)
@@ -80,15 +81,15 @@ circuit.Xi=Xi(:,indx);
 % Generate question
 
 quiz.enunciado = 'Para o circuito apresentado na Figura 1, determine:'; % Enunciado da pergunta!
-quiz.rowfigparam=1; % Imprima os parâmetros ao lado da figura
+quiz.rowfigparam=1; % Imprima os parÃ¢metros ao lado da figura
 quiz.autoitem=1; % Auto add item letter: a), b)... 97 - 122;  
 % quiz.scriptfile=1; % Add link to script file
 % https://www.tutorialspoint.com/latex_equation_editor.htm
-quiz.exptable=1; % Cria tabela para responder com expressão matemática
+quiz.exptable=1; % Cria tabela para responder com expressÃ£o matemÃ¡tica
 
 q=0;
 q=q+1;
-quiz.question{q}.str='Qual o valor médio da corrente no diodo D1?';
+quiz.question{q}.str='Qual o valor mÃ©dio da corrente no diodo D1?';
 quiz.question{q}.units={'A'};
 quiz.question{q}.options={'ID1'};
 quiz.question{q}.vartype={'mean'}; %
@@ -109,7 +110,7 @@ end
 quiz.question{q}.expopts={'Corrente no diodo D1','Corrente no resitor R1','Corrente no diodo D2','Corrente no LED'}; % Primeira correta %TODO
 
 q=q+1;
-quiz.question{q}.str='Qual o valor médio da corrente no diodo D2?';
+quiz.question{q}.str='Qual o valor mÃ©dio da corrente no diodo D2?';
 quiz.question{q}.units={'A'};
 quiz.question{q}.options={'ID2'};
 quiz.question{q}.vartype={'mean'}; %
@@ -130,7 +131,7 @@ end
 quiz.question{q}.expopts={'Corrente no diodo D2','Corrente no diodo D1','Corrente no LED','Corrente no resitor R1'}; % Primeira correta %TODO
 
 q=q+1;
-quiz.question{q}.str='Qual o valor médio da corrente no LED?';
+quiz.question{q}.str='Qual o valor mÃ©dio da corrente no LED?';
 quiz.question{q}.units={'A'};
 quiz.question{q}.options={'ILED1'};
 quiz.question{q}.vartype={'mean'}; %
@@ -151,7 +152,7 @@ end
 quiz.question{q}.expopts={'Corrente no LED','Corrente no diodo D1','Corrente no resitor R1','Corrente no diodo D2'}; % Primeira correta %TODO
 
 q=q+1;
-quiz.question{q}.str='Qual o valor médio da tensão no resistor R1?';
+quiz.question{q}.str='Qual o valor mÃ©dio da tensÃ£o no resistor R1?';
 quiz.question{q}.units={'V'};
 quiz.question{q}.options={'VR1'};
 quiz.question{q}.vartype={'mean'}; %
@@ -169,10 +170,10 @@ switch circuit.mode
         quiz.question{q}.expmath='\( \frac{V_{CC}-V_{BE}}{R_B} \)'; %TODO
     otherwise %  disp('Other Mode')
 end
-quiz.question{q}.expopts={'Tensão no resitor R1','Tensão no diodo D1','Tensão no diodo LED','Tensão no diodo D2'}; % Primeira correta %TODO
+quiz.question{q}.expopts={'TensÃ£o no resitor R1','TensÃ£o no diodo D1','TensÃ£o no diodo LED','TensÃ£o no diodo D2'}; % Primeira correta %TODO
 
 q=q+1;
-quiz.question{q}.str='Qual o valor da potência dissipada no LED?';
+quiz.question{q}.str='Qual o valor da potÃªncia dissipada no LED?';
 quiz.question{q}.units={'W'};
 quiz.question{q}.options={'pd'};
 quiz.question{q}.vartype={'mean'}; %
@@ -190,7 +191,7 @@ switch circuit.mode
         quiz.question{q}.expmath='\( \frac{V_{CC}-V_{BE}}{R_B} \)'; %TODO
     otherwise %  disp('Other Mode')
 end
-quiz.question{q}.expopts={'Potência no LED','Potência no diodo D1','Potência no resitor R1','Potência no diodo D2'}; % Primeira correta %TODO
+quiz.question{q}.expopts={'PotÃªncia no LED','PotÃªncia no diodo D1','PotÃªncia no resitor R1','PotÃªncia no diodo D2'}; % Primeira correta %TODO
 
 
 

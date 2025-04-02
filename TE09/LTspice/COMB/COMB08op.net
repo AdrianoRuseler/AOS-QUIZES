@@ -10,7 +10,7 @@ Rs N004 0 {Rs}
 RL Vpp N001 {RL}
 .model NPN NPN
 .model PNP PNP
-.lib C:\Users\ruseler\AppData\Local\LTspice\lib\cmp\standard.bjt
+.lib C:\Users\ruseler\Documents\LTspiceXVII\lib\cmp\standard.bjt
 .op
 .param Vi=5 Vs=20 R1=220 R2=220 Rs=100 RL=120
 .model TBJ NPN(IS=10F BF=150)

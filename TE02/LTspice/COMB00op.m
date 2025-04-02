@@ -1,4 +1,5 @@
-clear all
+% clear all
+clear circuit quiz
 clc
 
 circuit.name = 'COMB00op'; % File name
@@ -32,7 +33,7 @@ n3=2:0.5:5;
 % Rb = combres(1,[100],'E12'); %
 circuit.Xi=CombVec(Vcc,R1,Is1,n1,Is2,n2,Is3,n3); %%
 % circuit.multiplesims=[50 50]; % Number of simulations
-circuit.nsims = 16; % Numero de circuitos a serem simulados
+circuit.nsims = 32; % Numero de circuitos a serem simulados
 
 circuit.parind=[1:2];
 
@@ -74,10 +75,10 @@ circuit.cmdupdate = 0; % Update the cmdtype from sim file
 circuit.LTspice.net.run = 0;
 
 % Generate question
-quiz.enunciado = 'Simule no LTspice o ponto de operaÁ„o (.op) do circuito apresentado na Figura 1 e determine:';
-quiz.rowfigparam=1; % Imprima os par‚metros ao lado da figura
+quiz.enunciado = 'Simule no LTspice o ponto de opera√ß√£o (.op) do circuito apresentado na Figura 1 e determine:';
+quiz.rowfigparam=1; % Imprima os par√¢metros ao lado da figura
 quiz.autoitem=1; % Auto add item letter: a), b)... 97 - 122; 
-quiz.rowfigdirective=1; % Imprima os par‚metros ao lado da figura
+quiz.rowfigdirective=1; % Imprima os par√¢metros ao lado da figura
 % quiz.modelfile=1; % Add link to model file
 
 % Text a ser colocado abaixo da figura
@@ -121,7 +122,7 @@ quiz.question{q}.opttol=[10]; % tolerance in percentage %
 quiz.question{q}.type='NUMERICAL';
 
 q=q+1;
-quiz.question{q}.str='Qual o valor da tens„o sobre os diodos D1 e D2?';
+quiz.question{q}.str='Qual o valor da tens√£o sobre os diodos D1 e D2?';
 quiz.question{q}.units={'V'};
 quiz.question{q}.options={'vd'};
 quiz.question{q}.vartype={'meas'}; % meas 
@@ -130,7 +131,7 @@ quiz.question{q}.opttol=[10]; % tolerance in percentage %
 quiz.question{q}.type='NUMERICAL';
 
 q=q+1;
-quiz.question{q}.str='Qual a potÍncia dissipada no diodo LED?';
+quiz.question{q}.str='Qual a pot√™ncia dissipada no diodo LED?';
 quiz.question{q}.units={'W'};
 quiz.question{q}.options={'pled'}; % Device:Var
 quiz.question{q}.vartype={'meas'}; % From log file

@@ -1,4 +1,4 @@
-clear all
+% clear all
 clc
 
 % Config simulation
@@ -28,23 +28,23 @@ circuit.Xi=Xi(:,indx);
 
 % circuit.Xi=CombVec(Vi,Von,Vz,Vled,R1,R2); %%
 % circuit.multiplesims=[25 25]; % Number of simulations
-circuit.nsims = 10; % Numero de circuitos a serem simulados
+circuit.nsims = 32; % Numero de circuitos a serem simulados
 
 % Generate question
 
-quiz.enunciado = ['Para o circuito contendo um diodo e um diodo zener com tensıes de polarizaÁ„o direta Von'...
-    ', o zener com tens„o de polarizaÁ„o reversa Vz e um diodo LED de tens„o direta Vled apresentado na Figura 1, determine:' ]; % Enunciado da pergunta!
-quiz.rowfigparam=1; % Imprima os par‚metros ao lado da figura
+quiz.enunciado = ['Para o circuito contendo um diodo e um diodo zener com tens√µes de polariza√ß√£o direta Von'...
+    ', o zener com tens√£o de polariza√ß√£o reversa Vz e um diodo LED de tens√£o direta Vled apresentado na Figura 1, determine:' ]; % Enunciado da pergunta!
+quiz.rowfigparam=1; % Imprima os par√¢metros ao lado da figura
 quiz.autoitem=1; % Auto add item letter: a), b)... 97 - 122;  
 % quiz.incfrom=0; % Increment from
 
 % https://www.tutorialspoint.com/latex_equation_editor.htm
 quiz.eqlist{1}='\( \sqrt{\frac{I_{pk1}^{2}+I_{pk3}^{2}+I_{pk5}^{2}}{2}} \)'; % valor eficaz da corrente de carga?
-quiz.eqlist{2}='\(  \sqrt{\frac{I_{pk3}^{2}+I_{pk5}^{2}}{2}} \)'; % Qual o valor eficaz dos harmÙnicos de corrente de carga?
+quiz.eqlist{2}='\(  \sqrt{\frac{I_{pk3}^{2}+I_{pk5}^{2}}{2}} \)'; % Qual o valor eficaz dos harm√¥nicos de corrente de carga?
 quiz.eqlist{3}='\( \sqrt{\frac{I_{pk1}^{2}}{2}} \)';  % Qual o valor eficaz da fundamental de corrente de carga?
 quiz.eqlist{4}='\( \sqrt{\frac{I_{pk3}^{2}+I_{pk5}^{2}}{I_{pk1}^{2}}} \)'; % Qual o valor da THD de corrente na fonte?
-quiz.eqlist{5}='\( \sqrt{\frac{V_{pk3}^{2}}{2}} \)'; % valor eficaz dos harmÙnicos de tens„o na fonte?
-quiz.eqlist{6}='\( \sqrt{\frac{V_{pk1}^{2}+V_{pk3}^{2}}{2}}  \)'; % valor eficaz da tens„o na fonte?
+quiz.eqlist{5}='\( \sqrt{\frac{V_{pk3}^{2}}{2}} \)'; % valor eficaz dos harm√¥nicos de tens√£o na fonte?
+quiz.eqlist{6}='\( \sqrt{\frac{V_{pk1}^{2}+V_{pk3}^{2}}{2}}  \)'; % valor eficaz da tens√£o na fonte?
 quiz.eqlist{7}='\( \sqrt{\frac{V_{pk1}^{2}}{2}} \)';
 % 
 quiz.eqnum={'A','B','C','D','E','F','G'};
@@ -53,7 +53,7 @@ quiz.vartype={'str','str','str','str','str','str','str'};
 q=0;
 q=q+1;
 %% TODO
-quiz.question{q}.str='Qual equaÁ„o calcula o valor da corrente mÈdia no resistor R1?';
+quiz.question{q}.str='Qual equa√ß√£o calcula o valor da corrente m√©dia no resistor R1?';
 quiz.question{q}.units={'V/V'};
 quiz.question{q}.options=quiz.eqnum; % Only lowcase
 quiz.question{q}.vartype=quiz.vartype; % meas 
@@ -63,7 +63,7 @@ quiz.question{q}.type='STRING';
 
 
 q=q+1;
-quiz.question{q}.str='Qual o valor da corrente mÈdia no resistor R1?';
+quiz.question{q}.str='Qual o valor da corrente m√©dia no resistor R1?';
 quiz.question{q}.units={'A'};
 quiz.question{q}.options={'IR1'};
 quiz.question{q}.vartype={'mean'}; %
@@ -72,7 +72,7 @@ quiz.question{q}.opttol=[10]; % tolerance in percentage %
 quiz.question{q}.type='NUMERICAL';
 
 q=q+1;
-quiz.question{q}.str='Qual o valor da tens„o mÈdia no resistor R2?';
+quiz.question{q}.str='Qual o valor da tens√£o m√©dia no resistor R2?';
 quiz.question{q}.units={'V'};
 quiz.question{q}.options={'VR2'};
 quiz.question{q}.vartype={'mean'}; %
@@ -81,7 +81,7 @@ quiz.question{q}.opttol=[10]; % tolerance in percentage %
 quiz.question{q}.type='NUMERICAL';
 % 
 q=q+1;
-quiz.question{q}.str='Qual o valor da corrente mÈdia no diodo zener Z1?';
+quiz.question{q}.str='Qual o valor da corrente m√©dia no diodo zener Z1?';
 quiz.question{q}.units={'A'};
 quiz.question{q}.options={'Iz'};
 quiz.question{q}.vartype={'mean'}; %
@@ -90,7 +90,7 @@ quiz.question{q}.opttol=[10]; % tolerance in percentage %
 quiz.question{q}.type='NUMERICAL';
 
 q=q+1;
-quiz.question{q}.str='Qual o valor da potÍncia mÈdia no diodo zener Z1?';
+quiz.question{q}.str='Qual o valor da pot√™ncia m√©dia no diodo zener Z1?';
 quiz.question{q}.units={'W'};
 quiz.question{q}.options={'Pz'};
 quiz.question{q}.vartype={'mean'}; %
@@ -99,7 +99,7 @@ quiz.question{q}.opttol=[10]; % tolerance in percentage %
 quiz.question{q}.type='NUMERICAL';
 
 % q=q+1;
-% quiz.question{q}.str='Qual o valor da potÍncia mÈdia na fonte Vi?';
+% quiz.question{q}.str='Qual o valor da pot√™ncia m√©dia na fonte Vi?';
 % quiz.question{q}.units={'W'};
 % quiz.question{q}.options={'PVi'};
 % quiz.question{q}.vartype={'mean'}; %
@@ -109,7 +109,7 @@ quiz.question{q}.type='NUMERICAL';
 
 
 q=q+1;
-quiz.question{q}.str='Qual o valor da potÍncia mÈdia no LED?';
+quiz.question{q}.str='Qual o valor da pot√™ncia m√©dia no LED?';
 quiz.question{q}.units={'W'};
 quiz.question{q}.options={'Pled'};
 quiz.question{q}.vartype={'mean'}; %

@@ -7,7 +7,7 @@ XU1 0 neg Vpp Vnn o level2 Avol=1Meg GBW=10Meg Slew=10Meg Ilimit=25m Rail=0 Vos=
 R1 i neg {R1}
 D2 neg o D2
 .model D D
-.lib C:\Users\ruseler\AppData\Local\LTspice\lib\cmp\standard.dio
+.lib C:\Users\ruseler\Documents\LTspiceXVII\lib\cmp\standard.dio
 .param Vi=10 Vs=15 R1=1k RL=10k
 .op
 .model D2 D(IS=10F N=1.2)

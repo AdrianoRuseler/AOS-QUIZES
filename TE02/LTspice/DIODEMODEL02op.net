@@ -3,7 +3,7 @@ Vcc i 0 {Vcc}
 R0 o 0 {R0}
 D0 i o D0
 .model D D
-.lib C:\Users\ruseler\AppData\Local\LTspice\lib\cmp\standard.dio
+.lib C:\Users\ruseler\Documents\LTspiceXVII\lib\cmp\standard.dio
 .op
 .param Vcc=2.500e+01 R0=1.200e+02 Td=50 func1=26m
 .model D0 D(Is=1.000e-14 n=1.200e+00)

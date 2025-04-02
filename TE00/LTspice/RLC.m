@@ -1,4 +1,5 @@
-clear all
+% clear all
+clear circuit quiz
 clc
 
 % Sets simulation dir
@@ -26,7 +27,7 @@ circuit.Xi=CombVec(Vipk,fi,C0,L0,R0); %%
 circuit.timeout = 5; % Simulation timeout in seconds
 
 % circuit.multiplesims=[50 50]; % Number of simulations
-circuit.nsims = 16; % Numero de circuitos a serem simulados
+circuit.nsims = 32; % Numero de circuitos a serem simulados
 
 circuit.parind=1:5;
 % 
@@ -53,14 +54,14 @@ circuit.printcycle = 5; % Cycle to start print
 % quiz.tbjeval = 0; % Evaluate tbj op
 % Generate question
 quiz.enunciado = 'Simule no LTspice o circuito com carga RLC apresentado na Figura 1 e determine:';
-quiz.rowfigdirective=1; % Imprima os parâmetros ao lado da figura
+quiz.rowfigdirective=1; % Imprima os parÃ¢metros ao lado da figura
 quiz.autoitem=1; % Auto add item letter: a), b)... 97 - 122;
 
 q=0;
 % q=q+1;
 
 q=q+1;
-quiz.question{q}.str='Qual o valor eficaz da tensão no indutor L0?';
+quiz.question{q}.str='Qual o valor eficaz da tensÃ£o no indutor L0?';
 quiz.question{q}.units={'V'};
 quiz.question{q}.options={'vl0rms'};
 quiz.question{q}.vartype={'meas'}; % meas 
@@ -79,7 +80,7 @@ quiz.question{q}.opttol=[5]; % tolerance in percentage %
 quiz.question{q}.type='NUMERICAL';
 % 
 q=q+1;
-quiz.question{q}.str='Qual o valor eficaz da tensão na carga RLC?';
+quiz.question{q}.str='Qual o valor eficaz da tensÃ£o na carga RLC?';
 quiz.question{q}.units={'V'};
 quiz.question{q}.options={'virms'};
 quiz.question{q}.vartype={'meas'}; % meas 
@@ -88,7 +89,7 @@ quiz.question{q}.opttol=[5]; % tolerance in percentage %
 quiz.question{q}.type='NUMERICAL';
 % 
 q=q+1;
-quiz.question{q}.str='Qual o valor da impedância de carga Z0?';
+quiz.question{q}.str='Qual o valor da impedÃ¢ncia de carga Z0?';
 quiz.question{q}.units={'&Omega;'};
 quiz.question{q}.options={'z0'};
 quiz.question{q}.vartype={'meas'}; % meas 
@@ -97,7 +98,7 @@ quiz.question{q}.opttol=[5]; % tolerance in percentage %
 quiz.question{q}.type='NUMERICAL';
 % 
 % q=3;
-% quiz.question{q}.str='c) Qual o valor do ganho de tensão vo/vi?';
+% quiz.question{q}.str='c) Qual o valor do ganho de tensÃ£o vo/vi?';
 % quiz.question{q}.units={'V/V'};
 % quiz.question{q}.options={'av'};
 % quiz.question{q}.vartype={'meas'}; % meas 
@@ -106,7 +107,7 @@ quiz.question{q}.type='NUMERICAL';
 % quiz.question{q}.type='NUMERICAL';
 
 q=q+1;
-quiz.question{q}.str='Qual o valor da potência ativa na carga?';
+quiz.question{q}.str='Qual o valor da potÃªncia ativa na carga?';
 quiz.question{q}.units={'W'};
 quiz.question{q}.options={'p0'};
 quiz.question{q}.vartype={'meas'}; % meas 
@@ -116,7 +117,7 @@ quiz.question{q}.type='NUMERICAL';
 % 
 
 q=q+1;
-quiz.question{q}.str='Qual o valor da potência aparente na fonte?';
+quiz.question{q}.str='Qual o valor da potÃªncia aparente na fonte?';
 quiz.question{q}.units={'VA'};
 quiz.question{q}.options={'si'};
 quiz.question{q}.vartype={'meas'}; % meas 
@@ -125,7 +126,7 @@ quiz.question{q}.opttol=[5]; % tolerance in percentage %
 quiz.question{q}.type='NUMERICAL';
 
 q=q+1;
-quiz.question{q}.str='Qual o valor do fator de potência?';
+quiz.question{q}.str='Qual o valor do fator de potÃªncia?';
 quiz.question{q}.units={'W/VA'};
 quiz.question{q}.options={'fp'};
 quiz.question{q}.vartype={'meas'}; % meas 

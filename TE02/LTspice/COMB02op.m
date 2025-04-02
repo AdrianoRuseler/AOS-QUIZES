@@ -1,4 +1,5 @@
-clear all
+% clear all
+clear circuit quiz
 clc
 
 % Sets simulation dir
@@ -38,7 +39,7 @@ n3=2:5;
 % Rb = combres(1,[100],'E12'); %
 circuit.Xi=CombVec(Vcc,R1,R2,R3,Is1,n1,BV1,Is2,n2,BV2,Is3,n3); %%
 % circuit.multiplesims=[50 50]; % Number of simulations
-circuit.nsims = 16; % Numero de circuitos a serem simulados
+circuit.nsims = 32; % Numero de circuitos a serem simulados
 
 circuit.parind=[1:4];
 % circuit.modind(1,:)=[5:7]; % Index for model parameters
@@ -76,8 +77,8 @@ circuit.cmdupdate = 0; % Update the cmdtype from sim file
 circuit.LTspice.net.run = 0;
 
 % Generate question
-quiz.enunciado = 'Simule no LTspice o ponto de operaÁ„o (.op) do circuito apresentado na Figura 1 e determine:';
-% quiz.rowfigparam=1; % Imprima os par‚metros ao lado da figura
+quiz.enunciado = 'Simule no LTspice o ponto de opera√ß√£o (.op) do circuito apresentado na Figura 1 e determine:';
+% quiz.rowfigparam=1; % Imprima os par√¢metros ao lado da figura
 quiz.rowfigdirective=1;
 quiz.autoitem=1; % Auto add item letter: a), b)... 97 - 122;  
 % Text a ser colocado abaixo da figura
@@ -104,7 +105,7 @@ quiz.question{q}.opttol=[10]; % tolerance in percentage %
 quiz.question{q}.type='NUMERICAL';
 
 q=q+1;
-quiz.question{q}.str='Qual o valor da tens„o no diodo zener DZ1?';
+quiz.question{q}.str='Qual o valor da tens√£o no diodo zener DZ1?';
 quiz.question{q}.units={'V'};
 quiz.question{q}.options={'vz1'};
 quiz.question{q}.vartype={'meas'}; % meas 
@@ -113,7 +114,7 @@ quiz.question{q}.opttol=[10]; % tolerance in percentage %
 quiz.question{q}.type='NUMERICAL';
 
 q=q+1;
-quiz.question{q}.str='Qual o valor da tens„o no diodo zener DZ2?';
+quiz.question{q}.str='Qual o valor da tens√£o no diodo zener DZ2?';
 quiz.question{q}.units={'V'};
 quiz.question{q}.options={'vz2'};
 quiz.question{q}.vartype={'meas'}; % meas 
@@ -122,7 +123,7 @@ quiz.question{q}.opttol=[10]; % tolerance in percentage %
 quiz.question{q}.type='NUMERICAL';
 
 q=q+1;
-quiz.question{q}.str='Qual a potÍncia dissipada no LED?';
+quiz.question{q}.str='Qual a pot√™ncia dissipada no LED?';
 quiz.question{q}.units={'W'};
 quiz.question{q}.options={'pled'};
 quiz.question{q}.vartype={'meas'}; % meas 

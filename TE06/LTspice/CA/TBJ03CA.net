@@ -1,4 +1,4 @@
-* C:\Users\ruseler\Documents\GitHub\AOS-QUIZES\TE05\LTspice\CA\TBJ03CA.asc
+* C:\Users\ruseler\Documents\GitHub\AOS-QUIZES\TE06\LTspice\CA\TBJ03CA.asc
 RB cc N001 {RB}
 Vcc cc 0 {Vcc}
 Q1 cc N001 N002 0 TBJ
@@ -16,7 +16,7 @@ Vca1 CAout2 0 SINE(0 0.1m 10k)
 RE1 N005 0 {RE}
 .model NPN NPN
 .model PNP PNP
-.lib C:\Users\ruseler\AppData\Local\LTspice\lib\cmp\standard.bjt
+.lib C:\Users\ruseler\Documents\LTspiceXVII\lib\cmp\standard.bjt
 .meas Vipp PP V(CAin)
 .meas Iipp PP I(Ci)
 .meas Zi param Vipp/Iipp
